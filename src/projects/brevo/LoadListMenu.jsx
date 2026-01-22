@@ -43,29 +43,21 @@ const DATA = {
   ],
 };
 
-interface LoadListMenuProps {
-  onSelect: (item: any) => void;
-  onClose: () => void;
-}
-
-type Tab = "lists" | "segments";
-type View = "root" | "folder";
-
-export default function LoadListMenu({ onSelect, onClose }: LoadListMenuProps) {
-  const [activeTab, setActiveTab] = useState<Tab>("lists");
-  const [currentView, setCurrentView] = useState<View>("root");
-  const [activeFolder, setActiveFolder] = useState<any | null>(null);
+export default function LoadListMenu({ onSelect, onClose }) {
+  const [activeTab, setActiveTab] = useState("lists");
+  const [currentView, setCurrentView] = useState("root");
+  const [activeFolder, setActiveFolder] = useState(null);
   const [searchValue, setSearchValue] = useState("");
 
-  const handleTabChange = (tab: Tab) => {
+  const handleFolderClick = (folder) => {
+    setActiveFolder(folder);
+    setCurrentView("folder");
+  };
+  
+  const handleTabChange = (tab) => {
     setActiveTab(tab);
     setCurrentView("root");
     setActiveFolder(null);
-  };
-
-  const handleFolderClick = (folder: any) => {
-    setActiveFolder(folder);
-    setCurrentView("folder");
   };
 
   const handleBackClick = () => {
@@ -228,7 +220,7 @@ export default function LoadListMenu({ onSelect, onClose }: LoadListMenuProps) {
             <div className="flex-1 overflow-y-auto">
               {activeFolder.children && activeFolder.children.length > 0 ? (
                 <ul>
-                  {activeFolder.children.map((child: any) => (
+                  {activeFolder.children.map((child) => (
                     <li key={child.id}>{child.label}</li>
                   ))}
                 </ul>

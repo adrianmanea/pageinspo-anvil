@@ -16,17 +16,7 @@ import {
 
 import * as Checkbox from "@radix-ui/react-checkbox";
 
-interface Contact {
-  name: string;
-  email: string;
-  subscribed: boolean;
-  blocklisted: boolean;
-  whatsapp: boolean;
-  lastChanged: string;
-  creationDate: string;
-}
-
-const FAKE_CONTACTS: Contact[] = [
+const FAKE_CONTACTS = [
   {
     name: "Alice Johnson",
     email: "alice.johnson@example.com",
@@ -132,8 +122,8 @@ export default function ContactsView() {
   const [isFilterMenuOpen, setIsFilterMenuOpen] = React.useState(false);
   const [isLoadListOpen, setIsLoadListOpen] = React.useState(false);
 
-  const loadListRef = useRef<HTMLDivElement>(null);
-  const filterMenuRef = useRef<HTMLDivElement>(null);
+  const loadListRef = useRef(null);
+  const filterMenuRef = useRef(null);
 
   useOutsideClick(loadListRef, () => {
     if (isLoadListOpen) setIsLoadListOpen(false);

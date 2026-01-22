@@ -21,9 +21,20 @@ export default function Dashboard() {
                   B
                 </div>
                 <h3 className="text-lg font-medium group-hover:text-indigo-600 transition-colors">
-                  Brevo Clone
+                  Brevo
                 </h3>
-                <p className="text-sm text-slate-500 mt-2">Brevo Clone</p>
+                <p className="text-sm text-slate-500 mt-2">Brevo</p>
+              </div>
+            </Link>
+            <Link to="/projects/attio" className="block group">
+              <div className="border border-slate-200 bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-10 w-10 bg-indigo-500 rounded-lg mb-4 flex items-center justify-center text-white font-bold">
+                  A
+                </div>
+                <h3 className="text-lg font-medium group-hover:text-indigo-600 transition-colors">
+                  Attio
+                </h3>
+                <p className="text-sm text-slate-500 mt-2">Attio</p>
               </div>
             </Link>
           </div>

@@ -22,30 +22,72 @@ You will be provided with:
 
 # OUTPUT
 
-You must generate a SINGLE React component (e.g., `DashboardShell.tsx`) that exports the shell layout.
+You must generate a SINGLE React component (e.g., `DashboardShell.jsx`) that exports the shell layout.
 
 # RULES
 
-1.  **Strict Visual Fidelity**: You must match the **exact** widths, heights, background colors, border colors, and spacing from the capture.
-    - _Example_: If the sidebar is `w-[240px]` and `bg-[#F9FFF6]`, you must use those exact arbitrary values. Do not approximate with `w-60` or `bg-green-50`.
-2.  **Interactive Navigation**:
-    - Identify the "Active" item in the capture (usually highlighted).
-    - Implement logic (e.g., simple `useState` or just props) to allow the sidebar items to show active/inactive states correctly.
-    - Ensure hover states are implemented for interactive elements.
-3.  **The "Content Hole"**:
-    - The component **MUST** accept a `children` prop.
-    - You must place `{children}` in the exact location where the main page content resides in the capture.
-    - If no children are provided, render a temporary placeholder (e.g., a dashed border box) so the user can verify the layout structure.
-4.  **No External Libraries**:
-    - Use **Tailwind CSS** for all styling.
-    - Use **Lucide React** for icons. `import { IconName } from "lucide-react";`
-    - Do NOT use Shadcn, Radix, HeadlessUI, or any other component libraries unless explicitly told otherwise.
-5.  **Icon Mapping**:
-    - Replace SVGs from the capture with the closest matching **Lucide React** icon.
-    - Maintain the same size, color, and stroke width as the original SVG.
-6.  **Clean Code**:
-    - Extract navigation items into an array (e.g., `const navItems = [...]`) to keep the JSX clean.
-    - Use semantic HTML (`<aside>`, `<header>`, `<main>`, `<nav>`).
+## 1. Strict Visual Fidelity
+
+You must match the **exact** widths, heights, background colors, border colors, and spacing from the capture.
+
+- **ALWAYS use Tailwind arbitrary values** when the capture has specific measurements or colors.
+- ❌ WRONG: `w-60`, `bg-green-50`, `px-4`, `rounded-lg`
+- ✅ CORRECT: `w-[240px]`, `bg-[#F9FFF6]`, `px-[16px]`, `rounded-[8px]`
+- Extract exact values from the source HTML/CSS. Do NOT approximate.
+
+## 2. Interactive Navigation
+
+- Identify the "Active" item in the capture (usually highlighted).
+- Implement logic (e.g., simple `useState` or just props) to allow the sidebar items to show active/inactive states correctly.
+- Ensure hover states are implemented for interactive elements.
+
+## 3. The "Content Hole"
+
+- The component **MUST** accept a `children` prop.
+- You must place `{children}` in the exact location where the main page content resides in the capture.
+- If no children are provided, render a temporary placeholder (e.g., a dashed border box) so the user can verify the layout structure.
+
+## 4. No External Libraries
+
+- Use **Tailwind CSS** for all styling.
+- Use **Lucide React** for icons. `import { IconName } from "lucide-react";`
+- Do NOT use Shadcn, Radix, HeadlessUI, or any other component libraries unless explicitly told otherwise.
+
+## 5. Icon Mapping
+
+- Replace SVGs from the capture with the closest matching **Lucide React** icon.
+- Maintain the same size, color, and stroke width as the original SVG.
+- Use arbitrary values for icon sizing: `w-[20px] h-[20px]` instead of `w-5 h-5`.
+
+## 6. Button & Interactive Element Checklist
+
+For EVERY button or clickable element, you MUST explicitly match:
+
+| Property      | Example                               |
+| ------------- | ------------------------------------- |
+| Background    | `bg-[#1F2937]` + `hover:bg-[#374151]` |
+| Text color    | `text-[#FFFFFF]`                      |
+| Font size     | `text-[14px]`                         |
+| Font weight   | `font-[500]`                          |
+| Padding       | `px-[16px] py-[10px]`                 |
+| Border radius | `rounded-[6px]`                       |
+| Border        | `border border-[#E5E7EB]` or none     |
+| Icon size     | `w-[16px] h-[16px]`                   |
+| Icon spacing  | `gap-[8px]`                           |
+| Shadow        | `shadow-[0_1px_2px_rgba(0,0,0,0.05)]` |
+
+Add an inline comment above complex elements with extracted values:
+
+```jsx
+{
+  /* NavItem Active: bg #EFF6FF, text #2563EB, font 14/500, radius 6, px 12 py 8 */
+}
+```
+
+## 7. Clean Code
+
+- Extract navigation items into an array (e.g., `const navItems = [...]`) to keep the JSX clean.
+- Use semantic HTML (`<aside>`, `<header>`, `<main>`, `<nav>`).
 
 # REFERENCE EXAMPLE
 
@@ -63,34 +105,44 @@ You must generate a SINGLE React component (e.g., `DashboardShell.tsx`) that exp
 
 **Output (React Component):**
 
-```tsx
+```jsx
 import React from "react";
 import { Home, Settings } from "lucide-react";
 
-export default function AppShell({ children }: { children: React.ReactNode }) {
-  const navItems = [
-    { name: "Home", icon: Home, active: true },
-    { name: "Settings", icon: Settings, active: false },
-  ];
+const navItems = [
+  { name: "Home", icon: Home, active: true },
+  { name: "Settings", icon: Settings, active: false },
+];
 
+export default function AppShell({ children }) {
   return (
-    <div className="flex min-h-screen bg-white">
+    <div className="flex min-h-screen bg-[#FFFFFF]">
+      {/* Sidebar: w 240, bg #f5f5f5, fixed full height */}
       <aside className="w-[240px] bg-[#f5f5f5] fixed h-full">
-        <nav className="p-4 space-y-2">
+        <nav className="p-[16px] space-y-[8px]">
           {navItems.map((item) => (
             <a
               key={item.name}
-              className={`flex gap-2 ${
-                item.active ? "text-blue-600" : "text-black"
+              href="#"
+              className={`flex items-center gap-[8px] px-[12px] py-[8px] rounded-[6px] text-[14px] font-[500] transition-colors ${
+                item.active
+                  ? "bg-[#EFF6FF] text-[#2563EB]"
+                  : "text-[#000000] hover:bg-[#E5E7EB]"
               }`}
             >
-              <item.icon size={20} />
+              <item.icon className="w-[20px] h-[20px]" />
               {item.name}
             </a>
           ))}
         </nav>
       </aside>
-      <main className="ml-[240px] flex-1">{children}</main>
+      <main className="ml-[240px] flex-1">
+        {children || (
+          <div className="m-[24px] border-[2px] border-dashed border-[#D1D5DB] rounded-[8px] p-[48px] text-center text-[#9CA3AF]">
+            Content goes here
+          </div>
+        )}
+      </main>
     </div>
   );
 }

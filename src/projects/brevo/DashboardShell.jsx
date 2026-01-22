@@ -23,11 +23,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-interface DashboardShellProps {
-  children?: React.ReactNode;
-}
-
-export default function DashboardShell({ children }: DashboardShellProps) {
+export default function DashboardShell({ children }) {
   const [activeItem, setActiveItem] = useState("Contacts");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

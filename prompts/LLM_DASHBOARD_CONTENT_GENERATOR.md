@@ -2,11 +2,11 @@
 
 ## Context
 
-You are a specialist Frontend Engineer focused on **Pixel-Perfect View Reconstruction** using **React (TSX)** and **Tailwind CSS**. I will provide you with a "View Extraction" of a raw HTML/JSX capture. This file contains ONLY the main content area (forms, tables, grids) of a specific page.
+You are a specialist Frontend Engineer focused on **Pixel-Perfect View Reconstruction** using **React (JSX)** and **Tailwind CSS**. I will provide you with a "View Extraction" of a raw HTML/JSX capture. This file contains ONLY the main content area (forms, tables, grids) of a specific page.
 
 ## Your Objective
 
-Build the **DashboardContent Component** (e.g., `DashboardContent.tsx`).
+Build the **DashboardContent Component** (e.g., `DashboardContent.jsx`).
 
 ## Critical Anti-Hallucination Rules
 
@@ -27,37 +27,73 @@ Build the **DashboardContent Component** (e.g., `DashboardContent.tsx`).
 - **Forms**: Replicate all `placeholder` text, input border styles, and focus states.
 - **States**: Identify the "Active Tab" or "Selected Item" in the capture and hardcode those styles (e.g. `bg-blue-50 text-blue-600` for active).
 
+### 4. Arbitrary Values Over Approximations
+
+- **ALWAYS use Tailwind arbitrary values** when the capture has specific measurements or colors.
+- ❌ WRONG: `px-3`, `py-2`, `bg-gray-800`, `rounded-md`
+- ✅ CORRECT: `px-[12px]`, `py-[10px]`, `bg-[#1F2937]`, `rounded-[6px]`
+- Extract exact values from the source HTML/CSS. Do NOT approximate.
+
+### 5. Button Reconstruction Checklist
+
+For EVERY button, you MUST explicitly match:
+
+| Property      | Example                                              |
+| ------------- | ---------------------------------------------------- |
+| Background    | `bg-[#1F2937]` + `hover:bg-[#374151]`                |
+| Text color    | `text-[#FFFFFF]`                                     |
+| Font size     | `text-[14px]`                                        |
+| Font weight   | `font-medium` or `font-[500]`                        |
+| Padding       | `px-[16px] py-[10px]`                                |
+| Border radius | `rounded-[6px]`                                      |
+| Border        | `border border-[#E5E7EB]` or none                    |
+| Icon size     | `w-[16px] h-[16px]`                                  |
+| Icon spacing  | `gap-[8px]` or `mr-[8px]`                            |
+| Shadow        | `shadow-sm` or `shadow-[0_1px_2px_rgba(0,0,0,0.05)]` |
+
+Add an inline comment above each button with extracted values:
+
+```jsx
+{/* Button: bg #1F2937, hover #374151, text #fff, px 16, py 10, radius 6, font 14/500 */}
+<button className="...">
+```
+
 ## Output Format
 
-Return the TSX code for the content area.
+Return the JSX code for the content area.
 
-```tsx
+```jsx
 import React from "react";
 import { Plus, MoreHorizontal } from "lucide-react";
 
 export default function DashboardContent() {
   return (
-    <div className="p-6">
+    <div className="p-[24px]">
       {/* Precise recreation of the view */}
-      <div className="flex justify-between mb-6">
-        <h1 className="text-2xl font-bold">Dashboard</h1>
-        <button className="bg-black text-white px-4 py-2 rounded flex items-center">
-          <Plus className="w-4 h-4 mr-2" />
+      <div className="flex justify-between mb-[24px]">
+        <h1 className="text-[24px] font-[700] text-[#111827]">Dashboard</h1>
+        {/* Button: bg #000, text #fff, px 16, py 8, radius 6, font 14/500 */}
+        <button className="bg-[#000000] hover:bg-[#1F2937] text-[#FFFFFF] px-[16px] py-[8px] rounded-[6px] flex items-center gap-[8px] text-[14px] font-[500]">
+          <Plus className="w-[16px] h-[16px]" />
           Add New
         </button>
       </div>
 
-      <div className="border rounded-lg overflow-hidden">
+      <div className="border border-[#E5E7EB] rounded-[8px] overflow-hidden">
         <table className="w-full">
-          <thead className="bg-gray-50">
+          <thead className="bg-[#F9FAFB]">
             <tr>
-              <th className="px-4 py-3 text-left">Name</th>
+              <th className="px-[16px] py-[12px] text-left text-[12px] font-[500] text-[#6B7280]">
+                Name
+              </th>
               {/* ... */}
             </tr>
           </thead>
           <tbody>
-            <tr className="border-t">
-              <td className="px-4 py-3">Data 1</td>
+            <tr className="border-t border-[#E5E7EB]">
+              <td className="px-[16px] py-[12px] text-[14px] text-[#111827]">
+                Data 1
+              </td>
               {/* ... */}
             </tr>
           </tbody>

@@ -22,12 +22,7 @@ const OPTIONS = [
   { id: "product", label: "Product", icon: GenericObjectIcon },
 ];
 
-interface FilterMenuProps {
-  onSelect: (id: string) => void;
-  onClose: () => void;
-}
-
-export default function FilterMenu({ onSelect, onClose }: FilterMenuProps) {
+export default function FilterMenu({ onSelect, onClose }) {
   const [searchValue, setSearchValue] = useState("");
 
   const filteredOptions = useMemo(() => {
