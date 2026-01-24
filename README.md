@@ -1,73 +1,127 @@
-# React + TypeScript + Vite
+# PageInspo Anvil
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The workbench for PageInspo component development. This project allows for developing and building standalone React components/pages that can be embedded elsewhere.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.  **Install dependencies**:
 
-## React Compiler
+    ```bash
+    npm install
+    # or
+    pnpm install
+    ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2.  **Run development server**:
+    ```bash
+    npm run dev
+    ```
+    Access the dashboard at `http://localhost:5173`.
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- `src/pages/`: Main dashboard pages.
+- `src/projects/`: Individual project components (e.g., `attio`, `brevo`).
+- `vite.config.js`: Main build configuration.
+- `vite.config.<project>.js`: Standalone build configurations for specific projects.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Creating a Standalone Project Build
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+To create a buildable, standalone version of a project (e.g., for embedding in an iframe), follow these steps:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Create Project Files
+
+Create a new folder in `src/projects/<your-project>` (e.g., `src/projects/my-page`).
+
+Inside, you need two entry files:
+
+**`mount.jsx`** (The React entry point):
+
+```jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./main"; // Your main component
+import "../../index.css"; // Global styles
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+);
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**`index.html`** (The HTML entry point):
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./mount.jsx"></script>
+  </body>
+</html>
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
+### 2. Create Build Configuration
+
+Create a `vite.config.<project>.js` file in the project root (e.g., `vite.config.mypage.js`):
+
+```javascript
+import path from "path";
+import { fileURLToPath } from "url";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
     },
   },
-])
+  // Root of the sub-project
+  root: path.resolve(__dirname, "src/projects/my-page"),
+  publicDir: path.resolve(__dirname, "public"),
+  build: {
+    // Output directory
+    outDir: path.resolve(__dirname, "dist/my-page"),
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        // Point to your index.html
+        main: path.resolve(__dirname, "src/projects/my-page/index.html"),
+      },
+    },
+  },
+});
 ```
+
+### 3. Add Build Script
+
+Add a script to `package.json`:
+
+```json
+"scripts": {
+  "build:mypage": "vite build -c vite.config.mypage.js"
+}
+```
+
+### 4. Build
+
+Run the build command:
+
+```bash
+npm run build:mypage
+```
+
+The output will be generated in `dist/my-page/`.
