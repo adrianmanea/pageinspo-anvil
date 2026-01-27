@@ -10,8 +10,6 @@
     "preview": "vite preview",
     "build:project": "node scripts/build-project.js",
     "build:lib": "node scripts/build-library.js",
-    "build:brevo": "vite build -c vite.config.brevo.js",
-    "build:attio": "vite build -c vite.config.attio.js",
     "build:boilerplate": "vite build -c vite.config.boilerplate.js"
   },
   "dependencies": {

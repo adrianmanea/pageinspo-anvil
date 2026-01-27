@@ -17,10 +17,14 @@ export default defineConfig({
   publicDir: path.resolve(__dirname, 'public'),
   build: {
     outDir: path.resolve(__dirname, 'dist/attio'),
-    emptyOutDir: true,
+    emptyOutDir: process.env.PAGE === 'OnboardingStep1' || !process.env.PAGE, // Only empty on first step
     rollupOptions: {
-      input: {
-        OnboardingStep1Page: path.resolve(__dirname, 'src/projects/attio/OnboardingStep1Page.html'),
+      input: process.env.PAGE ? {
+        [process.env.PAGE]: path.resolve(__dirname, `src/projects/attio/${process.env.PAGE}.html`)
+      } : {
+        OnboardingStep1: path.resolve(__dirname, 'src/projects/attio/OnboardingStep1.html'),
+        OnboardingStep2: path.resolve(__dirname, 'src/projects/attio/OnboardingStep2.html'),
+        OnboardingStep3: path.resolve(__dirname, 'src/projects/attio/OnboardingStep3.html'),
       },
     },
   },
