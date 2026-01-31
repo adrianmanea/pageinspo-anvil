@@ -51,13 +51,6 @@ For EVERY button, you MUST explicitly match:
 | Icon spacing  | `gap-[8px]` or `mr-[8px]`                            |
 | Shadow        | `shadow-sm` or `shadow-[0_1px_2px_rgba(0,0,0,0.05)]` |
 
-Add an inline comment above each button with extracted values:
-
-```jsx
-{/* Button: bg #1F2937, hover #374151, text #fff, px 16, py 10, radius 6, font 14/500 */}
-<button className="...">
-```
-
 ## Output Format
 
 Return the JSX code for the content area.
@@ -72,7 +65,7 @@ export default function DashboardContent() {
       {/* Precise recreation of the view */}
       <div className="flex justify-between mb-[24px]">
         <h1 className="text-[24px] font-[700] text-[#111827]">Dashboard</h1>
-        {/* Button: bg #000, text #fff, px 16, py 8, radius 6, font 14/500 */}
+
         <button className="bg-[#000000] hover:bg-[#1F2937] text-[#FFFFFF] px-[16px] py-[8px] rounded-[6px] flex items-center gap-[8px] text-[14px] font-[500]">
           <Plus className="w-[16px] h-[16px]" />
           Add New

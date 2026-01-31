@@ -80,16 +80,7 @@ For social auth buttons (Google, GitHub, Apple, etc.):
 - **Card Container**: If the form is in a card, match exact `padding`, `shadow`, `border-radius`, and `background`.
 - **Form Spacing**: Match exact `gap` or `space-y` between form elements.
 
-Add inline comments for complex sections:
 
-```jsx
-{
-  /* Form Card: bg #FFFFFF, shadow lg, radius 16, p 40 */
-}
-{
-  /* Input: border #D1D5DB, focus #2563EB, radius 8, h 48 */
-}
-```
 
 ## Output Format
 
@@ -103,7 +94,7 @@ import { FaGoogle } from "react-icons/fa";
 export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#F9FAFB] px-[16px]">
-      {/* Form Card: bg #FFFFFF, shadow lg, radius 16, p 40 */}
+
       <div className="w-full max-w-[400px] bg-[#FFFFFF] rounded-[16px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] p-[40px]">
         {/* Header */}
         <div className="text-center mb-[32px]">
@@ -118,7 +109,7 @@ export default function LoginPage() {
         {/* Social Login */}
         <button className="w-full flex items-center justify-center gap-[12px] bg-[#FFFFFF] border border-[#E5E7EB] rounded-[8px] px-[16px] py-[12px] text-[14px] font-[500] text-[#374151] hover:bg-[#F9FAFB] transition-colors mb-[24px]">
           <FaGoogle className="w-[20px] h-[20px] text-[#EA4335]" />
-          Continue with Google
+          Continue with Acme
         </button>
 
         <div className="flex items-center gap-[16px] mb-[24px]">
@@ -176,7 +167,7 @@ export default function LoginPage() {
           </div>
 
           {/* Submit Button */}
-          {/* Button: bg #2563EB, hover #1D4ED8, text #fff, h 48, radius 8, font 16/600 */}
+
           <button
             type="submit"
             className="w-full h-[48px] bg-[#2563EB] hover:bg-[#1D4ED8] text-[#FFFFFF] rounded-[8px] text-[16px] font-[600] transition-colors"

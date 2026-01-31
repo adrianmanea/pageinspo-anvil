@@ -10,6 +10,7 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         {/* Project Routes */}
         <Route path="/projects/attio/*" element={<AttioApp />} />
+        <Route path="/attio/*" element={<AttioApp />} />
       </Routes>
     </BrowserRouter>
   );

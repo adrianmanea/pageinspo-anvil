@@ -76,14 +76,6 @@ For EVERY button or clickable element, you MUST explicitly match:
 | Icon spacing  | `gap-[8px]`                           |
 | Shadow        | `shadow-[0_1px_2px_rgba(0,0,0,0.05)]` |
 
-Add an inline comment above complex elements with extracted values:
-
-```jsx
-{
-  /* NavItem Active: bg #EFF6FF, text #2563EB, font 14/500, radius 6, px 12 py 8 */
-}
-```
-
 ## 7. Clean Code
 
 - Extract navigation items into an array (e.g., `const navItems = [...]`) to keep the JSX clean.
@@ -117,7 +109,6 @@ const navItems = [
 export default function AppShell({ children }) {
   return (
     <div className="flex min-h-screen bg-[#FFFFFF]">
-      {/* Sidebar: w 240, bg #f5f5f5, fixed full height */}
       <aside className="w-[240px] bg-[#f5f5f5] fixed h-full">
         <nav className="p-[16px] space-y-[8px]">
           {navItems.map((item) => (
