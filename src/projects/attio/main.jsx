@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate, Link } from "react-router-dom";
 import OnboardingStep1Page from "./OnboardingStep1Page";
+import OnboardingStep1PageShadcn from "./OnboardingStep1PageShadcn";
 import OnboardingStep2Page from "./OnboardingStep2Page";
 import OnboardingStep3Page from "./OnboardingStep3Page";
 import TasksEmptyPage from './TasksEmptyPage'
@@ -54,7 +55,8 @@ export default function AttioApp() {
           </div>
         }
       />
-      <Route path="/attio/step1" element={<OnboardingStep1Page />} />
+      <Route path="/step1" element={<OnboardingStep1Page />} />
+      <Route path="/step1-shadcn" element={<OnboardingStep1PageShadcn />} />
       <Route path="onboarding-step-2" element={<OnboardingStep2Page />} />
       <Route path="onboarding-step-3" element={<OnboardingStep3Page />} />
       <Route path="tasks-empty" element={<TasksEmptyPage />} />
