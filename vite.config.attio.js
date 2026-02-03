@@ -17,7 +17,7 @@ export default defineConfig({
   publicDir: path.resolve(__dirname, 'public'),
   build: {
     outDir: path.resolve(__dirname, 'dist/attio'),
-    emptyOutDir: process.env.PAGE === 'OnboardingStep1' || !process.env.PAGE, // Only empty on first step
+    emptyOutDir: process.env.EMPTY_OUT_DIR === 'true',
     rollupOptions: {
       input: process.env.PAGE ? {
         [process.env.PAGE]: path.resolve(__dirname, `src/projects/attio/${process.env.PAGE}.html`)
