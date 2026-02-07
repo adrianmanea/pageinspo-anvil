@@ -13,19 +13,17 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  root: path.resolve(__dirname, 'src/projects/attio'),
+  // Root is now the specific page directory, passed via env var or handled dynamically
+  root: process.env.PAGE_DIR || path.resolve(__dirname, 'src/projects/attio'),
   publicDir: path.resolve(__dirname, 'public'),
   build: {
-    outDir: path.resolve(__dirname, 'dist/attio'),
+    // Output directory is based on the page name to keep it clean
+    outDir: process.env.OUT_DIR || path.resolve(__dirname, 'dist/attio'),
     emptyOutDir: process.env.EMPTY_OUT_DIR === 'true',
     rollupOptions: {
-      input: process.env.PAGE ? {
-        [process.env.PAGE]: path.resolve(__dirname, `src/projects/attio/${process.env.PAGE}.html`)
-      } : {
-        OnboardingStep1: path.resolve(__dirname, 'src/projects/attio/OnboardingStep1.html'),
-        OnboardingStep2: path.resolve(__dirname, 'src/projects/attio/OnboardingStep2.html'),
-        OnboardingStep3: path.resolve(__dirname, 'src/projects/attio/OnboardingStep3.html'),
-      },
+      input: {
+        main: path.resolve(process.env.PAGE_DIR || process.cwd(), 'index.html')
+      }
     },
   },
 })

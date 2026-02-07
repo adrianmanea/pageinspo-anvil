@@ -16,68 +16,45 @@ if (!projectName) {
 const rootDir = path.resolve(__dirname, '..');
 const customConfig = path.resolve(rootDir, `vite.config.${projectName}.js`);
 
-// Special handling for attio due to single-file plugin limitations
+// Special handling for attio due to multi-page structure
 if (projectName === 'attio') {
-  console.log('Building attio pages dynamically...');
+  console.log('Building attio pages (new structure)...');
 
-  const projectDir = path.resolve(rootDir, 'src/projects/attio');
+  const pagesDir = path.resolve(rootDir, 'src/projects/attio/pages');
   const distDir = path.resolve(rootDir, 'dist/attio');
 
   // Clear output directory once at the start
   if (fs.existsSync(distDir)) {
     fs.rmSync(distDir, { recursive: true, force: true });
   }
+  fs.mkdirSync(distDir, { recursive: true });
 
-  // Find all *Page.jsx files
-  const files = fs.readdirSync(projectDir).filter(f => f.endsWith('Page.jsx'));
+  // Find all page directories
+  if (!fs.existsSync(pagesDir)) {
+    console.error(`Error: Pages directory not found at ${pagesDir}`);
+    process.exit(1);
+  }
 
-  for (const file of files) {
-    const pageName = file.replace('.jsx', ''); // e.g. TasksEmptyPage
-    const mountName = `gen-mount-${pageName}`;
-    const htmlName = `gen-${pageName}`;
+  const pages = fs.readdirSync(pagesDir).filter(f => {
+    return fs.statSync(path.join(pagesDir, f)).isDirectory();
+  });
 
+  for (const pageName of pages) {
     console.log(`Building ${pageName}...`);
 
-    // 1. Generate Mount File
-    const mountContent = `import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Page from './${pageName}'
-import '../../index.css'
+    const pageDir = path.resolve(pagesDir, pageName);
+    const pageDistDir = path.resolve(distDir, pageName);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Page />
-  </React.StrictMode>,
-)
-`;
-    const mountPath = path.resolve(projectDir, `${mountName}.jsx`);
-    fs.writeFileSync(mountPath, mountContent);
-
-    // 2. Generate HTML File
-    const htmlContent = `<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${pageName.replace('Page', '')} - PageInspo</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./${mountName}.jsx"></script>
-  </body>
-</html>`;
-    const htmlPath = path.resolve(projectDir, `${htmlName}.html`);
-    fs.writeFileSync(htmlPath, htmlContent);
-
-    // 3. Build using temporary HTML
+    // Build using custom config with env vars
     const child = spawn('npx', ['vite', 'build', '-c', `vite.config.${projectName}.js`], {
       stdio: 'inherit',
       cwd: rootDir,
       shell: true,
       env: {
         ...process.env,
-        PAGE: htmlName,
-        EMPTY_OUT_DIR: 'false' // We cleared it manually at start
+        PAGE_DIR: pageDir,
+        OUT_DIR: pageDistDir,
+        EMPTY_OUT_DIR: 'true'
       }
     });
 
@@ -87,23 +64,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         else resolve();
       });
     });
-
-    // 4. Rename output file (gen-PageName.html -> PageName.html)
-    const builtHtmlPath = path.resolve(distDir, `${htmlName}.html`);
-    const targetHtmlPath = path.resolve(distDir, `${pageName}.html`);
-    if (fs.existsSync(builtHtmlPath)) {
-      fs.renameSync(builtHtmlPath, targetHtmlPath);
-    } else {
-      console.error(`Warning: Expected output file ${builtHtmlPath} not found.`);
-    }
-
-    // 5. Cleanup
-    try {
-      fs.unlinkSync(mountPath);
-      fs.unlinkSync(htmlPath);
-    } catch (e) {
-      console.warn('Cleanup failed:', e);
-    }
   }
 
   console.log('Attio build complete!');
