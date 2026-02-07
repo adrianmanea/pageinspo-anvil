@@ -4,7 +4,7 @@ import Page from './Page'
 import '../../../../index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Page />
-  </React.StrictMode>,
+    <React.StrictMode>
+        <Page />
+    </React.StrictMode>,
 )
