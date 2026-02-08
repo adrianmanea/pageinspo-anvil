@@ -8,6 +8,8 @@ import AttioTasksWithItems from "@/projects/attio/pages/TasksWithItems/Page";
 import AttioOnboardingStep1 from "@/projects/attio/pages/OnboardingStep1/Page";
 import AttioOnboardingStep2 from "@/projects/attio/pages/OnboardingStep2/Page";
 import AttioOnboardingStep3 from "@/projects/attio/pages/OnboardingStep3/Page";
+import AttioConvertPricing from "@/projects/attio/pages/ConvertPricing/Page";
+import AttioConvertChoosePlan from "@/projects/attio/pages/ConvertChoosePlan/Page";
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
         <Route path="/attio/onboarding-1" element={<AttioOnboardingStep1 />} />
         <Route path="/attio/onboarding-2" element={<AttioOnboardingStep2 />} />
         <Route path="/attio/onboarding-3" element={<AttioOnboardingStep3 />} />
+
+        <Route path="/attio/convert-pricing" element={<AttioConvertPricing />} />
+        <Route path="/attio/convert-choose-plan" element={<AttioConvertChoosePlan />} />
       </Routes>
     </BrowserRouter>
   );
