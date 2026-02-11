@@ -19,15 +19,17 @@ Build the **Onboarding Page Component** (e.g., `LoginPage.jsx`, `SignUpPage.jsx`
 ### 2. Component Composition
 
 - **Pure HTML/Tailwind ONLY**: Do NOT use any component libraries (like Shadcn, Radix, or MUI). Use standard HTML elements styled exclusively with Tailwind CSS.
-- **Single File**: Keep everything in one file for this pass.
+- **Structure**: You must generate `Page.jsx`, `index.html`, and `main.jsx`.
 - **Icons**: Use **Lucide React** (`import { Mail, Lock, Eye } from 'lucide-react'`) by default. For social icons, use `react-icons` (e.g., `import { FaGoogle, FaGithub } from 'react-icons/fa'`).
 
-### 3. Arbitrary Values Over Approximations
+### 3. Responsive Layout & Sizing
 
-- **ALWAYS use Tailwind arbitrary values** when the capture has specific measurements or colors.
-- ❌ WRONG: `max-w-md`, `py-8`, `bg-gray-50`, `rounded-lg`
-- ✅ CORRECT: `max-w-[400px]`, `py-[32px]`, `bg-[#F9FAFB]`, `rounded-[12px]`
-- Extract exact values from the source HTML/CSS. Do NOT approximate.
+- **Skin (Colors/Fonts/Radius)**: STRICTLY match the capture using arbitrary values.
+  - ✅ `bg-[#F9FAFB]`, `rounded-[12px]`, `shadow-[...]`
+- **Layout (Dimensions)**:
+  - **Cards/Forms**: Use `max-w-[...]` (e.g., `max-w-[400px]`) and `w-full` to ensure responsiveness on small screens.
+  - **Page Wrapper**: Use `min-h-screen` and `flex/grid` for centering.
+  - ❌ **NEVER** use fixed `width` or `height` for text/input containers. Use padding (`px-[32px]`) to create inner spacing.
 
 ### 4. Form Input Checklist
 
@@ -84,14 +86,64 @@ For social auth buttons (Google, GitHub, Apple, etc.):
 
 ## Output Format
 
-Return the JSX code for the complete onboarding page.
+You must generate **3 files** inside a specific folder structure.
 
+### 1. `index.html`
+Standard Vite entry HTML.
+- Title: `[Page Name] - PageInspo`
+- Script: `src="./main.jsx"`
+
+### 2. `main.jsx`
+Entry point to render the page.
+- Imports `React`, `ReactDOM`
+- Imports `./Page`
+- Imports `../../../../index.css` (Adjust path as needed based on depth, but consistent with example)
+- Renders `<Page />` in `React.StrictMode` inside `#root`
+
+### 3. `Page.jsx`
+The main React component containing the onboarding page implementation.
+
+---
+
+**Example Output:**
+
+`index.html`:
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoginPage - PageInspo</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./main.jsx"></script>
+  </body>
+</html>
+```
+
+`main.jsx`:
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import Page from './Page'
+import '../../../../index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Page />
+  </React.StrictMode>,
+)
+```
+
+`Page.jsx`:
 ```jsx
 import React from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { FaGoogle } from "react-icons/fa";
 
-export default function LoginPage() {
+export default function Page() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#F9FAFB] px-[16px]">
 

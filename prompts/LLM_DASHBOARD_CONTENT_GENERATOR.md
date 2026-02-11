@@ -27,12 +27,14 @@ Build the **DashboardContent Component** (e.g., `DashboardContent.jsx`).
 - **Forms**: Replicate all `placeholder` text, input border styles, and focus states.
 - **States**: Identify the "Active Tab" or "Selected Item" in the capture and hardcode those styles (e.g. `bg-blue-50 text-blue-600` for active).
 
-### 4. Arbitrary Values Over Approximations
+### 4. Responsive Sizing & Spacing
 
-- **ALWAYS use Tailwind arbitrary values** when the capture has specific measurements or colors.
-- ❌ WRONG: `px-3`, `py-2`, `bg-gray-800`, `rounded-md`
-- ✅ CORRECT: `px-[12px]`, `py-[10px]`, `bg-[#1F2937]`, `rounded-[6px]`
-- Extract exact values from the source HTML/CSS. Do NOT approximate.
+- **Skin (Colors/Fonts/Radius)**: STRICTLY match the capture using arbitrary values.
+  - ✅ `bg-[#1F2937]`, `rounded-[6px]`, `text-[#FFFFFF]`
+- **Layout (Dimensions)**:
+  - ❌ **NEVER** use fixed `width` or `height` for main layout containers (e.g. `w-[800px]`, `h-[600px]`).
+  - ✅ Use `w-full`, `max-w-[...]`, `min-h-[...]`, `flex-1`.
+  - ✅ Use **Padding** (`p-[24px]`) and **Gap** (`gap-[16px]`) to create size and structure.
 
 ### 5. Button Reconstruction Checklist
 

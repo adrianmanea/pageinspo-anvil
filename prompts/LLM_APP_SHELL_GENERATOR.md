@@ -26,14 +26,23 @@ You must generate a SINGLE React component (e.g., `DashboardShell.jsx`) that exp
 
 # RULES
 
-## 1. Strict Visual Fidelity
+## 1. Responsive Visual Fidelity
 
-You must match the **exact** widths, heights, background colors, border colors, and spacing from the capture.
+You must match the **visual style** (colors, typography, spacing, border-radius) exactly, but you must make the **layout** responsive.
 
-- **ALWAYS use Tailwind arbitrary values** when the capture has specific measurements or colors.
-- ❌ WRONG: `w-60`, `bg-green-50`, `px-4`, `rounded-lg`
-- ✅ CORRECT: `w-[240px]`, `bg-[#F9FFF6]`, `px-[16px]`, `rounded-[8px]`
-- Extract exact values from the source HTML/CSS. Do NOT approximate.
+### Skin & Spacing (STRICT)
+- **Colors/Fonts/Radius**: Strict adherence. ALWAYS use arbitrary values.
+  - ✅ `bg-[#F9FFF6]`, `text-[14px]`, `rounded-[8px]`, `border-[#E5E7EB]`
+- **Spacing**: Use `gap`, `p`, `m` values from the capture.
+  - ✅ `gap-[16px]`, `p-[24px]`, `mt-[12px]`
+
+### Layout Dimensions (RESPONSIVE)
+- **SIDEBARS**: Fixed widths are allowed (e.g., `w-[240px]`).
+- **MAIN CONTENT**: **NEVER** use fixed widths (e.g., `w-[1200px]`).
+  - ✅ Use `w-full`, `flex-1`, `max-w-[...]` (if constrained).
+- **HEIGHTS**: Avoid fixed heights for content containers.
+  - ✅ Use padding (`p-[24px]`) to define vertical volume.
+  - ✅ Use `min-h-[...]` if a minimum height is visually apparent.
 
 ## 2. Interactive Navigation
 
