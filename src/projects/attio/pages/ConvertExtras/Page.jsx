@@ -115,7 +115,7 @@ export default function ConvertExtras() {
             </button>
           </div>
 
-          <div className="flex min-h-[960px] h-full items-stretch">
+          <div className="flex h-full items-stretch flex-col md:flex-row">
             {/* Main Content */}
             <div className="flex-[8] p-[32px] pr-[24px] border-r border-[#EEEFF1] dark:border-[#27282B] flex flex-col">
               
@@ -353,7 +353,7 @@ export default function ConvertExtras() {
                        </span>
                    </div>
 
-                   <button className="w-full h-[36px] bg-[#266DF0] dark:bg-[#4E8CFC] text-white rounded-[10px] text-[14px] font-[500] flex items-center justify-center shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(38,109,240,0.12),0_3px_6px_-2px_rgba(38,109,240,0.08)] hover:bg-[#215BC4] dark:hover:bg-[#3B7ADF] transition-colors">
+                   <button className="w-full h-[36px] bg-[#266DF0] dark:bg-[#266DF0] text-white rounded-[10px] text-[14px] font-[500] flex items-center justify-center shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(38,109,240,0.12),0_3px_6px_-2px_rgba(38,109,240,0.08)] hover:bg-[#215BC4] dark:hover:bg-[#3B7ADF] transition-colors duration-200">
                       Proceed to payment
                    </button>
                </div>

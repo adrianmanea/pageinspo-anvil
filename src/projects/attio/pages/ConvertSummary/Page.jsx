@@ -71,7 +71,7 @@ export default function ConvertSummary() {
 
       {/* Main Content */}
       <div className="w-full flex justify-center pb-[96px]">
-        <div className="w-full max-w-[860px] bg-white dark:bg-[#1A1D21] rounded-[16px] shadow-[0_1px_3px_0_rgba(24,41,75,0.04),0_0_2px_0_rgba(28,40,64,0.18)] dark:shadow-none dark:border dark:border-[#27282B] flex flex-col md:flex-row overflow-hidden min-h-[960px]">
+        <div className="w-full max-w-[860px] bg-white dark:bg-[#1A1D21] rounded-[16px] shadow-[0_1px_3px_0_rgba(24,41,75,0.04),0_0_2px_0_rgba(28,40,64,0.18)] dark:shadow-none dark:border dark:border-[#27282B] flex flex-col md:flex-row overflow-hidden">
           
           {/* Left Column: Billing Information */}
           <div className="flex-[8] p-[20px] border-b md:border-b-0 md:border-r border-[#EEEFF1] dark:border-[#27282B]">
@@ -103,7 +103,7 @@ export default function ConvertSummary() {
                       <span className="text-[12px] font-[500] leading-[16px] tracking-[-0.24px] text-[#0000008C] dark:text-white/55">For growing teams</span>
                    </div>
                 </div>
-                <button className="flex justify-center items-center gap-[6px] h-[32px] px-[10px] bg-white dark:bg-[#1A1D21] border border-[#EEEFF1] dark:border-[#EEEFF1] rounded-[9px] hover:bg-gray-50 dark:hover:bg-[#2A2B2E] transition-colors">
+                <button className="flex justify-center items-center gap-[6px] h-[32px] px-[10px] bg-white dark:bg-[#1A1D21] border border-[#EEEFF1] dark:border-[#27282B] rounded-[9px] hover:bg-gray-50 dark:hover:bg-[#2A2B2E] transition-colors duration-200">
                    <span className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">Change plan</span>
                 </button>
              </div>
@@ -122,10 +122,10 @@ export default function ConvertSummary() {
              <div className="flex flex-col gap-[16px]">
                 {/* Card Number */}
                 <div className="flex flex-col gap-[4px]">
-                   <label className="text-[12px] font-[500] text-[#000000]/55 dark:text-white/55">
-                      Card number <span className="text-[#000000]/40 dark:text-white/29">(required)</span>
+                   <label className="text-[12px] font-[500] text-[#75777C] dark:text-[#86888D]">
+                      Card number <span className="text-[#5C5E63] dark:text-[#9FA1A7]">(required)</span>
                    </label>
-                   <div className="h-[36px] px-[12px] py-[8px] bg-transparent border border-[#EEEFF1] dark:border-[#A2A4A7] rounded-[8px] flex items-center shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-none">
+                   <div className="flex items-center gap-[6px] w-full h-[34px] min-h-[34px] px-[10px] rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] focus-within:shadow-[rgb(38,109,240)_0px_0px_0px_1px_inset,rgba(38,109,240,0.2)_0px_0px_0px_3px] transition-shadow bg-transparent">
                       <div className="w-full h-[20px] bg-transparent text-[#505154] dark:text-[#A2A4A7] text-[14px] font-[500]">
                          {/* Placeholder for Stripe Element */}
                       </div>
@@ -134,91 +134,107 @@ export default function ConvertSummary() {
 
                 {/* Full Name */}
                 <div className="flex flex-col gap-[4px]">
-                   <label className="text-[12px] font-[500] text-[#000000]/55 dark:text-white/55">
-                      Full name <span className="text-[#000000]/40 dark:text-white/29">(required)</span>
+                   <label className="text-[12px] font-[500] text-[#75777C] dark:text-[#86888D]">
+                      Full name <span className="text-[#5C5E63] dark:text-[#9FA1A7]">(required)</span>
                    </label>
-                   <input 
-                      type="text" 
-                      placeholder="Full name"
-                      className="h-[34px] px-[10px] bg-transparent border border-[#EEEFF1] dark:border-[#A2A4A7] rounded-[10px] text-[14px] font-[500] text-[#242529] dark:text-[#EEEFF1] placeholder:text-[#505154] dark:placeholder:text-[#A2A4A7] focus:outline-none focus:border-[#242529] dark:focus:border-[#EEEFF1] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-none"
-                   />
+                   <div className="flex items-center gap-[6px] w-full h-[34px] min-h-[34px] px-[10px] rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] focus-within:shadow-[rgb(38,109,240)_0px_0px_0px_1px_inset,rgba(38,109,240,0.2)_0px_0px_0px_3px] transition-shadow bg-transparent">
+                      <input 
+                         type="text" 
+                         placeholder="Full name"
+                         className="flex-1 bg-transparent text-[14px] font-[500] leading-[20px] tracking-[-0.28px] text-[#232529] dark:text-[#EEEFF1] placeholder:text-[#5C5E63] dark:placeholder:text-[#9FA1A7] outline-none"
+                      />
+                   </div>
                 </div>
 
                 {/* Address */}
                 <div className="flex flex-col gap-[8px]">
                     <div className="flex flex-col gap-[4px]">
-                       <label className="text-[12px] font-[500] text-[#000000]/55 dark:text-white/55">
-                          Address <span className="text-[#000000]/40 dark:text-white/29">(required)</span>
+                       <label className="text-[12px] font-[500] text-[#75777C] dark:text-[#86888D]">
+                          Address <span className="text-[#5C5E63] dark:text-[#9FA1A7]">(required)</span>
                        </label>
-                       <input 
-                          type="text" 
-                          placeholder="Address line 1"
-                          className="h-[34px] px-[10px] bg-transparent border border-[#EEEFF1] dark:border-[#A2A4A7] rounded-[10px] text-[14px] font-[500] text-[#242529] dark:text-[#EEEFF1] placeholder:text-[#505154] dark:placeholder:text-[#A2A4A7] focus:outline-none focus:border-[#242529] dark:focus:border-[#EEEFF1] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-none"
-                       />
-                       <input 
-                          type="text" 
-                          placeholder="Address line 2"
-                          className="h-[34px] px-[10px] bg-transparent border border-[#EEEFF1] dark:border-[#A2A4A7] rounded-[10px] text-[14px] font-[500] text-[#242529] dark:text-[#EEEFF1] placeholder:text-[#505154] dark:placeholder:text-[#A2A4A7] focus:outline-none focus:border-[#242529] dark:focus:border-[#EEEFF1] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-none"
-                       />
-                       <input 
-                          type="text" 
-                          placeholder="City"
-                          className="h-[34px] px-[10px] bg-transparent border border-[#EEEFF1] dark:border-[#A2A4A7] rounded-[10px] text-[14px] font-[500] text-[#242529] dark:text-[#EEEFF1] placeholder:text-[#505154] dark:placeholder:text-[#A2A4A7] focus:outline-none focus:border-[#242529] dark:focus:border-[#EEEFF1] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-none"
-                       />
-                       <div className="flex gap-[12px]">
+                       <div className="flex items-center gap-[6px] w-full h-[34px] min-h-[34px] px-[10px] rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] focus-within:shadow-[rgb(38,109,240)_0px_0px_0px_1px_inset,rgba(38,109,240,0.2)_0px_0px_0px_3px] transition-shadow bg-transparent">
                           <input 
                              type="text" 
-                             placeholder="Postal Code"
-                             className="flex-1 h-[34px] px-[10px] bg-transparent border border-[#EEEFF1] dark:border-[#A2A4A7] rounded-[10px] text-[14px] font-[500] text-[#242529] dark:text-[#EEEFF1] placeholder:text-[#505154] dark:placeholder:text-[#A2A4A7] focus:outline-none focus:border-[#242529] dark:focus:border-[#EEEFF1] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-none"
+                             placeholder="Address line 1"
+                             className="flex-1 bg-transparent text-[14px] font-[500] leading-[20px] tracking-[-0.28px] text-[#232529] dark:text-[#EEEFF1] placeholder:text-[#5C5E63] dark:placeholder:text-[#9FA1A7] outline-none"
                           />
+                       </div>
+                       <div className="flex items-center gap-[6px] w-full h-[34px] min-h-[34px] px-[10px] rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] focus-within:shadow-[rgb(38,109,240)_0px_0px_0px_1px_inset,rgba(38,109,240,0.2)_0px_0px_0px_3px] transition-shadow bg-transparent">
+                          <input 
+                             type="text" 
+                             placeholder="Address line 2"
+                             className="flex-1 bg-transparent text-[14px] font-[500] leading-[20px] tracking-[-0.28px] text-[#232529] dark:text-[#EEEFF1] placeholder:text-[#5C5E63] dark:placeholder:text-[#9FA1A7] outline-none"
+                          />
+                       </div>
+                       <div className="flex items-center gap-[6px] w-full h-[34px] min-h-[34px] px-[10px] rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] focus-within:shadow-[rgb(38,109,240)_0px_0px_0px_1px_inset,rgba(38,109,240,0.2)_0px_0px_0px_3px] transition-shadow bg-transparent">
+                          <input 
+                             type="text" 
+                             placeholder="City"
+                             className="flex-1 bg-transparent text-[14px] font-[500] leading-[20px] tracking-[-0.28px] text-[#232529] dark:text-[#EEEFF1] placeholder:text-[#5C5E63] dark:placeholder:text-[#9FA1A7] outline-none"
+                          />
+                       </div>
+                       <div className="flex gap-[12px]">
+                          <div className="flex-1 flex items-center gap-[6px] h-[34px] min-h-[34px] px-[10px] rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] focus-within:shadow-[rgb(38,109,240)_0px_0px_0px_1px_inset,rgba(38,109,240,0.2)_0px_0px_0px_3px] transition-shadow bg-transparent">
+                             <input 
+                                type="text" 
+                                placeholder="Postal Code"
+                                className="flex-1 bg-transparent text-[14px] font-[500] leading-[20px] tracking-[-0.28px] text-[#232529] dark:text-[#EEEFF1] placeholder:text-[#5C5E63] dark:placeholder:text-[#9FA1A7] outline-none"
+                             />
+                          </div>
                           <div className="flex-1 h-[34px] relative">
-                             <button className="w-full h-full px-[10px] flex items-center justify-between bg-transparent border border-[#EEEFF1] dark:border-[#A2A4A7] rounded-[8px] text-[14px] font-[500] text-[#242529] dark:text-[#EEEFF1] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-none">
-                                <span className="text-[#000000]/40 dark:text-white/29">Province</span>
-                                <ChevronDown size={14} />
+                             <button className="w-full h-full px-[10px] flex items-center justify-between bg-transparent rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] hover:bg-gray-50 dark:hover:bg-[#2A2B2E] transition-all text-[14px] font-[500] text-[#232529] dark:text-[#EEEFF1]">
+                                <span className="text-[#5C5E63] dark:text-[#9FA1A7]">Province</span>
+                                <ChevronDown size={14} className="text-[#75777C] dark:text-[#86888D]" />
                              </button>
                           </div>
                        </div>
-                       <button className="w-full h-[34px] px-[10px] flex items-center justify-between bg-transparent border border-[#EEEFF1] dark:border-[#A2A4A7] rounded-[8px] text-[14px] font-[500] text-[#242529] dark:text-[#EEEFF1] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-none">
+                       <button className="w-full h-[34px] px-[10px] flex items-center justify-between bg-transparent rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] hover:bg-gray-50 dark:hover:bg-[#2A2B2E] transition-all text-[14px] font-[500] text-[#232529] dark:text-[#EEEFF1]">
                           <span>Canada</span>
-                          <ChevronDown size={14} />
+                          <ChevronDown size={14} className="text-[#75777C] dark:text-[#86888D]" />
                        </button>
                     </div>
                 </div>
 
                 {/* Email */}
                 <div className="flex flex-col gap-[4px]">
-                   <label className="text-[12px] font-[500] text-[#000000]/55 dark:text-white/55">
-                      Email <span className="text-[#000000]/40 dark:text-white/29">(required)</span>
+                   <label className="text-[12px] font-[500] text-[#75777C] dark:text-[#86888D]">
+                      Email <span className="text-[#5C5E63] dark:text-[#9FA1A7]">(required)</span>
                    </label>
-                   <input 
-                      type="email" 
-                      placeholder="Email address"
-                      className="h-[34px] px-[10px] bg-transparent border border-[#EEEFF1] dark:border-[#A2A4A7] rounded-[10px] text-[14px] font-[500] text-[#242529] dark:text-[#EEEFF1] placeholder:text-[#505154] dark:placeholder:text-[#A2A4A7] focus:outline-none focus:border-[#242529] dark:focus:border-[#EEEFF1] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-none"
-                   />
+                   <div className="flex items-center gap-[6px] w-full h-[34px] min-h-[34px] px-[10px] rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] focus-within:shadow-[rgb(38,109,240)_0px_0px_0px_1px_inset,rgba(38,109,240,0.2)_0px_0px_0px_3px] transition-shadow bg-transparent">
+                      <input 
+                         type="email" 
+                         placeholder="Email address"
+                         className="flex-1 bg-transparent text-[14px] font-[500] leading-[20px] tracking-[-0.28px] text-[#232529] dark:text-[#EEEFF1] placeholder:text-[#5C5E63] dark:placeholder:text-[#9FA1A7] outline-none"
+                      />
+                   </div>
                 </div>
 
                 {/* Business */}
                 <div className="flex flex-col gap-[4px]">
-                   <label className="text-[12px] font-[500] text-[#000000]/55 dark:text-white/55">
-                      Business <span className="text-[#000000]/40 dark:text-white/29">(required)</span>
+                   <label className="text-[12px] font-[500] text-[#75777C] dark:text-[#86888D]">
+                      Business <span className="text-[#5C5E63] dark:text-[#9FA1A7]">(required)</span>
                    </label>
-                   <input 
-                      type="text" 
-                      placeholder="Company name"
-                      className="h-[34px] px-[10px] bg-transparent border border-[#EEEFF1] dark:border-[#A2A4A7] rounded-[10px] text-[14px] font-[500] text-[#242529] dark:text-[#EEEFF1] placeholder:text-[#505154] dark:placeholder:text-[#A2A4A7] focus:outline-none focus:border-[#242529] dark:focus:border-[#EEEFF1] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-none"
-                   />
+                   <div className="flex items-center gap-[6px] w-full h-[34px] min-h-[34px] px-[10px] rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] focus-within:shadow-[rgb(38,109,240)_0px_0px_0px_1px_inset,rgba(38,109,240,0.2)_0px_0px_0px_3px] transition-shadow bg-transparent">
+                      <input 
+                         type="text" 
+                         placeholder="Company name"
+                         className="flex-1 bg-transparent text-[14px] font-[500] leading-[20px] tracking-[-0.28px] text-[#232529] dark:text-[#EEEFF1] placeholder:text-[#5C5E63] dark:placeholder:text-[#9FA1A7] outline-none"
+                      />
+                   </div>
                 </div>
 
                 {/* GST/HST */}
                 <div className="flex flex-col gap-[4px]">
-                   <label className="text-[12px] font-[500] text-[#000000]/55 dark:text-white/55">
-                      GST/HST number <span className="text-[#000000]/40 dark:text-white/29">(optional)</span>
+                   <label className="text-[12px] font-[500] text-[#75777C] dark:text-[#86888D]">
+                      GST/HST number <span className="text-[#5C5E63] dark:text-[#9FA1A7]">(optional)</span>
                    </label>
-                   <input 
-                      type="text" 
-                      placeholder="123456789RT0002"
-                      className="h-[34px] px-[10px] bg-transparent border border-[#EEEFF1] dark:border-[#A2A4A7] rounded-[10px] text-[14px] font-[500] text-[#242529] dark:text-[#EEEFF1] placeholder:text-[#505154] dark:placeholder:text-[#A2A4A7] focus:outline-none focus:border-[#242529] dark:focus:border-[#EEEFF1] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-none"
-                   />
+                   <div className="flex items-center gap-[6px] w-full h-[34px] min-h-[34px] px-[10px] rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] focus-within:shadow-[rgb(38,109,240)_0px_0px_0px_1px_inset,rgba(38,109,240,0.2)_0px_0px_0px_3px] transition-shadow bg-transparent">
+                      <input 
+                         type="text" 
+                         placeholder="123456789RT0002"
+                         className="flex-1 bg-transparent text-[14px] font-[500] leading-[20px] tracking-[-0.28px] text-[#232529] dark:text-[#EEEFF1] placeholder:text-[#5C5E63] dark:placeholder:text-[#9FA1A7] outline-none"
+                      />
+                   </div>
                 </div>
              </div>
           </div>
@@ -321,7 +337,7 @@ export default function ConvertSummary() {
              </div>
 
              {/* Confirm Button */}
-             <button className="w-full h-[36px] bg-[#266DF0] hover:bg-[#1D4ED8] dark:bg-[#266DF0] dark:hover:bg-[#3B7ADF] text-white rounded-[10px] text-[14px] font-[500] md:shadow-[rgba(0,0,0,0.1)_0px_0px_0px_1px_inset,rgba(38,109,240,0.12)_0px_2px_4px_-2px,rgba(38,109,240,0.08)_0px_3px_6px_-2px] transition-all">
+             <button className="w-full h-[36px] bg-[#266DF0] hover:bg-[#1D4ED8] dark:bg-[#266DF0] dark:hover:bg-[#3B7ADF] text-white rounded-[10px] text-[14px] font-[500] md:shadow-[rgba(0,0,0,0.1)_0px_0px_0px_1px_inset,rgba(38,109,240,0.12)_0px_2px_4px_-2px,rgba(38,109,240,0.08)_0px_3px_6px_-2px] transition-colors duration-200">
                 Confirm
              </button>
 

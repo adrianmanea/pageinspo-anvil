@@ -103,7 +103,7 @@ export default function AppShellPage() {
                     {/* Search & Quick Actions */}
                     <div className="flex flex-col px-[12px] py-[10px] gap-[8px]">
                         <div className="flex items-center gap-[6px]">
-                            <button className="flex items-center gap-[6px] flex-1 h-[28px] px-[6px] bg-white dark:bg-[#1A1D21] rounded-[8px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0),0_0_2px_0_rgba(28,40,64,0.18),0_1px_3px_0_rgba(24,41,75,0.04)] dark:shadow-[inset_0_0_0_1px_rgb(47,48,51),0_0_2px_0_rgb(0,0,0),0_1px_3px_0_rgba(0,0,0,0.08)] hover:bg-[#F9F9FB] dark:hover:bg-[#202225] transition-colors overflow-hidden">
+                            <button className="flex items-center gap-[6px] flex-1 h-[28px] px-[6px] bg-white dark:bg-[#1A1D21] rounded-[8px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] hover:bg-[#F9F9FB] dark:hover:bg-[#202225] transition-colors overflow-hidden">
                                 <div className="w-[14px] h-[14px] text-[#505154] dark:text-[#A2A4A7] flex items-center justify-center">
                                     <Zap size={14} strokeWidth={1.5} />
                                 </div>
@@ -114,7 +114,7 @@ export default function AppShellPage() {
                                     Ctrl K
                                 </kbd>
                             </button>
-                            <button className="flex items-center justify-center w-[50px] h-[28px] bg-white dark:bg-[#1A1D21] rounded-[8px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0),0_0_2px_0_rgba(28,40,64,0.18),0_1px_3px_0_rgba(24,41,75,0.04)] dark:shadow-[inset_0_0_0_1px_rgb(47,48,51),0_0_2px_0_rgb(0,0,0),0_1px_3px_0_rgba(0,0,0,0.08)] hover:bg-[#F9F9FB] dark:hover:bg-[#202225] gap-[6px]">
+                            <button className="flex items-center justify-center w-[50px] h-[28px] bg-white dark:bg-[#1A1D21] rounded-[8px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] hover:bg-[#F9F9FB] dark:hover:bg-[#202225] gap-[6px]">
                                 <Search className="w-[14px] h-[14px] text-black dark:text-[#EEEFF1]" />
                                 <kbd className="flex items-center justify-center w-[20px] h-[20px] bg-transparent rounded-[6px] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] text-[11px] font-[400] text-[#00000066] dark:text-[#FFFFFF4A] uppercase tracking-[0.22px]">
                                     /

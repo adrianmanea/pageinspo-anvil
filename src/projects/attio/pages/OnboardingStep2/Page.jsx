@@ -142,7 +142,7 @@ export default function OnboardingStep2Page() {
                       </div>
                       <button
                         type="button"
-                        className="flex items-center justify-between w-full h-[32px] px-[8px] bg-transparent border border-[#EEEEF1] dark:border-[#27282B] rounded-[8px] outline-none"
+                        className="flex items-center justify-between w-full h-[34px] px-[10px] bg-transparent rounded-[10px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] focus:shadow-[rgb(38,109,240)_0px_0px_0px_1px_inset,rgba(38,109,240,0.2)_0px_0px_0px_3px] outline-none transition-shadow"
                       >
                          <span className="text-[14px] font-[500] leading-[20px] tracking-[-0.28px] text-[#232529] dark:text-[#EEEFF1]">
                            Romania
