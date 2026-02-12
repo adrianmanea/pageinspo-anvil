@@ -13,6 +13,10 @@ import AttioConvertExtras from "@/projects/attio/pages/ConvertExtras/Page";
 import AttioConvertSummary from "@/projects/attio/pages/ConvertSummary/Page";   
 import AttioTrialEnded from "@/projects/attio/pages/TrialEnded/Page";
 
+// iClassPro Pages
+import IClassProDashboard from "@/projects/iclass/pages/Dashboard/Page";
+import IClassProDashboardModern from "@/projects/iclass/pages/Dashboard/PageModern";
+
 function App() {
   return (
     <BrowserRouter>
@@ -34,6 +38,11 @@ function App() {
         <Route path="/attio/convert-summary" element={<AttioConvertSummary />} />
 
         <Route path="/attio/trial-ended" element={<AttioTrialEnded />} />
+
+        {/* iClassPro Project Routes */}
+        <Route path="/iclass" element={<IClassProDashboard />} />
+        <Route path="/iclass/dashboard" element={<IClassProDashboard />} />
+        <Route path="/iclass/dashboard-modern" element={<IClassProDashboardModern />} />
       </Routes>
     </BrowserRouter>
   );

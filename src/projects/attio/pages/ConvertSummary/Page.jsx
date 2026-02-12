@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CreditCard, Building2, Mail, MapPin, User, Check, ChevronDown } from "lucide-react";
+import { CreditCard, Building2, Mail, MapPin, User, Check, ChevronDown, Layers } from "lucide-react";
 
 export default function ConvertSummary() {
   const [theme, setTheme] = useState(() => {
@@ -70,7 +70,7 @@ export default function ConvertSummary() {
       </div>
 
       {/* Main Content */}
-      <div className="w-full flex justify-center pb-[96px]">
+      <div className="flex-1 w-full flex justify-center p-[20px] pb-[96px]">
         <div className="w-full max-w-[860px] bg-white dark:bg-[#1A1D21] rounded-[16px] shadow-[0_1px_3px_0_rgba(24,41,75,0.04),0_0_2px_0_rgba(28,40,64,0.18)] dark:shadow-none dark:border dark:border-[#27282B] flex flex-col md:flex-row overflow-hidden">
           
           {/* Left Column: Billing Information */}
@@ -92,9 +92,8 @@ export default function ConvertSummary() {
                             <path d="M0.000976562 5.8577H40.001" stroke="currentColor" strokeOpacity="0.05" strokeWidth="0.5"/>
                             <path d="M0.000976562 34.4206H40.001" stroke="currentColor" strokeOpacity="0.05" strokeWidth="0.5"/>
                             
-                            {/* Blue Plus Icon */}
-                            <path d="M15.0874 8.0557L21.1633 4.58373C21.4747 4.40583 21.8569 4.40583 22.1682 4.58373L28.2441 8.0557C28.5596 8.236 28.7544 8.57153 28.7544 8.93493V15.8609C28.7544 16.2243 28.5596 16.5598 28.2441 16.7401L22.1682 20.2121C21.8569 20.39 21.4747 20.39 21.1633 20.2121L15.0874 16.7401C14.7719 16.5598 14.5771 16.2243 14.5771 15.8609V8.93493C14.5771 8.57153 14.7719 8.236 15.0874 8.0557Z" fill="#E5EEFF" stroke="#266DF0" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" className="dark:fill-[#1D2E55] dark:stroke-[#4E8CFC]"/>
-                            <path opacity="0.4" d="M21.6657 12.3976L14.7986 8.47358M21.6657 12.3976L28.5651 8.45508M21.6657 12.3976V20.2457" stroke="#266DF0" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" className="dark:stroke-[#4E8CFC]"/>
+                            {/* Blue Plus Icon Replacement */}
+                            <Layers x={5} y={5} size={30} strokeWidth={1.5} className="text-[#266DF0] dark:text-[#4E8CFC] fill-[#E5EEFF] dark:fill-[#1D2E55]" />
                           </svg>
                       </div>
                    </div>

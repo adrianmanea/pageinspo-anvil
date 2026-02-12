@@ -20,6 +20,16 @@ export default function Home() {
         { name: "Trial Ended", path: "/attio/trial-ended" },
       ],
     },
+    {
+      title: "iClassPro",
+      description: "School Management System",
+      color: "bg-blue-500",
+      letter: "I",
+      links: [
+        { name: "Dashboard", path: "/iclass/dashboard" },
+        { name: "Dashboard Modern", path: "/iclass/dashboard-modern" },
+      ],
+    },
   ];
 
   return (
