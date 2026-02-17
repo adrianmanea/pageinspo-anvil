@@ -18,16 +18,8 @@ export default function Home() {
         { name: "Convert Extras", path: "/attio/convert-extras" },
         { name: "Convert Summary", path: "/attio/convert-summary" },
         { name: "Trial Ended", path: "/attio/trial-ended" },
-      ],
-    },
-    {
-      title: "iClassPro",
-      description: "School Management System",
-      color: "bg-blue-500",
-      letter: "I",
-      links: [
-        { name: "Dashboard", path: "/iclass/dashboard" },
-        { name: "Dashboard Modern", path: "/iclass/dashboard-modern" },
+        { name: "Settings Account", path: "/attio/settings-account" },
+        { name: "Settings Appareance", path: "/attio/settings-appearance" },
       ],
     },
   ];

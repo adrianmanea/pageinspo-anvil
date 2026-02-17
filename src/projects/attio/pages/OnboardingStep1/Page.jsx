@@ -3,10 +3,10 @@ import { Upload } from "lucide-react";
 
 export default function OnboardingStep1Page() {
   const [subscribeToNews, setSubscribeToNews] = useState(false);
-  
+
   // Use vanilla URLSearchParams to avoid React Router dependency for standalone build
   const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       return new URLSearchParams(window.location.search).get("theme");
     }
     return null;
@@ -22,7 +22,7 @@ export default function OnboardingStep1Page() {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center bg-white dark:bg-[#1b1d21] pt-[32px] pb-[24px] gap-[24px] px-4 sm:px-6 lg:px-8"
+      className="min-h-screen flex flex-col items-center bg-white dark:bg-[#15181C] pt-[32px] pb-[24px] gap-[24px] px-4 sm:px-6 lg:px-8"
       style={{ fontFamily: "Inter, sans-serif" }}
     >
       {/* Progress Bar */}

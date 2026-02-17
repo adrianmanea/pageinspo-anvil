@@ -10,12 +10,10 @@ import AttioOnboardingStep2 from "@/projects/attio/pages/OnboardingStep2/Page";
 import AttioOnboardingStep3 from "@/projects/attio/pages/OnboardingStep3/Page";
 import AttioConvertChoosePlan from "@/projects/attio/pages/ConvertChoosePlan/Page";
 import AttioConvertExtras from "@/projects/attio/pages/ConvertExtras/Page";
-import AttioConvertSummary from "@/projects/attio/pages/ConvertSummary/Page";   
+import AttioConvertSummary from "@/projects/attio/pages/ConvertSummary/Page";
 import AttioTrialEnded from "@/projects/attio/pages/TrialEnded/Page";
-
-// iClassPro Pages
-import IClassProDashboard from "@/projects/iclass/pages/Dashboard/Page";
-import IClassProDashboardModern from "@/projects/iclass/pages/Dashboard/PageModern";
+import AttioSettingsAccount from "@/projects/attio/pages/SettingsAccount/Page";
+import AttioSettingsAppearance from "@/projects/attio/pages/SettingsAppearance/Page";
 
 function App() {
   return (
@@ -27,22 +25,34 @@ function App() {
         <Route path="/attio" element={<AttioAppShell />} />
         <Route path="/attio/app-shell" element={<AttioAppShell />} />
         <Route path="/attio/tasks-empty" element={<AttioTasksEmpty />} />
-        <Route path="/attio/tasks-with-items" element={<AttioTasksWithItems />} />
+        <Route
+          path="/attio/tasks-with-items"
+          element={<AttioTasksWithItems />}
+        />
 
         <Route path="/attio/onboarding-1" element={<AttioOnboardingStep1 />} />
         <Route path="/attio/onboarding-2" element={<AttioOnboardingStep2 />} />
         <Route path="/attio/onboarding-3" element={<AttioOnboardingStep3 />} />
 
-        <Route path="/attio/convert-choose-plan" element={<AttioConvertChoosePlan />} />
+        <Route
+          path="/attio/convert-choose-plan"
+          element={<AttioConvertChoosePlan />}
+        />
         <Route path="/attio/convert-extras" element={<AttioConvertExtras />} />
-        <Route path="/attio/convert-summary" element={<AttioConvertSummary />} />
+        <Route
+          path="/attio/convert-summary"
+          element={<AttioConvertSummary />}
+        />
 
         <Route path="/attio/trial-ended" element={<AttioTrialEnded />} />
-
-        {/* iClassPro Project Routes */}
-        <Route path="/iclass" element={<IClassProDashboard />} />
-        <Route path="/iclass/dashboard" element={<IClassProDashboard />} />
-        <Route path="/iclass/dashboard-modern" element={<IClassProDashboardModern />} />
+        <Route
+          path="/attio/settings-account"
+          element={<AttioSettingsAccount />}
+        />
+        <Route
+          path="/attio/settings-appearance"
+          element={<AttioSettingsAppearance />}
+        />
       </Routes>
     </BrowserRouter>
   );

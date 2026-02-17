@@ -3,6 +3,7 @@
 ## Context
 
 You are a specialist Frontend Engineer focused on **Pixel-Perfect Dark Mode Implementation** using **React (JSX)** and **Tailwind CSS**. I will provide you with:
+
 1.  **Source Code**: The existing React component (currently in Light Mode).
 2.  **Dark Mode Capture**: A "Page Extraction" or raw HTML/JSX capture of the same page in Dark Mode.
 
@@ -11,6 +12,27 @@ You are a specialist Frontend Engineer focused on **Pixel-Perfect Dark Mode Impl
 Update the **Source Code** to implement **Dark Mode** using Tailwind's `dark:` modifier, matching the **Dark Mode Capture** exactly, while **PRESERVING** the existing Light Mode styles.
 
 ## Critical Rules
+
+### 0. Theme Logic (MANDATORY)
+
+You **MUST** include the following state logic at the top of the component to handle the `?theme=dark` URL parameter. This is required for our preview environment.
+
+```javascript
+const [theme, setTheme] = useState(() => {
+  if (typeof window !== "undefined") {
+    return new URLSearchParams(window.location.search).get("theme");
+  }
+  return null;
+});
+
+useEffect(() => {
+  if (theme === "dark") {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+}, [theme]);
+```
 
 ### 1. Dual-Mode Coexistence (CRITICAL)
 
@@ -34,25 +56,26 @@ Update the **Source Code** to implement **Dark Mode** using Tailwind's `dark:` m
 
 For every element with a background or border, check:
 
-| Property | Light Mode (Existing) | Dark Mode Action |
-| :--- | :--- | :--- |
-| **Page Background** | `bg-white` | Add `dark:bg-[#...]` (usually very dark, e.g. `#000000` or `#121212`) |
-| **Card Background** | `bg-white` | Add `dark:bg-[#...]` (usually slightly lighter than page, e.g. `#1C1C1E`) |
-| **Borders** | `border-gray-200` | Add `dark:border-[#...]` (usually much darker, e.g. `#2C2C2E`) |
-| **Shadows** | `shadow-sm` | Sometimes removed or made subtle in dark mode (e.g. `dark:shadow-none` or `dark:shadow-[...]`) |
+| Property            | Light Mode (Existing) | Dark Mode Action                                                                               |
+| :------------------ | :-------------------- | :--------------------------------------------------------------------------------------------- |
+| **Page Background** | `bg-white`            | Add `dark:bg-[#...]` (usually very dark, e.g. `#000000` or `#121212`)                          |
+| **Card Background** | `bg-white`            | Add `dark:bg-[#...]` (usually slightly lighter than page, e.g. `#1C1C1E`)                      |
+| **Borders**         | `border-gray-200`     | Add `dark:border-[#...]` (usually much darker, e.g. `#2C2C2E`)                                 |
+| **Shadows**         | `shadow-sm`           | Sometimes removed or made subtle in dark mode (e.g. `dark:shadow-none` or `dark:shadow-[...]`) |
 
 ### 5. Text & Contrast Checklist
 
-| Property | Light Mode (Existing) | Dark Mode Action |
-| :--- | :--- | :--- |
-| **Primary Text** | `text-gray-900` | Add `dark:text-[#...]` (usually white or off-white, e.g. `#FFFFFF` or `#F5F5F7`) |
-| **Secondary Text** | `text-gray-500` | Add `dark:text-[#...]` (usually dimmed white, e.g. `#EBEBF5]/60`) |
-| **Placeholders** | `placeholder:text-gray-400` | Add `dark:placeholder:text-[#...]` |
-| **Links/Accents** | `text-blue-600` | Add `dark:text-[#...]` (often a lighter shade of the accent color for contrast, e.g. `blue-400`) |
+| Property           | Light Mode (Existing)       | Dark Mode Action                                                                                 |
+| :----------------- | :-------------------------- | :----------------------------------------------------------------------------------------------- |
+| **Primary Text**   | `text-gray-900`             | Add `dark:text-[#...]` (usually white or off-white, e.g. `#FFFFFF` or `#F5F5F7`)                 |
+| **Secondary Text** | `text-gray-500`             | Add `dark:text-[#...]` (usually dimmed white, e.g. `#EBEBF5]/60`)                                |
+| **Placeholders**   | `placeholder:text-gray-400` | Add `dark:placeholder:text-[#...]`                                                               |
+| **Links/Accents**  | `text-blue-600`             | Add `dark:text-[#...]` (often a lighter shade of the accent color for contrast, e.g. `blue-400`) |
 
 ## Input Format
 
 **Source Code:**
+
 ```jsx
 <div className="bg-white border border-gray-200 p-4">
   <h1 className="text-gray-900">Title</h1>
