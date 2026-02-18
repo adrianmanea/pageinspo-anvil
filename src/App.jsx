@@ -14,6 +14,7 @@ import AttioConvertSummary from "@/projects/attio/pages/ConvertSummary/Page";
 import AttioTrialEnded from "@/projects/attio/pages/TrialEnded/Page";
 import AttioSettingsAccount from "@/projects/attio/pages/SettingsAccount/Page";
 import AttioSettingsAppearance from "@/projects/attio/pages/SettingsAppearance/Page";
+import AttioSettingsEmailAndCalendar from "@/projects/attio/pages/SettingsEmailAndCalendar/Page";
 
 function App() {
   return (
@@ -52,6 +53,10 @@ function App() {
         <Route
           path="/attio/settings-appearance"
           element={<AttioSettingsAppearance />}
+        />
+        <Route
+          path="/attio/settings-email-and-calendar"
+          element={<AttioSettingsEmailAndCalendar />}
         />
       </Routes>
     </BrowserRouter>

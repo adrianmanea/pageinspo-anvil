@@ -19,7 +19,11 @@ export default function Home() {
         { name: "Convert Summary", path: "/attio/convert-summary" },
         { name: "Trial Ended", path: "/attio/trial-ended" },
         { name: "Settings Account", path: "/attio/settings-account" },
-        { name: "Settings Appareance", path: "/attio/settings-appearance" },
+        { name: "Settings Appearance", path: "/attio/settings-appearance" },
+        {
+          name: "Settings Email and Calendar",
+          path: "/attio/settings-email-and-calendar",
+        },
       ],
     },
   ];
