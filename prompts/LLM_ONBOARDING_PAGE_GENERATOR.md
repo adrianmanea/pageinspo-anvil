@@ -46,6 +46,7 @@ For EVERY input field, you MUST explicitly match:
 | Placeholder   | `placeholder:text-[#9CA3AF]`                  |
 | Font size     | `text-[14px]` or `text-[16px]`                |
 | Height        | `h-[48px]` if explicitly set                  |
+| **Interactive** | Checks for `hover:border-...` and `focus:ring-...` |
 
 ### 5. Button Reconstruction Checklist
 
@@ -63,6 +64,7 @@ For EVERY button, you MUST explicitly match:
 | Height         | `h-[48px]` if explicitly set                      |
 | Shadow         | `shadow-[0_1px_2px_rgba(0,0,0,0.05)]`             |
 | Disabled state | `disabled:opacity-50 disabled:cursor-not-allowed` |
+| **Interactive**| **MUST** include `hover:`, `active:`, `focus:` styles |
 
 ### 6. Social Login Buttons
 

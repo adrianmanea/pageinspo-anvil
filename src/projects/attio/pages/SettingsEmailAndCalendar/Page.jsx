@@ -107,9 +107,9 @@ export default function Page() {
   return (
     <div className="flex min-h-screen w-full bg-[#FFFFFF] dark:bg-[#15181C] font-sans text-[#1F2937] dark:text-[#EEEFF1]">
       {/* Sidebar - Exact Clone from SettingsAccount */}
-      <aside className="flex w-[275px] min-w-[275px] flex-col border-r border-[#EEEEF1] dark:border-[#27282B] bg-[#FBFBFB] dark:bg-[#15181C]">
+      <aside className="flex w-[275px] min-w-[275px] flex-col border-r border-[#EEEFF1] dark:border-[#27282B] bg-[#FBFBFB] dark:bg-[#15181C]">
         {/* Sidebar Header */}
-        <div className="flex h-[49px] items-center justify-start border-b border-[#EEEEF1] dark:border-[#27282B] pl-[12px] pr-[12px]">
+        <div className="flex h-[49px] items-center justify-start border-b border-[#EEEFF1] dark:border-[#27282B] pl-[12px] pr-[12px]">
           <a
             href="#"
             className="flex h-[28px] w-[28px] items-center justify-center rounded-[8px] hover:bg-black/5 dark:hover:bg-white/5"
@@ -171,7 +171,7 @@ export default function Page() {
                 </div>
                 {group.showDivider && (
                   <div className="px-[16px] pb-[8px] pt-[8px]">
-                    <div className="h-[1px] w-full bg-[#EEEEF1] dark:bg-[#27282B]"></div>
+                    <div className="h-[1px] w-full bg-[#EEEFF1] dark:bg-[#27282B]"></div>
                   </div>
                 )}
               </div>
@@ -286,7 +286,7 @@ export default function Page() {
               </div>
 
               {/* Email Address Display */}
-              <div className="flex items-center justify-between h-[56px] px-[8px] pr-[16px] bg-white dark:bg-[#1A1D21] border border-[#EEEEF1] dark:border-transparent rounded-[12px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] overflow-hidden">
+              <div className="flex items-center justify-between h-[56px] px-[8px] pr-[16px] bg-white dark:bg-[#1A1D21] rounded-[12px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset] overflow-hidden">
                 <div className="flex items-center gap-[12px]">
                   <div className="w-[40px] h-[40px] flex items-center justify-center bg-black dark:bg-[#000000] border border-black dark:border-black rounded-[8px] text-white dark:text-[#9E9EFF]">
                     <Mail size={20} />
@@ -303,7 +303,7 @@ export default function Page() {
 
                 <div className="flex items-center gap-[12px]">
                   {/* Status Badge */}
-                  <div className="flex items-center gap-[4px] px-[6px] py-[2px] bg-[#F8F9FA] dark:bg-[#2F3033] border border-[#EEEFF1] dark:border-[#46474A] rounded-[6px] shadow-[rgb(70,71,74)_0px_0px_0px_1px_inset]">
+                  <div className="flex items-center gap-[4px] px-[6px] py-[2px] bg-[#F8F9FA] dark:bg-[#2F3033] border border-[#EEEFF1] dark:border-[#46474A] rounded-[6px]">
                     <div className="w-[6px] h-[6px] rounded-full bg-[#16A34A] dark:bg-[#9E9EFF]"></div>
                     {/* Note: The "In Sync" badge icon in the capture (line 141) has color rgb(158, 158, 255) in dark mode, which is #9E9EFF. I am simulating the dot here but the capture has an icon. I will use the capture color for the dot and text. Capture says text color is rgb(205, 207, 209) which is #CDCFD1 for text "In Sync" line 145 */}
                     <span className="text-[12px] font-[500] text-[#505154] dark:text-[#CDCFD1]">
@@ -323,17 +323,17 @@ export default function Page() {
                       <path
                         d="M8 3.5C8.82843 3.5 9.5 2.82843 9.5 2C9.5 1.17157 8.82843 0.5 8 0.5C7.17157 0.5 6.5 1.17157 6.5 2C6.5 2.82843 7.17157 3.5 8 3.5Z"
                         fill="currentColor"
-                        className="text-[#242529] dark:text-[#9E9EFF]"
+                        className="text-[#242529] dark:text-[#A2A4A7]"
                       />
                       <path
                         d="M8 9.5C8.82843 9.5 9.5 8.82843 9.5 8C9.5 7.17157 8.82843 6.5 8 6.5C7.17157 6.5 6.5 7.17157 6.5 8C6.5 8.82843 7.17157 9.5 8 9.5Z"
                         fill="currentColor"
-                        className="text-[#242529] dark:text-[#9E9EFF]"
+                        className="text-[#242529] dark:text-[#A2A4A7]"
                       />
                       <path
                         d="M8 15.5C8.82843 15.5 9.5 14.8284 9.5 14C9.5 13.1716 8.82843 12.5 8 12.5C7.17157 12.5 6.5 13.1716 6.5 14C6.5 14.8284 7.17157 15.5 8 15.5Z"
                         fill="currentColor"
-                        className="text-[#242529] dark:text-[#9E9EFF]"
+                        className="text-[#242529] dark:text-[#A2A4A7]"
                       />
                     </svg>
                   </button>
@@ -351,7 +351,7 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between p-[10px] px-[16px] bg-white dark:bg-[#1A1D21] border border-[#EEEFF1] dark:border-transparent rounded-[12px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset]">
+              <div className="flex items-center justify-between p-[10px] px-[16px] bg-white dark:bg-[#1A1D21] rounded-[12px] shadow-[rgb(238,239,241)_0px_0px_0px_1px_inset] dark:shadow-[rgb(39,40,43)_0px_0px_0px_1px_inset]">
                 <div className="flex flex-col">
                   <span className="text-[14px] font-[500] text-[#242529] dark:text-[#EEEFF1] leading-[20px] tracking-[-0.14px]">
                     Enable Attio watermark

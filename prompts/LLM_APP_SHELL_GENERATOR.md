@@ -84,6 +84,7 @@ For EVERY button or clickable element, you MUST explicitly match:
 | Icon size     | `w-[16px] h-[16px]`                   |
 | Icon spacing  | `gap-[8px]`                           |
 | Shadow        | `shadow-[0_1px_2px_rgba(0,0,0,0.05)]` |
+| **Interactive** | **MANDATORY**: `hover:bg-[#...]`, `active:bg-[#...]`, `focus:ring-[#...]` |
 
 ## 7. Clean Code
 

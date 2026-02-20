@@ -35,7 +35,15 @@ You are a **Senior Frontend Engineer** and **Design System Specialist**. I will 
 | `rounded-[8px]`                            | `rounded-md`                              | Standard radius token.                                                                                      |
 | `text-[14px]`                              | `text-sm`                                 | Standard typography token.                                                                                  |
 
-### 3. Component Replacement Strategy
+### 3. Interactive States (Crucial)
+    
+You must capture and implement all interactive states from the visual reference or standard UX patterns:
+- **Hover**: Ensure all interactive elements (buttons, links, cards) have `hover:` states (e.g., `hover:bg-muted`, `hover:text-primary`).
+- **Focus**: Inputs and buttons must have visible focus rings (`focus-visible:ring-2`).
+- **Active**: Navigation items must show their active state clearly (e.g., `bg-muted` for sidebar items).
+- **Disabled**: Stylize disabled elements with `opacity-50` and `cursor-not-allowed`.
+
+### 4. Component Replacement Strategy
 
 Replace raw HTML patterns with Shadcn components.
 
