@@ -24,6 +24,12 @@ export default function Home() {
           name: "Settings Email and Calendar",
           path: "/attio/settings-email-and-calendar",
         },
+        { name: "Settings Referrals", path: "/attio/settings-referrals" },
+        {
+          name: "Settings Notifications",
+          path: "/attio/settings-notifications",
+        },
+        { name: "Settings Workspace", path: "/attio/settings-workspace" },
       ],
     },
   ];

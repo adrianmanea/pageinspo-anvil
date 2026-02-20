@@ -180,7 +180,7 @@ export default function Page() {
       {/* Main Content */}
       <main className="flex flex-1 flex-col overflow-hidden bg-white dark:bg-[#1a1d21]">
         {/* Top Header */}
-        <header className="flex h-[49px] min-h-[49px] items-center justify-between border-b border-[#EEEEF1] dark:border-[#27282B] pl-[12px] pr-[12px]">
+        <header className="flex h-[49px] min-h-[49px] items-center justify-between border-b border-[#EEEFF1] dark:border-[#27282B] pl-[12px] pr-[12px]">
           <div className="flex items-center gap-[4px]">
             {/* Profile Breadcrumb */}
             <div className="flex items-center gap-[6px] rounded-[4px] border border-[#E5E7EB] dark:border-[#27282B] bg-white dark:bg-[#1a1d21] px-[4px] py-[2px] shadow-sm">

@@ -193,6 +193,23 @@ export default function Page() {
 
       {/* Main Content */}
       <main className="flex flex-1 flex-col overflow-hidden bg-white dark:bg-[#1a1d21]">
+        {/* Top Header */}
+        <header className="flex h-[49px] min-h-[49px] items-center justify-between border-b border-[#EEEFF1] dark:border-[#27282B] pl-[12px] pr-[12px]">
+          <div className="flex items-center gap-[4px]">
+            {/* Appearance Breadcrumb */}
+            <div className="flex items-center gap-[6px] rounded-[4px] border border-[#E5E7EB] dark:border-[#27282B] bg-white dark:bg-[#1a1d21] px-[4px] py-[2px] shadow-sm">
+              <Puzzle className="h-[14px] w-[14px] text-[#242529] dark:text-[#EEEFF1]" />
+              <span className="text-[13px] font-[500] text-[#242529] dark:text-[#EEEFF1]">
+                Appearance
+              </span>
+            </div>
+          </div>
+
+          <button className="flex h-[28px] w-[28px] items-center justify-center rounded-[8px] border border-[#E5E7EB] dark:border-[#27282B] hover:bg-gray-50 dark:hover:bg-[#242529]">
+            <HelpCircle className="h-[14px] w-[14px] text-[#242529] dark:text-[#EEEFF1]" />
+          </button>
+        </header>
+
         {/* Scrollable Content Area */}
         <div className="flex flex-1 flex-col items-center overflow-y-auto">
           <div className="flex w-full max-w-[768px] flex-col gap-[40px] pb-[72px] pt-[72px]">

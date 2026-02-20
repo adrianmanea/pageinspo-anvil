@@ -15,6 +15,9 @@ import AttioTrialEnded from "@/projects/attio/pages/TrialEnded/Page";
 import AttioSettingsAccount from "@/projects/attio/pages/SettingsAccount/Page";
 import AttioSettingsAppearance from "@/projects/attio/pages/SettingsAppearance/Page";
 import AttioSettingsEmailAndCalendar from "@/projects/attio/pages/SettingsEmailAndCalendar/Page";
+import AttioSettingsReferrals from "@/projects/attio/pages/SettingsReferrals/Page";
+import AttioSettingsNotifications from "@/projects/attio/pages/SettingsNotifications/Page";
+import AttioSettingsWorkspace from "@/projects/attio/pages/SettingsWorkspace/Page";
 
 function App() {
   return (
@@ -57,6 +60,18 @@ function App() {
         <Route
           path="/attio/settings-email-and-calendar"
           element={<AttioSettingsEmailAndCalendar />}
+        />
+        <Route
+          path="/attio/settings-referrals"
+          element={<AttioSettingsReferrals />}
+        />
+        <Route
+          path="/attio/settings-notifications"
+          element={<AttioSettingsNotifications />}
+        />
+        <Route
+          path="/attio/settings-workspace"
+          element={<AttioSettingsWorkspace />}
         />
       </Routes>
     </BrowserRouter>
