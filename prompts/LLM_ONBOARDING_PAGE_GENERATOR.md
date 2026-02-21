@@ -29,42 +29,44 @@ Build the **Onboarding Page Component** (e.g., `LoginPage.jsx`, `SignUpPage.jsx`
 - **Layout (Dimensions)**:
   - **Cards/Forms**: Use `max-w-[...]` (e.g., `max-w-[400px]`) and `w-full` to ensure responsiveness on small screens.
   - **Page Wrapper**: Use `min-h-screen` and `flex/grid` for centering.
-  - ❌ **NEVER** use fixed `width` or `height` for text/input containers. Use padding (`px-[32px]`) to create inner spacing.
+  - ❌ **NEVER** use fixed `width` or `height` constraints like `h-[50px]` for text/input containers, as text will clip when wrapping.
+  - ✅ **ALWAYS** use `min-h-[XXpx]` instead if a specific height is desired.
+  - ✅ Use padding (`px-[32px]`) to create inner volume naturally.
 
 ### 4. Form Input Checklist
 
 For EVERY input field, you MUST explicitly match:
 
-| Property      | Example                                       |
-| ------------- | --------------------------------------------- |
-| Background    | `bg-[#FFFFFF]` or `bg-[#F9FAFB]`              |
-| Border        | `border border-[#D1D5DB]`                     |
-| Border focus  | `focus:border-[#2563EB] focus:ring-[#2563EB]` |
-| Border radius | `rounded-[8px]`                               |
-| Padding       | `px-[16px] py-[12px]`                         |
-| Text color    | `text-[#111827]`                              |
-| Placeholder   | `placeholder:text-[#9CA3AF]`                  |
-| Font size     | `text-[14px]` or `text-[16px]`                |
-| Height        | `h-[48px]` if explicitly set                  |
+| Property        | Example                                            |
+| --------------- | -------------------------------------------------- |
+| Background      | `bg-[#FFFFFF]` or `bg-[#F9FAFB]`                   |
+| Border          | `border border-[#D1D5DB]`                          |
+| Border focus    | `focus:border-[#2563EB] focus:ring-[#2563EB]`      |
+| Border radius   | `rounded-[8px]`                                    |
+| Padding         | `px-[16px] py-[12px]`                              |
+| Text color      | `text-[#111827]`                                   |
+| Placeholder     | `placeholder:text-[#9CA3AF]`                       |
+| Font size       | `text-[14px]` or `text-[16px]`                     |
+| Height          | `h-[48px]` if explicitly set                       |
 | **Interactive** | Checks for `hover:border-...` and `focus:ring-...` |
 
 ### 5. Button Reconstruction Checklist
 
 For EVERY button, you MUST explicitly match:
 
-| Property       | Example                                           |
-| -------------- | ------------------------------------------------- |
-| Background     | `bg-[#2563EB]` + `hover:bg-[#1D4ED8]`             |
-| Text color     | `text-[#FFFFFF]`                                  |
-| Font size      | `text-[14px]` or `text-[16px]`                    |
-| Font weight    | `font-[500]` or `font-[600]`                      |
-| Padding        | `px-[24px] py-[12px]`                             |
-| Border radius  | `rounded-[8px]`                                   |
-| Width          | `w-full` for form buttons                         |
-| Height         | `h-[48px]` if explicitly set                      |
-| Shadow         | `shadow-[0_1px_2px_rgba(0,0,0,0.05)]`             |
-| Disabled state | `disabled:opacity-50 disabled:cursor-not-allowed` |
-| **Interactive**| **MUST** include `hover:`, `active:`, `focus:` styles |
+| Property        | Example                                               |
+| --------------- | ----------------------------------------------------- |
+| Background      | `bg-[#2563EB]` + `hover:bg-[#1D4ED8]`                 |
+| Text color      | `text-[#FFFFFF]`                                      |
+| Font size       | `text-[14px]` or `text-[16px]`                        |
+| Font weight     | `font-[500]` or `font-[600]`                          |
+| Padding         | `px-[24px] py-[12px]`                                 |
+| Border radius   | `rounded-[8px]`                                       |
+| Width           | `w-full` for form buttons                             |
+| Height          | `h-[48px]` if explicitly set                          |
+| Shadow          | `shadow-[0_1px_2px_rgba(0,0,0,0.05)]`                 |
+| Disabled state  | `disabled:opacity-50 disabled:cursor-not-allowed`     |
+| **Interactive** | **MUST** include `hover:`, `active:`, `focus:` styles |
 
 ### 6. Social Login Buttons
 
@@ -84,25 +86,28 @@ For social auth buttons (Google, GitHub, Apple, etc.):
 - **Card Container**: If the form is in a card, match exact `padding`, `shadow`, `border-radius`, and `background`.
 - **Form Spacing**: Match exact `gap` or `space-y` between form elements.
 
-
-
 ## Output Format
 
 You must generate **3 files** inside a specific folder structure.
 
 ### 1. `index.html`
+
 Standard Vite entry HTML.
+
 - Title: `[Page Name] - PageInspo`
 - Script: `src="./main.jsx"`
 
 ### 2. `main.jsx`
+
 Entry point to render the page.
+
 - Imports `React`, `ReactDOM`
 - Imports `./Page`
 - Imports `../../../../index.css` (Adjust path as needed based on depth, but consistent with example)
 - Renders `<Page />` in `React.StrictMode` inside `#root`
 
 ### 3. `Page.jsx`
+
 The main React component containing the onboarding page implementation.
 
 ---
@@ -110,6 +115,7 @@ The main React component containing the onboarding page implementation.
 **Example Output:**
 
 `index.html`:
+
 ```html
 <!doctype html>
 <html lang="en">
@@ -126,20 +132,22 @@ The main React component containing the onboarding page implementation.
 ```
 
 `main.jsx`:
-```jsx
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Page from './Page'
-import '../../../../index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+```jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Page from "./Page";
+import "../../../../index.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Page />
   </React.StrictMode>,
-)
+);
 ```
 
 `Page.jsx`:
+
 ```jsx
 import React from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
@@ -148,7 +156,6 @@ import { FaGoogle } from "react-icons/fa";
 export default function Page() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#F9FAFB] px-[16px]">
-
       <div className="w-full max-w-[400px] bg-[#FFFFFF] rounded-[16px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] p-[40px]">
         {/* Header */}
         <div className="text-center mb-[32px]">

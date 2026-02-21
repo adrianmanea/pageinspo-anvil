@@ -32,7 +32,8 @@ Build the **DashboardContent Component** (e.g., `DashboardContent.jsx`).
 - **Skin (Colors/Fonts/Radius)**: STRICTLY match the capture using arbitrary values.
   - ✅ `bg-[#1F2937]`, `rounded-[6px]`, `text-[#FFFFFF]`
 - **Layout (Dimensions)**:
-  - ❌ **NEVER** use fixed `width` or `height` for main layout containers (e.g. `w-[800px]`, `h-[600px]`).
+  - ❌ **NEVER** use fixed `width` or `height` for main layout containers or text blocks (e.g. `w-[800px]`, `h-[50px]`, `h-[600px]`). This breaks mobile text wrapping.
+  - ✅ Use `min-h-[XXpx]` instead of `h-[XXpx]` so containers can grow vertically as needed.
   - ✅ Use `w-full`, `max-w-[...]`, `min-h-[...]`, `flex-1`.
   - ✅ Use **Padding** (`p-[24px]`) and **Gap** (`gap-[16px]`) to create size and structure.
 

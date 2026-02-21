@@ -18,6 +18,7 @@ export default function Home() {
         { name: "Convert Extras", path: "/attio/convert-extras" },
         { name: "Convert Summary", path: "/attio/convert-summary" },
         { name: "Trial Ended", path: "/attio/trial-ended" },
+        { name: "Settings Shell", path: "/attio/settings-shell" },
         { name: "Settings Account", path: "/attio/settings-account" },
         { name: "Settings Appearance", path: "/attio/settings-appearance" },
         {

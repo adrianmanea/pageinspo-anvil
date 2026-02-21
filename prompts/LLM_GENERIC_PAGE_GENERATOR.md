@@ -28,7 +28,8 @@ Build the **Page Component** (e.g., `Page.jsx`).
   - ✅ `bg-[#F9FAFB]`, `rounded-[12px]`, `text-[#1F2937]`, `border-[#E5E7EB]`
 - **Layout (Dimensions)**:
   - **Containers**: Use `w-full`, `max-w-[...]`, `min-h-[...]` to ensure responsiveness.
-  - ❌ **NEVER** use fixed `width` or `height` for main layout containers or text blocks (e.g., avoid `w-[1200px]`).
+  - ❌ **NEVER** use fixed `width` or `height` for main layout containers or text blocks (e.g., avoid `w-[1200px]`, `h-[50px]`). This causes text clipping on mobile screens.
+  - ✅ Use `min-h-[XXpx]` instead of `h-[XXpx]` for containers to allow text wrapping.
   - ✅ Use **Padding** (`p-[24px]`) and **Gap** (`gap-[16px]`) to create size and structure.
 
 ### 4. Element Reconstruction Checklists

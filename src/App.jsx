@@ -18,6 +18,7 @@ import AttioSettingsEmailAndCalendar from "@/projects/attio/pages/SettingsEmailA
 import AttioSettingsReferrals from "@/projects/attio/pages/SettingsReferrals/Page";
 import AttioSettingsNotifications from "@/projects/attio/pages/SettingsNotifications/Page";
 import AttioSettingsWorkspace from "@/projects/attio/pages/SettingsWorkspace/Page";
+import AttioSettingsShell from "@/projects/attio/pages/SettingsShell/Page";
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
           path="/attio/convert-summary"
           element={<AttioConvertSummary />}
         />
+
+        <Route path="/attio/settings-shell" element={<AttioSettingsShell />} />
 
         <Route path="/attio/trial-ended" element={<AttioTrialEnded />} />
         <Route
