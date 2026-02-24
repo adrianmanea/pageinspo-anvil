@@ -138,7 +138,7 @@ export default function Page() {
                 </div>
                 <button
                   type="button"
-                  className="flex flex-row justify-center items-center gap-[6px] h-[34px] px-[12px] bg-transparent rounded-[10px] border border-[#E5E7EB] dark:border-[#27282B] hover:bg-[#EEEFF1] dark:hover:bg-[#232529] transition-colors"
+                  className="flex flex-row justify-center items-center gap-[6px] flex-shrink-0 w-full md:w-auto h-[34px] px-[12px] bg-transparent rounded-[10px] border border-[#E5E7EB] dark:border-[#27282B] hover:bg-[#EEEFF1] dark:hover:bg-[#232529] transition-colors whitespace-nowrap"
                 >
                   <Download className="w-[14px] h-[14px] text-[#242529] dark:text-[#EEEFF1]" />
                   <span className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
@@ -195,7 +195,7 @@ export default function Page() {
                   </div>
                   <button
                     type="button"
-                    className="flex flex-row justify-center items-center gap-[6px] h-[34px] px-[12px] bg-[#FF5454] dark:bg-[#ED3B3B] rounded-[10px] hover:bg-[#E54B4B] transition-colors"
+                    className="flex flex-row justify-center items-center gap-[6px] flex-shrink-0 w-full sm:w-auto h-[34px] px-[12px] bg-[#FF5454] dark:bg-[#ED3B3B] rounded-[10px] hover:bg-[#E54B4B] transition-colors whitespace-nowrap"
                   >
                     <Trash2 className="w-[14px] h-[14px] text-white" />
                     <span className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-white">

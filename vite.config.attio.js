@@ -22,7 +22,7 @@ export default defineConfig({
     emptyOutDir: process.env.EMPTY_OUT_DIR === 'true',
     rollupOptions: {
       input: {
-        main: path.resolve(process.env.PAGE_DIR || process.cwd(), 'index.html')
+        main: process.env.HTML_FILE || path.resolve(process.env.PAGE_DIR || process.cwd(), 'index.html')
       }
     },
   },

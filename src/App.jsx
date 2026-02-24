@@ -19,6 +19,9 @@ import AttioSettingsReferrals from "@/projects/attio/pages/SettingsReferrals/Pag
 import AttioSettingsNotifications from "@/projects/attio/pages/SettingsNotifications/Page";
 import AttioSettingsWorkspace from "@/projects/attio/pages/SettingsWorkspace/Page";
 import AttioSettingsShell from "@/projects/attio/pages/SettingsShell/Page";
+import AttioSettingsMembersAndTeams from "@/projects/attio/pages/SettingsMembersAndTeams/Page";
+import AttioSettingsMembersAndTeamsDialog from "@/projects/attio/pages/SettingsMembersAndTeams/DialogPage";
+import AttioSettingsMembersAndTeamsTeamsPage from "@/projects/attio/pages/SettingsMembersAndTeams/TeamsPage";
 
 function App() {
   return (
@@ -75,6 +78,18 @@ function App() {
         <Route
           path="/attio/settings-workspace"
           element={<AttioSettingsWorkspace />}
+        />
+        <Route
+          path="/attio/settings-members-and-teams"
+          element={<AttioSettingsMembersAndTeams />}
+        />
+        <Route
+          path="/attio/settings-members-and-teams-dialog"
+          element={<AttioSettingsMembersAndTeamsDialog />}
+        />
+        <Route
+          path="/attio/settings-members-and-teams-teams-page"
+          element={<AttioSettingsMembersAndTeamsTeamsPage />}
         />
       </Routes>
     </BrowserRouter>

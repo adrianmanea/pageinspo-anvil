@@ -40,30 +40,43 @@ if (projectName === 'attio') {
   });
 
   for (const pageName of pages) {
-    console.log(`Building ${pageName}...`);
+    console.log(`\nBuilding folder: ${pageName}...`);
 
     const pageDir = path.resolve(pagesDir, pageName);
     const pageDistDir = path.resolve(distDir, pageName);
 
-    // Build using custom config with env vars
-    const child = spawn('npx', ['vite', 'build', '-c', `vite.config.${projectName}.js`], {
-      stdio: 'inherit',
-      cwd: rootDir,
-      shell: true,
-      env: {
-        ...process.env,
-        PAGE_DIR: pageDir,
-        OUT_DIR: pageDistDir,
-        EMPTY_OUT_DIR: 'true'
-      }
-    });
+    // Find all .html files in the page directory
+    const htmlFiles = fs.readdirSync(pageDir).filter(f => f.endsWith('.html'));
 
-    await new Promise((resolve, reject) => {
-      child.on('close', (code) => {
-        if (code !== 0) reject(new Error(`Build failed for ${pageName}`));
-        else resolve();
+    if (htmlFiles.length === 0) {
+      console.warn(`Warning: No HTML files found in ${pageName}, skipping...`);
+      continue;
+    }
+
+    for (let i = 0; i < htmlFiles.length; i++) {
+      const htmlFile = htmlFiles[i];
+      console.log(`  -> Building entry: ${htmlFile}`);
+
+      const child = spawn('npx', ['vite', 'build', '-c', `vite.config.${projectName}.js`], {
+        stdio: 'inherit',
+        cwd: rootDir,
+        shell: true,
+        env: {
+          ...process.env,
+          PAGE_DIR: pageDir,
+          OUT_DIR: pageDistDir,
+          HTML_FILE: path.resolve(pageDir, htmlFile),
+          EMPTY_OUT_DIR: i === 0 ? 'true' : 'false' // Only clear the dist folder on the first build
+        }
       });
-    });
+
+      await new Promise((resolve, reject) => {
+        child.on('close', (code) => {
+          if (code !== 0) reject(new Error(`Build failed for ${pageName}/${htmlFile}`));
+          else resolve();
+        });
+      });
+    }
   }
 
   console.log('Attio build complete!');

@@ -31,6 +31,18 @@ export default function Home() {
           path: "/attio/settings-notifications",
         },
         { name: "Settings Workspace", path: "/attio/settings-workspace" },
+        {
+          name: "Settings Members and Teams",
+          path: "/attio/settings-members-and-teams",
+        },
+        {
+          name: "Settings Members and Teams Dialog",
+          path: "/attio/settings-members-and-teams-dialog",
+        },
+        {
+          name: "Settings Members and Teams Teams Page",
+          path: "/attio/settings-members-and-teams-teams-page",
+        },
       ],
     },
   ];
