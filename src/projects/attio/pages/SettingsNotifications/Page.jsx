@@ -125,7 +125,7 @@ export default function Page() {
                   <div className="min-w-[600px] w-full flex flex-col">
                     {/* Header Row */}
                     <div className="sticky top-0 z-10 flex flex-col gap-[16px]">
-                      <div className="grid grid-cols-[minmax(0,1fr)_72px_72px] w-full min-h-[40.6667px] px-[14px] py-[12px] gap-[12px] bg-[#FBFBFB] dark:bg-[#1A1D21] border-[0.666667px] border-solid border-[#EEEFF1] dark:border-[#27282B] border-b-0 rounded-t-[12px] shadow-[inset_0_-1px_0_0_#EEEFF1] dark:shadow-[inset_0_-1px_0_0_#27282B]">
+                      <div className="grid grid-cols-[minmax(0,1fr)_72px_72px] w-full min-h-[40.6667px] px-[14px] py-[12px] gap-[12px] bg-[#FBFBFB] dark:bg-[#1A1D21] border=[1px] border-solid border-[#EEEFF1] dark:border-[#27282B] border-b-0 rounded-t-[12px] shadow-[inset_0_-1px_0_0_#EEEFF1] dark:shadow-[inset_0_-1px_0_0_#27282B]">
                         {/* Col 1 */}
                         <div className="flex flex-row justify-start items-center gap-[6px]">
                           <Bell className="w-[14px] h-[14px]" />
@@ -174,7 +174,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border-[0.666667px] border-solid border-[#266DF0] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border=[1px] border-solid border-[#266DF0] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>
@@ -185,7 +185,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border-[0.666667px] border-solid border-[#266DF0] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border=[1px] border-solid border-[#266DF0] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>
@@ -209,7 +209,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border-[0.666667px] border-solid border-[#266DF0] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border=[1px] border-solid border-[#266DF0] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>
@@ -219,7 +219,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border-[0.666667px] border-solid border-[#266DF0] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border=[1px] border-solid border-[#266DF0] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>
@@ -244,7 +244,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border-[0.666667px] border-solid border-[#266DF0] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border=[1px] border-solid border-[#266DF0] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>
@@ -254,7 +254,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border-[0.666667px] border-solid border-[#266DF0] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border=[1px] border-solid border-[#266DF0] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>
@@ -278,7 +278,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border-[0.666667px] border-solid border-[#266DF0] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border=[1px] border-solid border-[#266DF0] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>
@@ -288,7 +288,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border-[0.666667px] border-solid border-[#266DF0] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] border=[1px] border-solid border-[#266DF0] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>
@@ -313,7 +313,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] dark:bg-[#4E8CFC] border-[0.666667px] border-solid border-[#266DF0] dark:border-[#4E8CFC] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] dark:bg-[#4E8CFC] border=[1px] border-solid border-[#266DF0] dark:border-[#4E8CFC] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>
@@ -323,7 +323,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] dark:bg-[#4E8CFC] border-[0.666667px] border-solid border-[#266DF0] dark:border-[#4E8CFC] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] dark:bg-[#4E8CFC] border=[1px] border-solid border-[#266DF0] dark:border-[#4E8CFC] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>
@@ -347,7 +347,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] dark:bg-[#4E8CFC] border-[0.666667px] border-solid border-[#266DF0] dark:border-[#4E8CFC] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] dark:bg-[#4E8CFC] border=[1px] border-solid border-[#266DF0] dark:border-[#4E8CFC] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>
@@ -357,7 +357,7 @@ export default function Page() {
                             type="button"
                             role="checkbox"
                             aria-checked="true"
-                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] dark:bg-[#4E8CFC] border-[0.666667px] border-solid border-[#266DF0] dark:border-[#4E8CFC] rounded-[6px]"
+                            className="flex items-center justify-center w-[16px] h-[16px] bg-[#266DF0] dark:bg-[#4E8CFC] border=[1px] border-solid border-[#266DF0] dark:border-[#4E8CFC] rounded-[6px]"
                           >
                             <Check className="w-[10px] h-[10px] text-white stroke-[3px]" />
                           </button>

@@ -1,4 +1,17 @@
 import React, { useState, useEffect } from "react";
+import {
+  CreditCard,
+  HelpCircle,
+  Clock,
+  Users,
+  Database,
+  ChevronRight,
+  Zap,
+  Info,
+  Pencil,
+  Plus,
+  ChevronDown,
+} from "lucide-react";
 
 export default function Page() {
   const [theme, setTheme] = useState(() => {
@@ -17,26 +30,22 @@ export default function Page() {
   }, [theme]);
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-transparent dark:bg-transparent font-['Inter'] items-center">
+    <div className="flex flex-col w-full min-h-screen bg-white dark:bg-[#15181C] font-['Inter'] items-center">
       {/* Top Bar */}
-      <div className="flex w-full h-[49px] min-h-[49px] px-[12px] justify-between items-center border-b-[0.666667px] border-[#EEEFF1] dark:border-[#27282B]">
+      <div className="flex w-full h-[49px] min-h-[49px] px-[12px] justify-between items-center border-b-[1px] border-[#EEEFF1] dark:border-[#27282B]">
         <ol className="flex max-w-full items-center gap-[4px] overflow-hidden">
           <li className="flex items-center">
             <div className="flex relative items-center gap-[4px] rounded-[4px] px-[4px] py-[2px]">
-              <svg className="w-[14px] h-[14px] dark:fill-[#FFFFFF] dark:opacity-75">
-                <use href="https://app.attio.com/web-assets/assets/icon-defs/4424347a7cafe663.svg#icon" />
-              </svg>
+              <CreditCard className="w-[14px] h-[14px] text-current dark:text-[#FFFFFF] dark:opacity-75" />
               <span className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1] whitespace-nowrap overflow-hidden text-ellipsis">
                 Billing
               </span>
             </div>
           </li>
         </ol>
-        <button className="flex w-[28px] h-[28px] p-[7px] justify-center items-center gap-[6px] rounded-[8px] hover:bg-[#F8F9FA] dark:hover:bg-[#FFFFFF]/10">
+        <button className="flex w-[28px] h-[28px] p-[7px] justify-center items-center gap-[6px] rounded-[8px] hover:bg-[#EEEFF1] dark:hover:bg-[#232529]">
           <div className="flex w-[14px] h-[14px] justify-center items-center">
-            <svg className="w-[14px] h-[14px] dark:fill-[#FFFFFF]">
-              <use href="https://app.attio.com/web-assets/assets/icon-defs/56abfcf34cedbdce.svg#icon" />
-            </svg>
+            <HelpCircle className="w-[14px] h-[14px] text-current dark:text-[#FFFFFF]" />
           </div>
         </button>
       </div>
@@ -53,7 +62,7 @@ export default function Page() {
                     Billing
                   </div>
                 </div>
-                <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                   Explore plans and manage your subscription, usage, and billing
                   information
                 </div>
@@ -67,23 +76,21 @@ export default function Page() {
               {/* Alert Bar */}
               <div
                 role="alert"
-                className="flex w-full min-h-[44px] px-[12px] py-[8px] justify-between items-center gap-[24px] bg-[#F8F9FA] dark:bg-[#2F3033] border-[0.666667px] border-[#EEEFF1] dark:border-[#46474A] rounded-[12px]"
+                className="flex w-full min-h-[44px] px-[12px] py-[8px] justify-between items-center gap-[24px] bg-[#F8F9FA] dark:bg-[#2F3033] border-[1px] border-[#EEEFF1] dark:border-[#27282B] rounded-[12px]"
               >
                 <div className="flex items-center gap-[6px]">
                   <div className="flex w-[20px] h-[20px] items-center">
-                    <svg className="w-[14px] h-[14px] dark:fill-[#CDCFD1]">
-                      <use href="https://app.attio.com/web-assets/assets/icon-defs/631614b2625fe026.svg#icon" />
-                    </svg>
+                    <Clock className="w-[14px] h-[14px] text-current dark:text-[#A2A4A7]" />
                   </div>
                   <div className="flex flex-col items-start pr-[8px] gap-[2px]">
-                    <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#505154] dark:text-[#CDCFD1] whitespace-nowrap overflow-hidden text-ellipsis">
+                    <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#505154] dark:text-[#A2A4A7] whitespace-nowrap overflow-hidden text-ellipsis">
                       There are about 5 hours left on your trial
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col items-center gap-[4px]">
                   <div className="flex items-center gap-[8px]">
-                    <button className="flex px-[8px] py-[4px] justify-center items-center gap-[6px] bg-[#266DF0] dark:bg-[#266DF0] rounded-[8px] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(38,109,240,0.12),0_3px_6px_-2px_rgba(38,109,240,0.08)] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),0_2px_4px_-2px_rgba(78,140,252,0.12),0_3px_6px_-2px_rgba(78,140,252,0.08)]">
+                    <button className="flex px-[8px] py-[4px] justify-center items-center gap-[6px] bg-[#266DF0] dark:bg-[#266DF0] hover:bg-[#1D5AD6] dark:hover:bg-[#1D5AD6] rounded-[10px] h-[34px]">
                       <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#FFFFFF] dark:text-[#FFFFFF] text-center whitespace-nowrap overflow-hidden text-ellipsis">
                         Add billing details
                       </div>
@@ -100,7 +107,7 @@ export default function Page() {
                       <div className="text-[16px] font-[600] leading-[20px] tracking-[-0.32px] text-[#242529] dark:text-[#EEEFF1]">
                         Current plan
                       </div>
-                      <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                      <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                         Starts February 24th, 2026
                       </div>
                     </div>
@@ -110,7 +117,7 @@ export default function Page() {
                     <div className="flex w-full h-[40px] justify-between items-center gap-[4px]">
                       <div className="flex flex-col items-start gap-[4px]">
                         <div className="flex items-center gap-[6px]">
-                          <div className="flex w-[40px] h-[40px] justify-center items-center border-[0.666667px] border-[#EEEFF1] dark:border-[#27282B] rounded-[8px] relative">
+                          <div className="flex w-[40px] h-[40px] justify-center items-center border-[1px] border-[#EEEFF1] dark:border-[#27282B] rounded-[8px] relative">
                             <div className="block absolute right-[0.666667px] bottom-[0.666667px] w-[38px] h-[38px] rounded-[8px] overflow-hidden">
                               <svg
                                 width="40"
@@ -258,7 +265,7 @@ export default function Page() {
                             <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
                               Pro
                             </div>
-                            <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                            <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                               $86.00/mo per seat, billed monthly
                             </div>
                           </div>
@@ -275,7 +282,7 @@ export default function Page() {
                       <div className="text-[16px] font-[600] leading-[20px] tracking-[-0.32px] text-[#242529] dark:text-[#EEEFF1]">
                         Usage
                       </div>
-                      <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                      <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                         Manage your seats and credits
                       </div>
                     </div>
@@ -285,17 +292,15 @@ export default function Page() {
                     {/* Seats Block */}
                     <div className="block p-[16px] bg-[#FFFFFF] dark:bg-[#1A1D21] rounded-[16px] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-[inset_0_0_0_1px_#27282B]">
                       <div className="flex items-center gap-[6px]">
-                        <div className="flex w-[14px] h-[14px] justify-center items-center bg-[#266DF0] border-[0.666667px] border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.05)] rounded-[30%]">
-                          <svg className="w-[14px] h-[14px] dark:fill-[#FFFFFF]">
-                            <use href="https://app.attio.com/web-assets/assets/icon-defs/6ca2f55db7a65a6c.svg#icon" />
-                          </svg>
+                        <div className="flex w-[14px] h-[14px] justify-center items-center bg-[#266DF0] border-[1px] border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.05)] rounded-[30%]">
+                          <Users className="w-[14px] h-[14px] text-[#FFFFFF] dark:text-[#FFFFFF]" />
                         </div>
                         <div className="text-[14px] font-[600] leading-[20px] tracking-[-0.28px] text-[#242529] dark:text-[#EEEFF1]">
                           Seats
                         </div>
                       </div>
                       <div className="flex flex-col items-stretch gap-[4px] my-[6px]">
-                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.4)] dark:text-[rgba(255,255,255,0.29)]">
+                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.4)] dark:text-[#A2A4A7]">
                           <span className="text-[#505154] dark:text-[#A2A4A7]">
                             2
                           </span>
@@ -306,7 +311,7 @@ export default function Page() {
                         </div>
                       </div>
                       <div className="flex mt-[16px] items-center gap-[8px]">
-                        <button className="flex px-[8px] py-[4px] justify-center items-center gap-[6px] bg-[#FFFFFF] dark:bg-[#1A1D21] rounded-[8px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0),0_0_2px_0_rgba(28,40,64,0.18),0_1px_3px_0_rgba(24,41,75,0.04)] dark:shadow-[inset_0_0_0_1px_#2F3033,0_0_2px_0_#000000,0_1px_3px_0_rgba(0,0,0,0.08)]">
+                        <button className="flex px-[8px] py-[4px] justify-center items-center gap-[6px] bg-transparent border border-[#E5E7EB] dark:border-[#27282B] hover:bg-[#EEEFF1] dark:hover:bg-[#232529] rounded-[8px] h-[28px]">
                           <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
                             Manage seats
                           </div>
@@ -317,17 +322,15 @@ export default function Page() {
                     {/* Records Block */}
                     <div className="block p-[16px] bg-[#FFFFFF] dark:bg-[#1A1D21] rounded-[16px] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-[inset_0_0_0_1px_#27282B]">
                       <div className="flex items-center gap-[6px]">
-                        <div className="flex w-[14px] h-[14px] justify-center items-center bg-[#00B9EB] border-[0.666667px] border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.05)] rounded-[30%]">
-                          <svg className="w-[14px] h-[14px] dark:fill-[#FFFFFF]">
-                            <use href="https://app.attio.com/web-assets/assets/icon-defs/cfb2adbfbb89d79a.svg#icon" />
-                          </svg>
+                        <div className="flex w-[14px] h-[14px] justify-center items-center bg-[#00B9EB] border-[1px] border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.05)] rounded-[30%]">
+                          <Database className="w-[14px] h-[14px] text-[#FFFFFF] dark:text-[#FFFFFF]" />
                         </div>
                         <div className="text-[14px] font-[600] leading-[20px] tracking-[-0.28px] text-[#242529] dark:text-[#EEEFF1]">
                           Records
                         </div>
                       </div>
                       <div className="flex flex-col items-stretch gap-[4px] my-[6px]">
-                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.4)] dark:text-[rgba(255,255,255,0.29)]">
+                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.4)] dark:text-[#A2A4A7]">
                           <span className="text-[#505154] dark:text-[#A2A4A7]">
                             10
                           </span>
@@ -338,14 +341,12 @@ export default function Page() {
                         </div>
                       </div>
                       <div className="flex mt-[16px] items-center gap-[8px]">
-                        <button className="flex px-[8px] py-[4px] justify-center items-center gap-[6px] bg-[#FFFFFF] dark:bg-[#1A1D21] rounded-[8px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0),0_0_2px_0_rgba(28,40,64,0.18),0_1px_3px_0_rgba(24,41,75,0.04)] dark:shadow-[inset_0_0_0_1px_#2F3033,0_0_2px_0_#000000,0_1px_3px_0_rgba(0,0,0,0.08)]">
+                        <button className="flex px-[8px] py-[4px] justify-center items-center gap-[6px] bg-transparent border border-[#E5E7EB] dark:border-[#27282B] hover:bg-[#EEEFF1] dark:hover:bg-[#232529] rounded-[8px] h-[28px]">
                           <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
                             Usage
                           </div>
                           <div className="flex w-[14px] h-[14px] justify-center items-center">
-                            <svg className="w-[14px] h-[14px] dark:fill-[#EEEFF1]">
-                              <use href="https://app.attio.com/web-assets/assets/icon-defs/9184f3ce81ce299b.svg#icon" />
-                            </svg>
+                            <ChevronRight className="w-[14px] h-[14px] text-current dark:text-[#EEEFF1]" />
                           </div>
                         </button>
                       </div>
@@ -354,20 +355,16 @@ export default function Page() {
                     {/* Credits Block */}
                     <div className="block p-[16px] bg-[#FFFFFF] dark:bg-[#1A1D21] rounded-[16px] shadow-[inset_0_0_0_1px_#EEEFF1] dark:shadow-[inset_0_0_0_1px_#27282B]">
                       <div className="flex items-center gap-[6px]">
-                        <div className="flex w-[14px] h-[14px] justify-center items-center bg-[#9B69FF] border-[0.666667px] border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.05)] rounded-[30%]">
-                          <svg className="w-[14px] h-[14px] dark:fill-[#FFFFFF]">
-                            <use href="https://app.attio.com/web-assets/assets/icon-defs/e14ab20530c946ce.svg#icon" />
-                          </svg>
+                        <div className="flex w-[14px] h-[14px] justify-center items-center bg-[#9B69FF] border-[1px] border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.05)] rounded-[30%]">
+                          <Zap className="w-[14px] h-[14px] text-[#FFFFFF] dark:text-[#FFFFFF]" />
                         </div>
                         <div className="text-[14px] font-[600] leading-[20px] tracking-[-0.28px] text-[#242529] dark:text-[#EEEFF1]">
                           Credits
                         </div>
-                        <svg className="w-[14px] h-[14px] dark:fill-[#EEEFF1] opacity-50">
-                          <use href="https://app.attio.com/web-assets/assets/icon-defs/36eefe86f01b76b0.svg#icon" />
-                        </svg>
+                        <Info className="w-[14px] h-[14px] text-current dark:text-[#EEEFF1] opacity-50" />
                       </div>
                       <div className="flex flex-col items-stretch gap-[4px] my-[6px]">
-                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.4)] dark:text-[rgba(255,255,255,0.29)]">
+                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.4)] dark:text-[#A2A4A7]">
                           <span className="text-[#505154] dark:text-[#A2A4A7]">
                             0
                           </span>
@@ -378,14 +375,12 @@ export default function Page() {
                         </div>
                       </div>
                       <div className="flex mt-[16px] items-center gap-[8px]">
-                        <button className="flex px-[8px] py-[4px] justify-center items-center gap-[6px] bg-[#FFFFFF] dark:bg-[#1A1D21] rounded-[8px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0),0_0_2px_0_rgba(28,40,64,0.18),0_1px_3px_0_rgba(24,41,75,0.04)] dark:shadow-[inset_0_0_0_1px_#2F3033,0_0_2px_0_#000000,0_1px_3px_0_rgba(0,0,0,0.08)]">
+                        <button className="flex px-[8px] py-[4px] justify-center items-center gap-[6px] bg-transparent border border-[#E5E7EB] dark:border-[#27282B] hover:bg-[#EEEFF1] dark:hover:bg-[#232529] rounded-[8px] h-[28px]">
                           <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
                             Usage
                           </div>
                           <div className="flex w-[14px] h-[14px] justify-center items-center">
-                            <svg className="w-[14px] h-[14px] dark:fill-[#EEEFF1]">
-                              <use href="https://app.attio.com/web-assets/assets/icon-defs/9184f3ce81ce299b.svg#icon" />
-                            </svg>
+                            <ChevronRight className="w-[14px] h-[14px] text-current dark:text-[#EEEFF1]" />
                           </div>
                         </button>
                       </div>
@@ -400,7 +395,7 @@ export default function Page() {
                       <div className="text-[16px] font-[600] leading-[20px] tracking-[-0.32px] text-[#242529] dark:text-[#EEEFF1]">
                         Billing details
                       </div>
-                      <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                      <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                         Manage your payment methods and billing information.
                       </div>
                     </div>
@@ -408,28 +403,26 @@ export default function Page() {
 
                   <div className="flex w-full justify-between items-stretch gap-[16px]">
                     {/* Address Card */}
-                    <div className="flex flex-1 flex-col items-start gap-[16px] p-[12px_16px_16px] bg-transparent border-[0.666667px] border-[#EEEFF1] dark:border-[#27282B] rounded-[16px]">
+                    <div className="flex flex-1 flex-col items-start gap-[16px] p-[12px_16px_16px] bg-transparent border-[1px] border-[#EEEFF1] dark:border-[#27282B] rounded-[16px]">
                       <div className="flex w-full justify-between items-start gap-[4px]">
                         <div className="flex flex-col items-start">
                           <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
                             Address
                           </div>
-                          <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                          <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                             Update your billing address
                           </div>
                         </div>
-                        <button className="flex w-[28px] h-[28px] p-[7px] justify-center items-center gap-[6px] bg-[#FFFFFF] dark:bg-[#1A1D21] rounded-[8px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0),0_0_2px_0_rgba(28,40,64,0.18),0_1px_3px_0_rgba(24,41,75,0.04)] dark:shadow-[inset_0_0_0_1px_#2F3033,0_0_2px_0_#000000,0_1px_3px_0_rgba(0,0,0,0.08)] hover:bg-[#F8F9FA] dark:hover:bg-[#FFFFFF]/10">
+                        <button className="flex w-[28px] h-[28px] p-[7px] justify-center items-center gap-[6px] bg-transparent border border-[#E5E7EB] dark:border-[#27282B] hover:bg-[#EEEFF1] dark:hover:bg-[#232529] rounded-[8px] h-[28px]">
                           <div className="flex w-[14px] h-[14px] justify-center items-center">
-                            <svg className="w-[14px] h-[14px] dark:fill-[#EEEFF1]">
-                              <use href="https://app.attio.com/web-assets/assets/icon-defs/4ec7e02e785dfe27.svg#icon" />
-                            </svg>
+                            <Pencil className="w-[14px] h-[14px] text-current dark:text-[#EEEFF1]" />
                           </div>
                         </button>
                       </div>
 
                       <div className="flex w-full items-start gap-[4px]">
                         <div className="flex w-1/2 flex-col items-start overflow-hidden">
-                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                             Email
                           </div>
                         </div>
@@ -443,7 +436,7 @@ export default function Page() {
 
                       <div className="flex w-full items-start gap-[4px]">
                         <div className="flex w-1/2 flex-col items-start overflow-hidden">
-                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                             Company name
                           </div>
                         </div>
@@ -457,7 +450,7 @@ export default function Page() {
 
                       <div className="flex w-full items-start gap-[4px]">
                         <div className="flex w-1/2 flex-col items-start overflow-hidden">
-                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                             Address
                           </div>
                         </div>
@@ -471,12 +464,12 @@ export default function Page() {
 
                       <div className="flex w-full items-start gap-[4px]">
                         <div className="flex w-1/2 flex-col items-start overflow-hidden">
-                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                             GST/HST number
                           </div>
                         </div>
                         <div className="flex w-1/2 flex-col items-start overflow-hidden">
-                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.4)] dark:text-[rgba(255,255,255,0.4)] whitespace-nowrap overflow-hidden text-ellipsis w-full">
+                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.4)] dark:text-[#A2A4A7] whitespace-nowrap overflow-hidden text-ellipsis w-full">
                             Add GST/HST number...
                           </div>
                         </div>
@@ -485,12 +478,12 @@ export default function Page() {
 
                       <div className="flex w-full items-start gap-[4px]">
                         <div className="flex w-1/2 flex-col items-start overflow-hidden">
-                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                             QST number
                           </div>
                         </div>
                         <div className="flex w-1/2 flex-col items-start overflow-hidden">
-                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.4)] dark:text-[rgba(255,255,255,0.4)] whitespace-nowrap overflow-hidden text-ellipsis w-full">
+                          <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.4)] dark:text-[#A2A4A7] whitespace-nowrap overflow-hidden text-ellipsis w-full">
                             Add QST number...
                           </div>
                         </div>
@@ -498,21 +491,19 @@ export default function Page() {
                     </div>
 
                     {/* Payment methods Card */}
-                    <div className="flex flex-1 flex-col items-start gap-[16px] p-[12px_16px_16px] bg-transparent border-[0.666667px] border-[#EEEFF1] dark:border-[#27282B] rounded-[16px]">
+                    <div className="flex flex-1 flex-col items-start gap-[16px] p-[12px_16px_16px] bg-transparent border-[1px] border-[#EEEFF1] dark:border-[#27282B] rounded-[16px]">
                       <div className="flex w-full justify-between items-start gap-[4px]">
                         <div className="flex flex-col items-start">
                           <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
                             Payment methods
                           </div>
-                          <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                          <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                             Manage cards used for subscriptions
                           </div>
                         </div>
-                        <button className="flex px-[8px] py-[4px] justify-center items-center gap-[6px] bg-[#FFFFFF] dark:bg-[#1A1D21] rounded-[8px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0),0_0_2px_0_rgba(28,40,64,0.18),0_1px_3px_0_rgba(24,41,75,0.04)] dark:shadow-[inset_0_0_0_1px_#2F3033,0_0_2px_0_#000000,0_1px_3px_0_rgba(0,0,0,0.08)]">
+                        <button className="flex px-[8px] py-[4px] justify-center items-center gap-[6px] bg-transparent border border-[#E5E7EB] dark:border-[#27282B] hover:bg-[#EEEFF1] dark:hover:bg-[#232529] rounded-[8px] h-[28px]">
                           <div className="flex w-[14px] h-[14px] justify-center items-center">
-                            <svg className="w-[14px] h-[14px] dark:fill-[#EEEFF1]">
-                              <use href="https://app.attio.com/web-assets/assets/icon-defs/ddfeecaafdd96a32.svg#icon" />
-                            </svg>
+                            <Plus className="w-[14px] h-[14px] text-current dark:text-[#EEEFF1]" />
                           </div>
                           <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
                             Add card
@@ -521,12 +512,10 @@ export default function Page() {
                       </div>
 
                       <div className="flex w-full flex-col items-center gap-[12px] pt-[24px]">
-                        <img
-                          src="https://app.attio.com/web-assets/assets/images/illustrations/payment-1acff04fbd776bed.png"
-                          className="w-[107px] h-[72px] dark:opacity-80"
-                          alt="No payment methods"
-                        />
-                        <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.4)] dark:text-[rgba(255,255,255,0.4)] text-center">
+                        <div className="flex w-[48px] h-[48px] justify-center items-center rounded-full bg-[#F8F9FA] dark:bg-[#2F3033] border border-dashed border-[#D1D5DB] dark:border-[#46474A]">
+                          <CreditCard className="w-[20px] h-[20px] text-[rgba(0,0,0,0.4)] dark:text-[#A2A4A7]" />
+                        </div>
+                        <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.4)] dark:text-[#A2A4A7] text-center">
                           You don't have any payment methods
                         </div>
                       </div>
@@ -544,19 +533,19 @@ export default function Page() {
                     </div>
                   </div>
 
-                  <div className="block w-full bg-[#FFFFFF] dark:bg-[#1A1D21] border-[0.666667px] border-[#EEEFF1] dark:border-[#27282B] rounded-[12px]">
+                  <div className="block w-full bg-[#FFFFFF] dark:bg-[#1A1D21] border-[1px] border-[#EEEFF1] dark:border-[#27282B] rounded-[12px]">
                     <div className="flex flex-col">
                       <div className="grid grid-cols-[1fr_120px_100px_48px] px-[14px] py-[10px] items-center gap-[12px] bg-[#FFFFFF] dark:bg-[#1A1D21] border-b-[0.666667px] border-[#EEEFF1] dark:border-[#27282B] rounded-t-[12px]">
-                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                           Invoice
                         </div>
-                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                           Amount
                         </div>
-                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                           Status
                         </div>
-                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]"></div>
+                        <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]"></div>
                       </div>
 
                       <div className="grid grid-cols-[1fr_120px_100px_48px] px-[14px] py-[10px] items-center gap-[12px] min-h-[44px]">
@@ -564,7 +553,7 @@ export default function Page() {
                           <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1] whitespace-nowrap overflow-hidden text-ellipsis">
                             Acme - Oct '24
                           </div>
-                          <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
+                          <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[#A2A4A7]">
                             Oct 22, 2024
                           </div>
                         </div>
@@ -580,10 +569,8 @@ export default function Page() {
                           </div>
                         </div>
                         <div className="flex justify-end pr-[4px]">
-                          <div className="flex w-[20px] h-[20px] justify-center items-center text-[rgba(0,0,0,0.4)] dark:text-[rgba(255,255,255,0.4)]">
-                            <svg className="w-[14px] h-[14px] transform -rotate-90 dark:fill-[#A2A4A7]">
-                              <use href="https://app.attio.com/web-assets/assets/icon-defs/cfeb791cae65bc93.svg#icon" />
-                            </svg>
+                          <div className="flex w-[20px] h-[20px] justify-center items-center text-[rgba(0,0,0,0.4)] dark:text-[#A2A4A7]">
+                            <ChevronDown className="w-[14px] h-[14px] transform -rotate-90 text-[rgba(0,0,0,0.4)] dark:text-[#A2A4A7]" />
                           </div>
                         </div>
                       </div>

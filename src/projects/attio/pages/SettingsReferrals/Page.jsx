@@ -178,7 +178,7 @@ export default function Page() {
 
               {/* Rewards Section */}
               <div className="flex flex-col justify-start items-center w-full gap-[24px]">
-                <div className="flex flex-col flex-grow w-full pt-[16px] overflow-hidden gap-[20px] bg-[#FBFBFB] dark:bg-[#15181C] border-[0.666667px] border-solid border-[#EEEFF1] dark:border-[#27282B] rounded-[18px]">
+                <div className="flex flex-col flex-grow w-full pt-[16px] overflow-hidden gap-[20px] bg-[#FBFBFB] dark:bg-[#15181C] border=[1px] border-solid border-[#EEEFF1] dark:border-[#27282B] rounded-[18px]">
                   <div className="flex justify-start items-center w-full px-[16px] gap-[12px]">
                     <div className="relative block w-[52px] h-[52px]">
                       <svg

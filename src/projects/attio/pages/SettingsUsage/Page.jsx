@@ -120,7 +120,7 @@ export default function Page() {
                     </div>
                   </div>
                   <div className="flex w-full h-[28px] relative items-center">
-                    <div className="flex w-full h-[28px] bg-[#F8F9FA] dark:bg-[#15181C] border-[0.666667px] border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.05)] rounded-[6px]" />
+                    <div className="flex w-full h-[28px] bg-[#F8F9FA] dark:bg-[#15181C] border=[1px] border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.05)] rounded-[6px]" />
                   </div>
                   <div className="flex pl-[4px] items-start gap-[4px]">
                     <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
