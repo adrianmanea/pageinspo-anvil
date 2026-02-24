@@ -43,6 +43,8 @@ export default function Home() {
           name: "Settings Members and Teams Teams Page",
           path: "/attio/settings-members-and-teams-teams-page",
         },
+        { name: "Settings Billing", path: "/attio/settings-billing" },
+        { name: "Settings Usage", path: "/attio/settings-usage" },
       ],
     },
   ];

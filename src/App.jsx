@@ -22,6 +22,8 @@ import AttioSettingsShell from "@/projects/attio/pages/SettingsShell/Page";
 import AttioSettingsMembersAndTeams from "@/projects/attio/pages/SettingsMembersAndTeams/Page";
 import AttioSettingsMembersAndTeamsDialog from "@/projects/attio/pages/SettingsMembersAndTeams/DialogPage";
 import AttioSettingsMembersAndTeamsTeamsPage from "@/projects/attio/pages/SettingsMembersAndTeams/TeamsPage";
+import AttioSettingsBilling from "@/projects/attio/pages/SettingsBilling/Page";
+import AttioSettingsUsage from "@/projects/attio/pages/SettingsUsage/Page";
 
 function App() {
   return (
@@ -91,6 +93,11 @@ function App() {
           path="/attio/settings-members-and-teams-teams-page"
           element={<AttioSettingsMembersAndTeamsTeamsPage />}
         />
+        <Route
+          path="/attio/settings-billing"
+          element={<AttioSettingsBilling />}
+        />
+        <Route path="/attio/settings-usage" element={<AttioSettingsUsage />} />
       </Routes>
     </BrowserRouter>
   );
