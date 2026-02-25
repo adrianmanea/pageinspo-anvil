@@ -36,6 +36,7 @@ Build the **DashboardContent Component** (e.g., `DashboardContent.jsx`).
   - ✅ Use `min-h-[XXpx]` instead of `h-[XXpx]` so containers can grow vertically as needed.
   - ✅ Use `w-full`, `max-w-[...]`, `min-h-[...]`, `flex-1`.
   - ✅ Use **Padding** (`p-[24px]`) and **Gap** (`gap-[16px]`) to create size and structure.
+  - **ROUNDING FRACTIONAL PIXELS**: **ALWAYS** round all physical dimensions (widths, heights, text sizes, padding, margins etc) to the nearest whole number (e.g., round `15.2px` to `15px` or `16px`).
 
 ### 5. Button Reconstruction Checklist
 

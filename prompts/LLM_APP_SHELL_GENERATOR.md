@@ -45,6 +45,7 @@ You must match the **visual style** (colors, typography, spacing, border-radius)
 - **HEIGHTS**: ❌ **NEVER** use fixed heights like `h-[60px]` for layout rows or content text containers. Text will clip on mobile.
   - ✅ ALWAYS replace `h-[...]` with `min-h-[...]` for flexible heights.
   - ✅ Use padding (`p-[24px]`) to define vertical volume.
+- **ROUNDING FRACTIONAL PIXELS**: **ALWAYS** round all physical dimensions (widths, heights, text sizes, padding, margins etc) to the nearest whole number (e.g., round `15.2px` to `15px` or `16px`).
 
 ## 2. Interactive Navigation
 

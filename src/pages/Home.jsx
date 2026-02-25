@@ -3,48 +3,14 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const projects = [
     {
-      title: "Attio",
+      title: "Folk",
       description: "CRM for the next generation",
       color: "bg-pink-500",
-      letter: "A",
+      letter: "F",
       links: [
-        { name: "App Shell", path: "/attio" },
-        { name: "Tasks (Empty)", path: "/attio/tasks-empty" },
-        { name: "Tasks (With Items)", path: "/attio/tasks-with-items" },
-        { name: "Onboarding Step 1", path: "/attio/onboarding-1" },
-        { name: "Onboarding Step 2", path: "/attio/onboarding-2" },
-        { name: "Onboarding Step 3", path: "/attio/onboarding-3" },
-        { name: "Convert Choose Plan", path: "/attio/convert-choose-plan" },
-        { name: "Convert Extras", path: "/attio/convert-extras" },
-        { name: "Convert Summary", path: "/attio/convert-summary" },
-        { name: "Trial Ended", path: "/attio/trial-ended" },
-        { name: "Settings Shell", path: "/attio/settings-shell" },
-        { name: "Settings Account", path: "/attio/settings-account" },
-        { name: "Settings Appearance", path: "/attio/settings-appearance" },
-        {
-          name: "Settings Email and Calendar",
-          path: "/attio/settings-email-and-calendar",
-        },
-        { name: "Settings Referrals", path: "/attio/settings-referrals" },
-        {
-          name: "Settings Notifications",
-          path: "/attio/settings-notifications",
-        },
-        { name: "Settings Workspace", path: "/attio/settings-workspace" },
-        {
-          name: "Settings Members and Teams",
-          path: "/attio/settings-members-and-teams",
-        },
-        {
-          name: "Settings Members and Teams Dialog",
-          path: "/attio/settings-members-and-teams-dialog",
-        },
-        {
-          name: "Settings Members and Teams Teams Page",
-          path: "/attio/settings-members-and-teams-teams-page",
-        },
-        { name: "Settings Billing", path: "/attio/settings-billing" },
-        { name: "Settings Usage", path: "/attio/settings-usage" },
+        { name: "Login Page", path: "/auth" },
+        { name: "Email Login Page", path: "/auth/email-login" },
+        { name: "Email Sent Page", path: "/auth/email-sent" },
       ],
     },
   ];

@@ -32,6 +32,7 @@ Build the **Onboarding Page Component** (e.g., `LoginPage.jsx`, `SignUpPage.jsx`
   - ❌ **NEVER** use fixed `width` or `height` constraints like `h-[50px]` for text/input containers, as text will clip when wrapping.
   - ✅ **ALWAYS** use `min-h-[XXpx]` instead if a specific height is desired.
   - ✅ Use padding (`px-[32px]`) to create inner volume naturally.
+  - **ROUNDING FRACTIONAL PIXELS**: **ALWAYS** round all physical dimensions (widths, heights, text sizes, padding, margins etc) to the nearest whole number (e.g., round `15.2px` to `15px` or `16px`).
 
 ### 4. Form Input Checklist
 

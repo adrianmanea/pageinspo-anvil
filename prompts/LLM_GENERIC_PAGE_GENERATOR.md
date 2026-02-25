@@ -31,6 +31,7 @@ Build the **Page Component** (e.g., `Page.jsx`).
   - ❌ **NEVER** use fixed `width` or `height` for main layout containers or text blocks (e.g., avoid `w-[1200px]`, `h-[50px]`). This causes text clipping on mobile screens.
   - ✅ Use `min-h-[XXpx]` instead of `h-[XXpx]` for containers to allow text wrapping.
   - ✅ Use **Padding** (`p-[24px]`) and **Gap** (`gap-[16px]`) to create size and structure.
+  - **ROUNDING FRACTIONAL PIXELS**: **ALWAYS** round all physical dimensions (widths, heights, text sizes, padding, margins etc) to the nearest whole number (e.g., round `15.2px` to `15px` or `16px`).
 
 ### 4. Element Reconstruction Checklists
 

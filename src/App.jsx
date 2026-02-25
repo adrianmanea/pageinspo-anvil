@@ -1,103 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "@/pages/Home";
-
-// Attio Pages
-import AttioAppShell from "@/projects/attio/pages/AppShell/Page";
-import AttioTasksEmpty from "@/projects/attio/pages/TasksEmpty/Page";
-import AttioTasksWithItems from "@/projects/attio/pages/TasksWithItems/Page";
-import AttioOnboardingStep1 from "@/projects/attio/pages/OnboardingStep1/Page";
-import AttioOnboardingStep2 from "@/projects/attio/pages/OnboardingStep2/Page";
-import AttioOnboardingStep3 from "@/projects/attio/pages/OnboardingStep3/Page";
-import AttioConvertChoosePlan from "@/projects/attio/pages/ConvertChoosePlan/Page";
-import AttioConvertExtras from "@/projects/attio/pages/ConvertExtras/Page";
-import AttioConvertSummary from "@/projects/attio/pages/ConvertSummary/Page";
-import AttioTrialEnded from "@/projects/attio/pages/TrialEnded/Page";
-import AttioSettingsAccount from "@/projects/attio/pages/SettingsAccount/Page";
-import AttioSettingsAppearance from "@/projects/attio/pages/SettingsAppearance/Page";
-import AttioSettingsEmailAndCalendar from "@/projects/attio/pages/SettingsEmailAndCalendar/Page";
-import AttioSettingsReferrals from "@/projects/attio/pages/SettingsReferrals/Page";
-import AttioSettingsNotifications from "@/projects/attio/pages/SettingsNotifications/Page";
-import AttioSettingsWorkspace from "@/projects/attio/pages/SettingsWorkspace/Page";
-import AttioSettingsShell from "@/projects/attio/pages/SettingsShell/Page";
-import AttioSettingsMembersAndTeams from "@/projects/attio/pages/SettingsMembersAndTeams/Page";
-import AttioSettingsMembersAndTeamsDialog from "@/projects/attio/pages/SettingsMembersAndTeams/DialogPage";
-import AttioSettingsMembersAndTeamsTeamsPage from "@/projects/attio/pages/SettingsMembersAndTeams/TeamsPage";
-import AttioSettingsBilling from "@/projects/attio/pages/SettingsBilling/Page";
-import AttioSettingsUsage from "@/projects/attio/pages/SettingsUsage/Page";
+import Auth from "@/projects/folk/pages/Auth/Page";
+import AuthEmailLogin from "@/projects/folk/pages/AuthEmailLogin/Page";
+import AuthEmailSent from "@/projects/folk/pages/AuthEmailSent/Page";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-
-        {/* Attio Project Routes */}
-        <Route path="/attio" element={<AttioAppShell />} />
-        <Route path="/attio/app-shell" element={<AttioAppShell />} />
-        <Route path="/attio/tasks-empty" element={<AttioTasksEmpty />} />
-        <Route
-          path="/attio/tasks-with-items"
-          element={<AttioTasksWithItems />}
-        />
-
-        <Route path="/attio/onboarding-1" element={<AttioOnboardingStep1 />} />
-        <Route path="/attio/onboarding-2" element={<AttioOnboardingStep2 />} />
-        <Route path="/attio/onboarding-3" element={<AttioOnboardingStep3 />} />
-
-        <Route
-          path="/attio/convert-choose-plan"
-          element={<AttioConvertChoosePlan />}
-        />
-        <Route path="/attio/convert-extras" element={<AttioConvertExtras />} />
-        <Route
-          path="/attio/convert-summary"
-          element={<AttioConvertSummary />}
-        />
-
-        <Route path="/attio/settings-shell" element={<AttioSettingsShell />} />
-
-        <Route path="/attio/trial-ended" element={<AttioTrialEnded />} />
-        <Route
-          path="/attio/settings-account"
-          element={<AttioSettingsAccount />}
-        />
-        <Route
-          path="/attio/settings-appearance"
-          element={<AttioSettingsAppearance />}
-        />
-        <Route
-          path="/attio/settings-email-and-calendar"
-          element={<AttioSettingsEmailAndCalendar />}
-        />
-        <Route
-          path="/attio/settings-referrals"
-          element={<AttioSettingsReferrals />}
-        />
-        <Route
-          path="/attio/settings-notifications"
-          element={<AttioSettingsNotifications />}
-        />
-        <Route
-          path="/attio/settings-workspace"
-          element={<AttioSettingsWorkspace />}
-        />
-        <Route
-          path="/attio/settings-members-and-teams"
-          element={<AttioSettingsMembersAndTeams />}
-        />
-        <Route
-          path="/attio/settings-members-and-teams-dialog"
-          element={<AttioSettingsMembersAndTeamsDialog />}
-        />
-        <Route
-          path="/attio/settings-members-and-teams-teams-page"
-          element={<AttioSettingsMembersAndTeamsTeamsPage />}
-        />
-        <Route
-          path="/attio/settings-billing"
-          element={<AttioSettingsBilling />}
-        />
-        <Route path="/attio/settings-usage" element={<AttioSettingsUsage />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/auth/email-login" element={<AuthEmailLogin />} />
+        <Route path="/auth/email-sent" element={<AuthEmailSent />} />
       </Routes>
     </BrowserRouter>
   );
