@@ -20,7 +20,7 @@ Build the **Onboarding Page Component** (e.g., `LoginPage.jsx`, `SignUpPage.jsx`
 
 - **Pure HTML/Tailwind ONLY**: Do NOT use any component libraries (like Shadcn, Radix, or MUI). Use standard HTML elements styled exclusively with Tailwind CSS.
 - **Structure**: You must generate `Page.jsx`, `index.html`, and `main.jsx`.
-- **Icons**: Use **Lucide React** (`import { Mail, Lock, Eye } from 'lucide-react'`) by default. For social icons, use `react-icons` (e.g., `import { FaGoogle, FaGithub } from 'react-icons/fa'`).
+- **Icons**: Use **Lucide React** (`import { Mail, Lock, Eye } from 'lucide-react'`) by default. You MUST replace ALL custom/external SVGs from the capture with the closest matching Lucide React icon to avoid relying on external resources. For social icons, use `react-icons` (e.g., `import { FaGoogle, FaGithub } from 'react-icons/fa'`).
 
 ### 3. Responsive Layout & Sizing
 
@@ -94,7 +94,7 @@ You must generate **3 files** inside a specific folder structure.
 
 Standard Vite entry HTML.
 
-- Title: `[Page Name] - PageInspo`
+- Title: `[Page Name] - Acme`
 - Script: `src="./main.jsx"`
 
 ### 2. `main.jsx`
@@ -122,7 +122,7 @@ The main React component containing the onboarding page implementation.
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LoginPage - PageInspo</title>
+    <title>LoginPage - Acme</title>
   </head>
   <body>
     <div id="root"></div>

@@ -428,7 +428,7 @@ export default function Page() {
                         </div>
                         <div className="flex w-1/2 flex-col items-start overflow-hidden">
                           <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1] whitespace-nowrap overflow-hidden text-ellipsis w-full">
-                            adrian.manea@devias.io
+                            john.doe@acme.com
                           </div>
                         </div>
                       </div>

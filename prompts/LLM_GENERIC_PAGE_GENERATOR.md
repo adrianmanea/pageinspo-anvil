@@ -20,7 +20,7 @@ Build the **Page Component** (e.g., `Page.jsx`).
 
 - **Pure HTML/Tailwind ONLY**: Do NOT use any component libraries (like Shadcn, Radix, or MUI). Use standard HTML elements (`div`, `table`, `form`, `input`, `button`) styled exclusively with Tailwind CSS.
 - **Structure**: You must generate `Page.jsx`, `index.html`, and `main.jsx`.
-- **Icons**: Use **Lucide React** (`import { User, Settings } from 'lucide-react'`) by default. If a specific icon style (e.g., solid/filled brand icons) is required to equal the capture and Lucide doesn't fit, you may use `react-icons` (e.g., `import { FaGoogle } from 'react-icons/fa'`).
+- **Icons**: Use **Lucide React** (`import { User, Settings } from 'lucide-react'`) by default. You MUST replace ALL custom/external SVGs from the capture with the closest matching Lucide React icon to avoid relying on external resources. If a specific icon style (e.g., solid/filled brand icons) is required to equal the capture and Lucide doesn't fit, you may use `react-icons` (e.g., `import { FaGoogle } from 'react-icons/fa'`).
 
 ### 3. Responsive Layout & Sizing
 
@@ -74,7 +74,7 @@ You must generate **3 files** inside a specific folder structure: `src/projects/
 
 Standard Vite entry HTML.
 
-- Title: `[Page Name] - PageInspo`
+- Title: `[Page Name] - Acme`
 - Script: `src="./main.jsx"`
 
 ### 2. `main.jsx`
@@ -102,7 +102,7 @@ The main React component containing the page implementation.
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard - PageInspo</title>
+    <title>Dashboard - Acme</title>
   </head>
   <body>
     <div id="root"></div>

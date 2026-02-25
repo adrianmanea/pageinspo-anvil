@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Plus, Zap, HelpCircle, Info, Hash, User } from "lucide-react";
 
 export default function Page() {
   const [theme, setTheme] = useState(() => {
@@ -17,28 +18,24 @@ export default function Page() {
   }, [theme]);
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-[#FFFFFF] dark:bg-transparent font-['Inter'] items-center">
+    <div className="flex flex-col w-full min-h-screen bg-[#FFFFFF] dark:bg-[#15181C] font-['Inter'] items-center">
       {/* Top Bar */}
       <div className="flex w-full h-[49px] min-h-[49px] px-[12px] justify-between items-center border-b-[0.666667px] border-[#EEEFF1] dark:border-[#27282B]">
         <ol className="flex max-w-full items-center gap-[4px] overflow-hidden">
           <li className="flex items-center">
             <div className="flex relative items-center gap-[4px] rounded-[4px]">
               <div className="flex px-[4px] py-[2px] items-center gap-[6px]">
-                <svg className="w-[14px] h-[14px]">
-                  <use href="https://app.attio.com/web-assets/assets/icon-defs/0f9a03be3e69cc1f.svg#icon" />
-                </svg>
+                <Zap className="w-[14px] h-[14px] text-current dark:text-[#FFFFFF] dark:opacity-75" />
                 <span className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1] whitespace-nowrap overflow-hidden text-ellipsis">
-                  Ask Attio usage
+                  Ask Acme usage
                 </span>
               </div>
             </div>
           </li>
         </ol>
-        <button className="flex w-[28px] h-[28px] p-[7px] justify-center items-center gap-[6px] rounded-[8px] text-[rgba(0,0,0,1)] dark:text-white">
+        <button className="flex w-[28px] h-[28px] p-[7px] justify-center items-center gap-[6px] rounded-[8px] text-[rgba(0,0,0,1)] dark:text-white hover:bg-[#F8F9FA] dark:hover:bg-[#FFFFFF]/10">
           <div className="flex w-[14px] h-[14px] justify-center items-center">
-            <svg className="w-[14px] h-[14px]">
-              <use href="https://app.attio.com/web-assets/assets/icon-defs/56abfcf34cedbdce.svg#icon" />
-            </svg>
+            <HelpCircle className="w-[14px] h-[14px] text-current dark:text-[#FFFFFF]" />
           </div>
         </button>
       </div>
@@ -51,11 +48,11 @@ export default function Page() {
             <div className="flex flex-col gap-[2px]">
               <div className="flex items-center gap-[8px]">
                 <div className="text-[24px] font-[600] leading-[28px] tracking-[-0.48px] text-[#242529] dark:text-[#EEEFF1]">
-                  Ask Attio usage
+                  Ask Acme usage
                 </div>
               </div>
               <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
-                View and configure use for Ask Attio
+                View and configure use for Ask Acme
               </div>
             </div>
           </div>
@@ -81,7 +78,7 @@ export default function Page() {
 
                   <div className="flex flex-col items-start gap-[6px] flex-1">
                     <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
-                      Members using Ask Attio
+                      Members using Ask Acme
                     </div>
                     <div className="flex items-baseline gap-[4px]">
                       <div className="text-[20px] font-[600] leading-[24px] tracking-[-0.4px] text-[#242529] dark:text-[#EEEFF1]">
@@ -116,11 +113,11 @@ export default function Page() {
                 <div className="flex px-[12px] py-[10px] flex-col items-start gap-[10px]">
                   <div className="flex px-[4px] flex-col items-start gap-[4px]">
                     <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
-                      Workspace credits used for Ask Attio
+                      Workspace credits used for Ask Acme
                     </div>
                   </div>
                   <div className="flex w-full h-[28px] relative items-center">
-                    <div className="flex w-full h-[28px] bg-[#F8F9FA] dark:bg-[#15181C] border=[1px] border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.05)] rounded-[6px]" />
+                    <div className="flex w-full h-[28px] bg-[#F8F9FA] dark:bg-[#15181C] border-[0.666667px] border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.05)] rounded-[6px]" />
                   </div>
                   <div className="flex pl-[4px] items-start gap-[4px]">
                     <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
@@ -140,9 +137,7 @@ export default function Page() {
                       <div className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[#242529] dark:text-[#EEEFF1]">
                         Set a limit
                       </div>
-                      <svg className="w-[14px] h-[14px]">
-                        <use href="https://app.attio.com/web-assets/assets/icon-defs/36eefe86f01b76b0.svg#icon" />
-                      </svg>
+                      <Info className="w-[14px] h-[14px] text-[rgba(0,0,0,0.4)] dark:text-[#A2A4A7]" />
                     </div>
                   </div>
 
@@ -178,17 +173,13 @@ export default function Page() {
                         style={{ gridTemplateColumns: "1fr 250px" }}
                       >
                         <div className="flex items-center gap-[6px]">
-                          <svg className="w-[14px] h-[14px]">
-                            <use href="https://app.attio.com/web-assets/assets/icon-defs/c894fcc768162fe4.svg#icon" />
-                          </svg>
+                          <User className="w-[14px] h-[14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]" />
                           <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
                             Member
                           </div>
                         </div>
                         <div className="flex items-center gap-[6px]">
-                          <svg className="w-[14px] h-[14px]">
-                            <use href="https://app.attio.com/web-assets/assets/icon-defs/9c18b17242f493d4.svg#icon" />
-                          </svg>
+                          <Hash className="w-[14px] h-[14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]" />
                           <div className="text-[12px] font-[500] leading-[16px] tracking-[-0.12px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)]">
                             Usage
                           </div>
@@ -212,7 +203,7 @@ export default function Page() {
                             John Doe (You)
                           </span>
                           <span className="text-[14px] font-[500] leading-[20px] tracking-[-0.14px] text-[rgba(0,0,0,0.55)] dark:text-[rgba(255,255,255,0.55)] whitespace-nowrap overflow-hidden text-ellipsis">
-                            adrian.manea@devias.io
+                            john@acme.com
                           </span>
                         </div>
                         <div className="flex flex-col items-start gap-[4px]">

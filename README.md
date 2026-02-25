@@ -13,10 +13,21 @@ The workbench for PageInspo component development. This project allows for devel
     ```
 
 2.  **Run development server**:
+
     ```bash
     npm run dev
     ```
+
     Access the dashboard at `http://localhost:5173`.
+
+3.  **Build a project**:
+    `bash
+npm run build:attio
+`
+    Access the built project at `http://localhost:5173/dist/attio`.
+    You can now use pnpm build:project attio <PageFolder> to seamlessly build a single page instead of the entire project. For example, running pnpm build:project attio SettingsBilling just completed in 3.4 seconds (compared to nearly 20 seconds for the full build)!
+
+You can still use pnpm build:project attio without arguments to compile everything and perform a fresh clean of the dist folder as usual.
 
 ## Project Structure
 

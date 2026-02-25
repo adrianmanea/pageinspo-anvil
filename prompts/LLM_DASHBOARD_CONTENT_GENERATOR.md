@@ -20,7 +20,7 @@ Build the **DashboardContent Component** (e.g., `DashboardContent.jsx`).
 
 - **Pure HTML/Tailwind ONLY**: Do NOT use any component libraries (like Shadcn, Radix, or MUI). Use standard HTML elements (`div`, `table`, `form`, `input`, `button`) styled exclusively with Tailwind CSS.
 - **Single File**: Keep everything in one file for this pass. Do not create separate sub-components unless absolutely necessary for recursion.
-- **Icons**: Use **Lucide React** (`import { User, Settings } from 'lucide-react'`) by default. If a specific icon style (e.g. solid/filled) is required to equal the capture and Lucide doesn't fit, you may use `react-icons` (e.g. `import { FaUser } from 'react-icons/fa'`).
+- **Icons**: Use **Lucide React** (`import { User, Settings } from 'lucide-react'`) by default. You MUST replace ALL custom/external SVGs from the capture with the closest matching Lucide React icon to avoid relying on external resources. If a specific icon style (e.g. solid/filled) is required to equal the capture and Lucide doesn't fit, you may use `react-icons` (e.g. `import { FaUser } from 'react-icons/fa'`).
 
 ### 3. Deep Detail Focus
 

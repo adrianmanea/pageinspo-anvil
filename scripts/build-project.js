@@ -7,9 +7,10 @@ import { spawn } from 'child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectName = process.argv[2];
+const targetPageName = process.argv[3]; // Optional target page
 
 if (!projectName) {
-  console.error('Please specify a project name: npm run build:project <name>');
+  console.error('Please specify a project name: npm run build:project <name> [targetPage]');
   process.exit(1);
 }
 
@@ -23,11 +24,16 @@ if (projectName === 'attio') {
   const pagesDir = path.resolve(rootDir, 'src/projects/attio/pages');
   const distDir = path.resolve(rootDir, 'dist/attio');
 
-  // Clear output directory once at the start
-  if (fs.existsSync(distDir)) {
-    fs.rmSync(distDir, { recursive: true, force: true });
+  // Clear output directory once at the start ONLY if we are building the full project
+  if (!targetPageName) {
+    if (fs.existsSync(distDir)) {
+      fs.rmSync(distDir, { recursive: true, force: true });
+    }
+    fs.mkdirSync(distDir, { recursive: true });
+  } else {
+    // Make sure the top level dir exists
+    if (!fs.existsSync(distDir)) fs.mkdirSync(distDir, { recursive: true });
   }
-  fs.mkdirSync(distDir, { recursive: true });
 
   // Find all page directories
   if (!fs.existsSync(pagesDir)) {
@@ -35,9 +41,17 @@ if (projectName === 'attio') {
     process.exit(1);
   }
 
-  const pages = fs.readdirSync(pagesDir).filter(f => {
+  let pages = fs.readdirSync(pagesDir).filter(f => {
     return fs.statSync(path.join(pagesDir, f)).isDirectory();
   });
+
+  if (targetPageName) {
+    if (!pages.includes(targetPageName)) {
+      console.error(`Error: Page '${targetPageName}' not found in ${pagesDir}`);
+      process.exit(1);
+    }
+    pages = [targetPageName];
+  }
 
   for (const pageName of pages) {
     console.log(`\nBuilding folder: ${pageName}...`);

@@ -66,7 +66,7 @@ You must match the **visual style** (colors, typography, spacing, border-radius)
 
 ## 5. Icon Mapping
 
-- Replace SVGs from the capture with the closest matching **Lucide React** icon.
+- You MUST replace ALL custom/external SVGs from the capture with the closest matching **Lucide React** icon to avoid relying on external resources.
 - Maintain the same size, color, and stroke width as the original SVG.
 - Use arbitrary values for icon sizing: `w-[20px] h-[20px]` instead of `w-5 h-5`.
 
