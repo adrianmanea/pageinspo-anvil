@@ -11,6 +11,8 @@ export default function Home() {
         { name: "Login Page", path: "/auth" },
         { name: "Email Login Page", path: "/auth/email-login" },
         { name: "Email Sent Page", path: "/auth/email-sent" },
+        { name: "Contacts Shell", path: "/contacts-shell" },
+        { name: "Search Contacts", path: "/search-contacts" },
       ],
     },
   ];

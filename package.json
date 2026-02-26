@@ -9,8 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build:project": "node scripts/build-project.js",
-    "build:lib": "node scripts/build-library.js",
-    "build:boilerplate": "vite build -c vite.config.boilerplate.js"
+    "build:lib": "node scripts/build-library.js"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.16",

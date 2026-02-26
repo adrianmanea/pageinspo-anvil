@@ -17,12 +17,12 @@ if (!projectName) {
 const rootDir = path.resolve(__dirname, '..');
 const customConfig = path.resolve(rootDir, `vite.config.${projectName}.js`);
 
-// Special handling for attio due to multi-page structure
-if (projectName === 'attio') {
-  console.log('Building attio pages (new structure)...');
+// Special handling for attio and folk due to multi-page structure
+if (['attio', 'folk'].includes(projectName)) {
+  console.log(`Building ${projectName} pages (multi-page structure)...`);
 
-  const pagesDir = path.resolve(rootDir, 'src/projects/attio/pages');
-  const distDir = path.resolve(rootDir, 'dist/attio');
+  const pagesDir = path.resolve(rootDir, `src/projects/${projectName}/pages`);
+  const distDir = path.resolve(rootDir, `dist/${projectName}`);
 
   // Clear output directory once at the start ONLY if we are building the full project
   if (!targetPageName) {

@@ -66,21 +66,17 @@ export default function Page() {
               <div className="mt-[24px] text-center text-[13px] font-[400] leading-[18px] tracking-[-0.026px] text-[#626262] dark:text-[#B4B4B4]">
                 By signing up you agree to the
                 <br />
-                folk{" "}
+                Acme{" "}
                 <a
-                  href="https://www.folk.app/privacy-policy"
+                  href="#"
                   className="font-[400] text-[#626262] dark:text-[#B4B4B4] underline decoration-[rgba(0,0,0,0.15)] dark:decoration-[#6E6E6E] hover:text-[#202020] dark:hover:text-[#FFFFFF]"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Privacy Policy
                 </a>{" "}
                 and{" "}
                 <a
-                  href="https://www.folk.app/terms-of-use"
+                  href="#"
                   className="font-[400] text-[#626262] dark:text-[#B4B4B4] underline decoration-[rgba(0,0,0,0.15)] dark:decoration-[#6E6E6E] hover:text-[#202020] dark:hover:text-[#FFFFFF]"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Terms of Use
                 </a>
@@ -90,7 +86,7 @@ export default function Page() {
         </div>
 
         {/* Right Column (Product Preview) */}
-        <div className="hidden bg-[#F7F3EF] dark:bg-gradient-to-tl dark:from-[#0E0E0E] dark:via-[#0E0E0E] dark:via-[60%] dark:to-[#363636] p-[80px] lg:flex lg:flex-col lg:items-center xl:p-[80px_120px]">
+        <div className="hidden bg-[#F7F3EF] dark:bg-gradient-to-tl dark:from-[#0E0E0E] dark:via-[#0E0E0E] dark:via-[60%] dark:to-[#363636] p-[80px] lg:flex lg:flex-col lg:items-center lg:justify-center xl:p-[80px_120px]">
           {/* Glass Tile Background Image (Mocked out with inline style or class if desired, using basic Tailwind bg for now based on style capture) */}
           <div className="flex w-full max-w-[1010.67px] flex-col overflow-hidden">
             <div className="flex flex-col gap-[64px]">
@@ -99,7 +95,7 @@ export default function Page() {
                 <img
                   src="https://hynfzdmpqbjpuanliuqv.supabase.co/storage/v1/object/public/images/login-product-preview.webp"
                   alt="Product preview"
-                  className="w-full rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[0px_1px_3px_0px_rgba(0,0,0,0.24)]"
+                  className="w-full rounded-[8px]"
                 />
               </div>
 
@@ -109,7 +105,7 @@ export default function Page() {
                   Trusted by 3000+ companies around the world
                 </div>
 
-                <div className="flex items-center gap-[40px]">
+                <div className="flex flex-wrap items-center gap-[40px]">
                   {/* Product Hunt */}
                   <div className="flex items-center gap-[8px]">
                     <span className="text-[28px] font-medium leading-[28px] tracking-[-0.026px] text-[#412F1D] dark:text-[#EEEEEE]">

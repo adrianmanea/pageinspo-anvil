@@ -97,7 +97,7 @@ export default function Page() {
         </div>
 
         {/* Right Column (Product Preview) */}
-        <div className="hidden bg-[#F7F3EF] dark:bg-gradient-to-tl dark:from-[#0E0E0E] dark:via-[#0E0E0E] dark:via-[60%] dark:to-[#363636] p-[80px] lg:flex lg:flex-col lg:items-center xl:p-[80px_120px]">
+        <div className="hidden bg-[#F7F3EF] dark:bg-gradient-to-tl dark:from-[#0E0E0E] dark:via-[#0E0E0E] dark:via-[60%] dark:to-[#363636] p-[80px] lg:flex lg:flex-col lg:items-center lg:justify-center xl:p-[80px_120px]">
           {/* Glass Tile Background Image (Mocked out with inline style or class if desired, using basic Tailwind bg for now based on style capture) */}
           <div className="flex w-full max-w-[1010.67px] flex-col overflow-hidden">
             <div className="flex flex-col gap-[64px]">
@@ -106,7 +106,7 @@ export default function Page() {
                 <img
                   src="https://hynfzdmpqbjpuanliuqv.supabase.co/storage/v1/object/public/images/login-product-preview.webp"
                   alt="Product preview"
-                  className="w-full rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[0px_1px_3px_0px_rgba(0,0,0,0.24)]"
+                  className="w-full rounded-[8px]"
                 />
               </div>
 

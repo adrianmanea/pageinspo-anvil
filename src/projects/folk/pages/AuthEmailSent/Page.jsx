@@ -40,7 +40,7 @@ export default function Page() {
               <p className="text-center text-[13px] font-[400] leading-[18px] tracking-[-0.026px] text-[#626262] dark:text-[#B4B4B4]">
                 We've sent a confirmation email to{" "}
                 <span className="text-[#202020] dark:text-[#EEEEEE]">
-                  adrianmanea.s@gmail.com
+                  johndoe@example.com
                 </span>
                 , please click the link to confirm your account.
               </p>
@@ -63,7 +63,7 @@ export default function Page() {
         </div>
 
         {/* Right Column (Product Preview) */}
-        <div className="hidden bg-[#F7F3EF] dark:bg-gradient-to-tl dark:from-[#0E0E0E] dark:via-[#0E0E0E] dark:via-[60%] dark:to-[#363636] p-[80px] lg:flex lg:flex-col lg:items-center xl:p-[80px_120px]">
+        <div className="hidden bg-[#F7F3EF] dark:bg-gradient-to-tl dark:from-[#0E0E0E] dark:via-[#0E0E0E] dark:via-[60%] dark:to-[#363636] p-[80px] lg:flex lg:flex-col lg:items-center lg:justify-center xl:p-[80px_120px]">
           {/* Glass Tile Background Image (Mocked out with inline style or class if desired, using basic Tailwind bg for now based on style capture) */}
           <div className="flex w-full max-w-[1010.67px] flex-col overflow-hidden">
             <div className="flex flex-col gap-[64px]">
@@ -72,7 +72,7 @@ export default function Page() {
                 <img
                   src="https://hynfzdmpqbjpuanliuqv.supabase.co/storage/v1/object/public/images/login-product-preview.webp"
                   alt="Product preview"
-                  className="w-full rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.06)] dark:shadow-[0px_1px_3px_0px_rgba(0,0,0,0.24)]"
+                  className="w-full rounded-[8px]"
                 />
               </div>
 
@@ -82,7 +82,7 @@ export default function Page() {
                   Trusted by 3000+ companies around the world
                 </div>
 
-                <div className="flex items-center gap-[40px]">
+                <div className="flex flex-wrap items-center gap-[40px]">
                   {/* Product Hunt */}
                   <div className="flex items-center gap-[8px]">
                     <span className="text-[28px] font-medium leading-[28px] tracking-[-0.026px] text-[#412F1D] dark:text-[#EEEEEE]">

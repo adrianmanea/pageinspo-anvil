@@ -29,6 +29,20 @@ npm run build:attio
 
 You can still use pnpm build:project attio without arguments to compile everything and perform a fresh clean of the dist folder as usual.
 
+4. **Create vite config for new project**
+
+```bash
+cp vite.config.attio.js vite.config.<project>.js
+```
+
+5. **Add build script to package.json**
+
+```json
+"scripts": {
+  "build:<project>": "vite build -c vite.config.<project>.js"
+}
+```
+
 ## Project Structure
 
 - `src/pages/`: Main dashboard pages.
