@@ -36,44 +36,261 @@ export default function Page() {
     }
   }, [theme]);
 
-  const contacts = [
+  const supabaseBaseUrl =
+    "https://hynfzdmpqbjpuanliuqv.supabase.co/storage/v1/object/public/images/";
+
+  const getInitials = (name) => {
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase()
+      .substring(0, 2);
+  };
+
+  const avatarColors = [
+    "bg-[#FFE2DD] text-[#5D1715] border-[#FFC4BC] dark:bg-[#5D1715] dark:text-[#FFE2DD] dark:border-[#8A2C29]",
+    "bg-[#D3E5EF] text-[#183347] border-[#A6CBE1] dark:bg-[#183347] dark:text-[#D3E5EF] dark:border-[#224A66]",
+    "bg-[#DBEDDB] text-[#1C3829] border-[#B7DBB7] dark:bg-[#1C3829] dark:text-[#DBEDDB] dark:border-[#285A43]",
+    "bg-[#FDECC8] text-[#402C1B] border-[#FBE09B] dark:bg-[#402C1B] dark:text-[#FDECC8] dark:border-[#6B4E38]",
+    "bg-[#E8DEEE] text-[#412454] border-[#D1BDDF] dark:bg-[#412454] dark:text-[#E8DEEE] dark:border-[#5E3A78]",
+    "bg-[#F5E0E9] text-[#4C2337] border-[#EBC1D3] dark:bg-[#4C2337] dark:text-[#F5E0E9] dark:border-[#733A56]",
+    "bg-[#EAE4F2] text-[#36294A] border-[#D5C9E5] dark:bg-[#36294A] dark:text-[#EAE4F2] dark:border-[#4F3C6D]",
+    "bg-[#FADEC9] text-[#49290E] border-[#F5BD93] dark:bg-[#49290E] dark:text-[#FADEC9] dark:border-[#70421A]",
+  ];
+
+  const getAvatarColor = (name) => {
+    let hash = 0;
+    for (let i = 0; i < name.length; i++) {
+      hash = name.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return avatarColors[Math.abs(hash) % avatarColors.length];
+  };
+
+  const rawContacts = [
     {
       id: "025deb2b",
-      name: "Jane Doe",
-      avatar: User,
+      name: "Brian Chesky",
+      avatar: "BC",
       company: {
-        name: "Acme Corp",
-        logoUrl: "https://placehold.co/32x32/E8EAED/9AA0A6.svg?text=A",
+        name: "Airbnb",
+        logoUrl: `${supabaseBaseUrl}airbnb.png`,
       },
-      title: "Sales Rep",
-      email: "jane.doe@acme.com",
-      group: { name: "Leads", emoji: "🤑" },
+      title: "Co-Founder & CEO",
+      email: "brian@airbnb.com",
+      group: { name: "CEOs", emoji: "👑" },
     },
     {
       id: "10e677f6",
-      name: "John Smith",
+      name: "Lisa Su",
       avatar: User,
       company: {
-        name: "Acme Corp",
-        logoUrl: "https://placehold.co/32x32/E8EAED/9AA0A6.svg?text=A",
+        name: "AMD",
+        logoUrl: `${supabaseBaseUrl}amd.png`,
       },
-      title: "Sales Manager",
-      email: "john.smith@acme.com",
-      group: { name: "Leads", emoji: "🤑" },
+      title: "President & CEO",
+      email: "lisa.su@amd.com",
+      group: { name: "Advisors", emoji: "🧠" },
     },
     {
       id: "21867ec5",
-      name: "Alice Johnson",
+      name: "Naval Ravikant",
       avatar: User,
       company: {
-        name: "Acme Corp",
-        logoUrl: "https://placehold.co/32x32/E8EAED/9AA0A6.svg?text=A",
+        name: "AngelList",
+        logoUrl: `${supabaseBaseUrl}angel_list.png`,
       },
-      title: "Account Executive",
-      email: "alice.johnson@acme.com",
-      group: { name: "Leads", emoji: "🤑" },
+      title: "Co-Founder",
+      email: "naval@angellist.com",
+      group: { name: "Investors", emoji: "💸" },
+    },
+    {
+      id: "3a9b8c7d",
+      name: "Tim Cook",
+      avatar: User,
+      company: {
+        name: "Apple",
+        logoUrl: `${supabaseBaseUrl}app_store.png`,
+      },
+      title: "CEO",
+      email: "tcook@apple.com",
+      group: { name: "CEOs", emoji: "👑" },
+    },
+    {
+      id: "4b8c7d6e",
+      name: "Michael Dell",
+      avatar: User,
+      company: {
+        name: "Dell Technologies",
+        logoUrl: `${supabaseBaseUrl}dell.png`,
+      },
+      title: "Chairman and CEO",
+      email: "michael@dell.com",
+      group: { name: "Partners", emoji: "🤝" },
+    },
+    {
+      id: "5c7d6e8f",
+      name: "Collis Ta'eed",
+      avatar: User,
+      company: {
+        name: "Envato",
+        logoUrl: `${supabaseBaseUrl}envato.png`,
+      },
+      title: "Co-Founder",
+      email: "collis@envato.com",
+      group: { name: "Designers", emoji: "🎨" },
+    },
+    {
+      id: "6d8e7f9a",
+      name: "Sundar Pichai",
+      avatar: User,
+      company: {
+        name: "Google",
+        logoUrl: `${supabaseBaseUrl}google.png`,
+      },
+      title: "CEO",
+      email: "sundar@google.com",
+      group: { name: "CEOs", emoji: "👑" },
+    },
+    {
+      id: "7e9f8a0b",
+      name: "Arvind Krishna",
+      avatar: User,
+      company: {
+        name: "IBM",
+        logoUrl: `${supabaseBaseUrl}ibm.png`,
+      },
+      title: "Chairman and CEO",
+      email: "arvind@ibm.com",
+      group: { name: "Partners", emoji: "🤝" },
+    },
+    {
+      id: "8f0a9b1c",
+      name: "Pat Gelsinger",
+      avatar: User,
+      company: {
+        name: "Intel",
+        logoUrl: `${supabaseBaseUrl}intel.png`,
+      },
+      title: "CEO",
+      email: "pat.gelsinger@intel.com",
+      group: { name: "Vendors", emoji: "📦" },
+    },
+    {
+      id: "9a1b0c2d",
+      name: "Yancey Strickler",
+      avatar: User,
+      company: {
+        name: "Kickstarter",
+        logoUrl: `${supabaseBaseUrl}kickstarter.png`,
+      },
+      title: "Co-Founder",
+      email: "yancey@kickstarter.com",
+      group: { name: "Founders", emoji: "🚀" },
+    },
+    {
+      id: "a2b1c0d3",
+      name: "Ev Williams",
+      avatar: "EW",
+      company: {
+        name: "Medium",
+        logoUrl: `${supabaseBaseUrl}medium.png`,
+      },
+      title: "Founder",
+      email: "ev@medium.com",
+      group: { name: "Media", emoji: "📰" },
+    },
+    {
+      id: "b3c2d1e4",
+      name: "Phil Spencer",
+      avatar: User,
+      company: {
+        name: "Xbox",
+        logoUrl: `${supabaseBaseUrl}ms_xbox.png`,
+      },
+      title: "CEO, Microsoft Gaming",
+      email: "phil@xbox.com",
+      group: { name: "Gaming", emoji: "🎮" },
+    },
+    {
+      id: "c4d3e2f5",
+      name: "Jim Ryan",
+      avatar: User,
+      company: {
+        name: "PlayStation",
+        logoUrl: `${supabaseBaseUrl}playstation.png`,
+      },
+      title: "President & CEO",
+      email: "jim@playstation.com",
+      group: { name: "Gaming", emoji: "🎮" },
+    },
+    {
+      id: "d5e4f3a6",
+      name: "Ryan Hoover",
+      avatar: User,
+      company: {
+        name: "Product Hunt",
+        logoUrl: `${supabaseBaseUrl}product_hunt.png`,
+      },
+      title: "Founder",
+      email: "ryan@producthunt.com",
+      group: { name: "Founders", emoji: "🚀" },
+    },
+    {
+      id: "e6f5a4b7",
+      name: "Gabe Newell",
+      avatar: User,
+      company: {
+        name: "Valve",
+        logoUrl: `${supabaseBaseUrl}steam.png`,
+      },
+      title: "President",
+      email: "gaben@valvesoftware.com",
+      group: { name: "Gaming", emoji: "🎮" },
+    },
+    {
+      id: "f7a6b5c8",
+      name: "Garrett Camp",
+      avatar: User,
+      company: {
+        name: "StumbleUpon",
+        logoUrl: `${supabaseBaseUrl}stumble_upon.png`,
+      },
+      title: "Co-Founder",
+      email: "garrett@stumbleupon.com",
+      group: { name: "Founders", emoji: "🚀" },
+    },
+    {
+      id: "08b7c6d9",
+      name: "Megan Rose Dickey",
+      avatar: User,
+      company: {
+        name: "TechCrunch",
+        logoUrl: `${supabaseBaseUrl}tech_crunch.png`,
+      },
+      title: "Reporter",
+      email: "megan@techcrunch.com",
+      group: { name: "Media", emoji: "📰" },
+    },
+    {
+      id: "19c8d7e0",
+      name: "Matt Goldberg",
+      avatar: User,
+      company: {
+        name: "Tripadvisor",
+        logoUrl: `${supabaseBaseUrl}tripadvisor.png`,
+      },
+      title: "CEO",
+      email: "matt@tripadvisor.com",
+      group: { name: "Tourism", emoji: "✈️" },
     },
   ];
+
+  const contacts = rawContacts.map((c) => ({
+    ...c,
+    avatar: getInitials(c.name),
+    colorClass: getAvatarColor(c.name),
+  }));
 
   return (
     <div className="flex flex-col h-screen w-full bg-[#ffffff] dark:bg-[#191919] font-sans text-[#202020] dark:text-[#EEEEEE] text-[13px] overflow-hidden">
@@ -124,7 +341,7 @@ export default function Page() {
             <li
               key={contact.id}
               onClick={() => setSelectedContact(contact)}
-              className="group flex flex-row items-center relative h-[70px] w-full px-[24px] py-[16px] gap-[12px] hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer"
+              className="group flex flex-row items-center relative h-[70px] w-full px-[24px] py-[16px] gap-[12px] border-b border-[#f0f0f0] dark:border-[#333333] hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer"
             >
               {/* Avatar & Checkbox Stack */}
               <div className="relative flex items-center justify-center w-[32px] h-[32px] shrink-0">
@@ -144,9 +361,15 @@ export default function Page() {
                   className="absolute inset-0 m-auto w-[16px] h-[16px] border border-[#cecece] dark:border-[#4A4A4A] rounded-[4px] bg-white dark:bg-[#191919] cursor-pointer accent-[#202020] dark:accent-[#EEEEEE] opacity-0 group-hover:opacity-100 checked:opacity-100 z-10 transition-opacity"
                 />
                 <div
-                  className={`absolute inset-0 w-full h-full rounded-full bg-white dark:bg-[#191919] overflow-hidden transition-opacity z-0 pointer-events-none flex items-center justify-center ${selectedContactIds.includes(contact.id) ? "opacity-0" : "group-hover:opacity-0 opacity-100"}`}
+                  className={`absolute inset-0 w-full h-full rounded-full overflow-hidden transition-opacity z-0 pointer-events-none flex items-center justify-center border ${contact.colorClass} ${selectedContactIds.includes(contact.id) ? "opacity-0" : "group-hover:opacity-0 opacity-100"}`}
                 >
-                  <contact.avatar className="w-full h-full p-1.5 text-[#626262] dark:text-[#B4B4B4]" />
+                  {typeof contact.avatar === "string" ? (
+                    <span className="text-[12px] font-[500] leading-none tracking-tight">
+                      {contact.avatar}
+                    </span>
+                  ) : (
+                    <contact.avatar className="w-full h-full p-1.5 text-[#626262] dark:text-[#B4B4B4]" />
+                  )}
                 </div>
               </div>
 
@@ -252,8 +475,16 @@ export default function Page() {
             {/* Header Area */}
             <div className="flex flex-col px-[24px] pt-[16px] pb-[4px] gap-[24px] shrink-0 bg-white dark:bg-[#191919]">
               <div className="flex items-center h-[56px]">
-                <div className="w-[56px] h-[56px] rounded-full bg-[#E1E1E1] dark:bg-[#333333] flex items-center justify-center overflow-hidden shrink-0">
-                  <selectedContact.avatar className="w-[24px] h-[24px] text-[#626262] dark:text-[#B4B4B4]" />
+                <div
+                  className={`w-[56px] h-[56px] rounded-full flex items-center justify-center overflow-hidden shrink-0 border ${selectedContact.colorClass}`}
+                >
+                  {typeof selectedContact.avatar === "string" ? (
+                    <span className="text-[20px] font-[500] leading-none tracking-tight">
+                      {selectedContact.avatar}
+                    </span>
+                  ) : (
+                    <selectedContact.avatar className="w-[24px] h-[24px] text-[#626262] dark:text-[#B4B4B4]" />
+                  )}
                 </div>
                 <div className="flex flex-col ml-[16px] flex-1 justify-center">
                   <div className="flex items-center h-[30px] gap-[4px]">
