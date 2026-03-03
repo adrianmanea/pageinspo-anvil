@@ -42,18 +42,19 @@ Build the **DashboardContent Component** (e.g., `DashboardContent.jsx`).
 
 For EVERY button, you MUST explicitly match:
 
-| Property      | Example                                              |
-| ------------- | ---------------------------------------------------- |
-| Background    | `bg-[#1F2937]` + `hover:bg-[#374151]`                |
-| Text color    | `text-[#FFFFFF]`                                     |
-| Font size     | `text-[14px]`                                        |
-| Font weight   | `font-medium` or `font-[500]`                        |
-| Padding       | `px-[16px] py-[10px]`                                |
-| Border radius | `rounded-[6px]`                                      |
-| Border        | `border border-[#E5E7EB]` or none                    |
-| Icon size     | `w-[16px] h-[16px]`                                  |
-| Icon spacing  | `gap-[8px]` or `mr-[8px]`                            |
-| Shadow        | `shadow-sm` or `shadow-[0_1px_2px_rgba(0,0,0,0.05)]` |
+| Property      | Example                                                                          |
+| ------------- | -------------------------------------------------------------------------------- |
+| Background    | `bg-[#1F2937]` + `hover:bg-[#374151]`                                            |
+| Text color    | `text-[#FFFFFF]` + `hover:text-[#F3F4F6]`                                        |
+| Font size     | `text-[14px]`                                                                    |
+| Font weight   | `font-medium` or `font-[500]`                                                    |
+| Padding       | `px-[16px] py-[10px]`                                                            |
+| Border radius | `rounded-[6px]`                                                                  |
+| Border        | `border border-[#E5E7EB]` or none                                                |
+| Icon size     | `w-[16px] h-[16px]`                                                              |
+| Icon spacing  | `gap-[8px]` or `mr-[8px]`                                                        |
+| Shadow        | `shadow-sm` or `shadow-[0_1px_2px_rgba(0,0,0,0.05)]`                             |
+| Hover States  | **CRITICAL**: Replicate hover states exactly (`hover:bg-[...] hover:text-[...]`) |
 
 ## Output Format
 

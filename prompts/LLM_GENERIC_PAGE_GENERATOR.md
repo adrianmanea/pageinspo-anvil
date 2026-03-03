@@ -39,15 +39,16 @@ Build the **Page Component** (e.g., `Page.jsx`).
 
 For EVERY button, you MUST explicitly match:
 
-| Property      | Example                                              |
-| ------------- | ---------------------------------------------------- |
-| Background    | `bg-[#1F2937]` + `hover:bg-[#374151]`                |
-| Text color    | `text-[#FFFFFF]`                                     |
-| Font info     | `text-[14px] font-[500]`                             |
-| Padding       | `px-[16px] py-[10px]`                                |
-| Border radius | `rounded-[6px]`                                      |
-| Icon size     | `w-[16px] h-[16px]`                                  |
-| Shadow        | `shadow-sm` or `shadow-[0_1px_2px_rgba(0,0,0,0.05)]` |
+| Property      | Example                                                                          |
+| ------------- | -------------------------------------------------------------------------------- |
+| Background    | `bg-[#1F2937]` + `hover:bg-[#374151]`                                            |
+| Text color    | `text-[#FFFFFF]` + `hover:text-[#F9FAFB]`                                        |
+| Font info     | `text-[14px] font-[500]`                                                         |
+| Padding       | `px-[16px] py-[10px]`                                                            |
+| Border radius | `rounded-[6px]`                                                                  |
+| Icon size     | `w-[16px] h-[16px]`                                                              |
+| Shadow        | `shadow-sm` or `shadow-[0_1px_2px_rgba(0,0,0,0.05)]`                             |
+| Hover States  | **CRITICAL**: Replicate hover states exactly (`hover:bg-[...] hover:text-[...]`) |
 
 #### Inputs & Forms (If present)
 

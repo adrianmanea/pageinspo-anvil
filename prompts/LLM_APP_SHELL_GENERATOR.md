@@ -51,12 +51,13 @@ For EVERY button, link, or clickable element in the shell, explicitly match:
 | Property | Example |
 | ------------- | ---------------------------------------------------- |
 | Background | `bg-[#1F2937] hover:bg-[#374151]` |
-| Text color | `text-[#FFFFFF]` |
+| Text color | `text-[#FFFFFF] hover:text-[#F3F4F6]` |
 | Font info | `text-[14px] font-[500]` |
 | Padding | `px-[16px] py-[10px]` |
 | Border radius | `rounded-[6px]` |
 | Icon size | `w-[16px] h-[16px]` |
 | Shadow | `shadow-sm` or `shadow-[0_1px_2px_rgba(0,0,0,0.05)]` |
+| Hover States | **CRITICAL**: Replicate hover states exactly (`hover:bg-[...] hover:text-[...]`) |
 | **Active States** | Evaluate if sidebar links need active states matching the capture. |
 
 #### Inputs & Forms (e.g., Global Search)

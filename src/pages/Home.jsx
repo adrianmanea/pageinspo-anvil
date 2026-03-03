@@ -13,6 +13,30 @@ export default function Home() {
         { name: "Email Sent Page", path: "/auth/email-sent" },
         { name: "Contacts Shell", path: "/contacts-shell" },
         { name: "Search Contacts", path: "/search-contacts" },
+        {
+          name: "Step 1 Onboarding Welcome",
+          path: "/step-1-onboarding-welcome",
+        },
+        {
+          name: "Step 2 Onboarding Tell About Yourself",
+          path: "/step-2-onboarding-tell-about-yourself",
+        },
+        {
+          name: "Step 3 Onboarding Connect Accounts",
+          path: "/step-3-onboarding-connect-accounts",
+        },
+        {
+          name: "Step 4 Onboarding Capture",
+          path: "/step-4-onboarding-capture",
+        },
+        {
+          name: "Notifications Empty State",
+          path: "/notifications/empty-state",
+        },
+        {
+          name: "Notifications Open Light",
+          path: "/notifications/open-light",
+        },
       ],
     },
   ];

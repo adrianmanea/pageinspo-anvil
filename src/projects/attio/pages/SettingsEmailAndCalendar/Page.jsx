@@ -1,38 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Search,
-  ChevronLeft,
-  User,
-  Settings,
-  Bell,
-  Gift,
-  Shield,
-  Briefcase,
-  Users,
-  Database,
-  CreditCard,
-  Puzzle,
-  Key,
-  Webhook,
-  Workflow,
-  Slash,
-  HelpCircle,
-  Cloud,
-  ChevronDown,
-  Phone,
-  BarChart2,
-  ArrowRightLeft,
-  Grid,
-  Mail,
-  Lock,
-  Box,
-  List,
-  History,
-  LayoutDashboard,
-  PlayCircle,
-  GitBranch,
-  Laptop,
-} from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function Page() {
   const [theme, setTheme] = useState(() => {

@@ -55,19 +55,19 @@ For EVERY input field, you MUST explicitly match:
 
 For EVERY button, you MUST explicitly match:
 
-| Property        | Example                                               |
-| --------------- | ----------------------------------------------------- |
-| Background      | `bg-[#2563EB]` + `hover:bg-[#1D4ED8]`                 |
-| Text color      | `text-[#FFFFFF]`                                      |
-| Font size       | `text-[14px]` or `text-[16px]`                        |
-| Font weight     | `font-[500]` or `font-[600]`                          |
-| Padding         | `px-[24px] py-[12px]`                                 |
-| Border radius   | `rounded-[8px]`                                       |
-| Width           | `w-full` for form buttons                             |
-| Height          | `h-[48px]` if explicitly set                          |
-| Shadow          | `shadow-[0_1px_2px_rgba(0,0,0,0.05)]`                 |
-| Disabled state  | `disabled:opacity-50 disabled:cursor-not-allowed`     |
-| **Interactive** | **MUST** include `hover:`, `active:`, `focus:` styles |
+| Property        | Example                                                       |
+| --------------- | ------------------------------------------------------------- |
+| Background      | `bg-[#2563EB]` + `hover:bg-[#1D4ED8]`                         |
+| Text color      | `text-[#FFFFFF]` + `hover:text-[#F3F4F6]`                     |
+| Font size       | `text-[14px]` or `text-[16px]`                                |
+| Font weight     | `font-[500]` or `font-[600]`                                  |
+| Padding         | `px-[24px] py-[12px]`                                         |
+| Border radius   | `rounded-[8px]`                                               |
+| Width           | `w-full` for form buttons                                     |
+| Height          | `h-[48px]` if explicitly set                                  |
+| Shadow          | `shadow-[0_1px_2px_rgba(0,0,0,0.05)]`                         |
+| Disabled state  | `disabled:opacity-50 disabled:cursor-not-allowed`             |
+| **Interactive** | **CRITICAL**: Replicate `hover:`, `active:`, `focus:` exactly |
 
 ### 6. Social Login Buttons
 
