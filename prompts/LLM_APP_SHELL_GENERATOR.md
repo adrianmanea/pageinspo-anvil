@@ -73,11 +73,63 @@ For EVERY input field in the shell, explicitly match:
 
 # OUTPUT FORMAT
 
-You must generate a SINGLE React component (e.g., `AppShell.jsx`) that exports the shell layout and accepts `{children}`.
+You must generate **3 files** inside a specific folder structure: `src/projects/[project_name]/pages/[ShellName]/`.
+
+### 1. `index.html`
+
+Standard Vite entry HTML.
+
+- Title: `[Shell Name] - Acme`
+- Script: `src="./main.jsx"`
+
+### 2. `main.jsx`
+
+Entry point to render the page.
+
+- Imports `React`, `ReactDOM`
+- Imports `./Page` (which will export your AppShell component as `default`)
+- Imports `../../../../index.css` (This path is correct for the depth: `projects/[project]/pages/[ShellName]`)
+- Renders `<Page />` in `React.StrictMode` inside `#root`
+
+### 3. `Page.jsx` (The App Shell)
+
+You must generate a SINGLE React component (e.g., `Page.jsx` exporting `default function AppShell({ children })`) that exports the shell layout and accepts `{children}`.
 
 **Example Output:**
 
-`AppShell.jsx`:
+`src/projects/acme/pages/DashboardShell/index.html`:
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Shell - Acme</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./main.jsx"></script>
+  </body>
+</html>
+```
+
+`src/projects/acme/pages/DashboardShell/main.jsx`:
+
+```jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Page from "./Page";
+import "../../../../index.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <Page />
+  </React.StrictMode>,
+);
+```
+
+`src/projects/acme/pages/DashboardShell/Page.jsx`:
 
 ```jsx
 import React from "react";

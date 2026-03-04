@@ -11,6 +11,9 @@ import {
   Phone,
   Linkedin,
   Building2,
+  StickyNote,
+  List,
+  ListOrdered,
 } from "lucide-react";
 
 export default function Page() {
@@ -635,7 +638,7 @@ export default function Page() {
 
               {/* Footer Buttons — always visible on xl, only when 'details' tab on smaller */}
               <div
-                className={`absolute bottom-0 left-0 right-0 grid gap-[4px] grid-cols-2 pt-[12px] pb-[12px] px-[24px] bg-white border-r border-[#D9D9D9] ${
+                className={`absolute bottom-0 left-0 right-0 grid gap-[4px] grid-cols-2 pt-[12px] pb-[12px] px-[24px] bg-white ${
                   activeTab === "details" ? "" : "hidden xl:grid"
                 }`}
               >
@@ -656,66 +659,10 @@ export default function Page() {
                 <div className="flex-1 overflow-y-auto w-full pt-[20px] pb-[160px] px-[24px]">
                   <div className="flex flex-col items-center justify-center h-[248px] mt-[40px] gap-[8px]">
                     <div className="w-[48px] h-[48px] flex items-center justify-center bg-gray-50 rounded-lg">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 48 48"
-                        className="w-[48px] h-[48px]"
-                      >
-                        <defs>
-                          <linearGradient
-                            id="gradient-note-responsive"
-                            x1="0%"
-                            y1="0%"
-                            x2="0%"
-                            y2="100%"
-                          >
-                            <stop offset="0%" stopColor="#fff0bd" />
-                            <stop offset="100%" stopColor="#ffebb5" />
-                          </linearGradient>
-                        </defs>
-                        <rect
-                          width="32"
-                          height="32"
-                          x="8"
-                          y="8"
-                          fill="url(#gradient-note-responsive)"
-                          rx="16"
-                        />
-                        <ellipse
-                          cx="20.704"
-                          cy="11.176"
-                          fill="#2E2000"
-                          fillOpacity=".88"
-                          stroke="#2E2000"
-                          strokeLinejoin="round"
-                          strokeOpacity=".88"
-                          strokeWidth=".889"
-                          rx=".792"
-                          ry="1.346"
-                          transform="rotate(-7.767 20.704 11.176) matrix(0.990826, -0.135145, 0.135145, 0.990826, -1.32044, 2.90057)"
-                        />
-                        <path
-                          stroke="#2E2000"
-                          strokeLinejoin="round"
-                          strokeOpacity=".88"
-                          strokeWidth=".889"
-                          d="M21.093 21.345c-1.764 1.494-5.388 1.788-8.465.534M15.223 8.667s3.444 5.887 3.444 7.486c0 .847-.994 1.18-3 1.18"
-                          fill="none"
-                        />
-                        <ellipse
-                          cx="11.63"
-                          cy="11.378"
-                          fill="#2E2000"
-                          fillOpacity=".88"
-                          stroke="#2E2000"
-                          strokeLinejoin="round"
-                          strokeOpacity=".88"
-                          strokeWidth=".889"
-                          rx=".789"
-                          ry="1.341"
-                          transform="rotate(-7.767 11.63 11.378) matrix(0.990826, -0.135145, 0.135145, 0.990826, -1.43098, 1.67612)"
-                        />
-                      </svg>
+                      <StickyNote
+                        className="w-[24px] h-[24px] text-amber-500"
+                        strokeWidth={1.5}
+                      />
                     </div>
                     <h3 className="text-[20px] font-[500] text-[#202020] tracking-[-0.38px] font-['Uxum_Grotesque',sans-serif]">
                       Add a note
@@ -733,7 +680,7 @@ export default function Page() {
                       className="w-full text-[13px] text-[#202020] bg-transparent outline-none resize-none placeholder:text-[#989898]"
                       rows={1}
                     />
-                    <div className="flex items-center justify-between pt-[12px]">
+                    <div className="flex items-center justify-between pt-[12px] flex-wrap gap-[12px]">
                       <div className="flex items-center gap-[2px]">
                         <button className="w-[28px] h-[28px] rounded flex items-center justify-center text-[#626262] hover:bg-black/5 transition-colors">
                           <span className="font-[600] text-[14px]">B</span>
@@ -810,66 +757,10 @@ export default function Page() {
                 <div className="flex-1 overflow-y-auto w-full pt-[20px] pb-[160px]">
                   <div className="flex flex-col items-center justify-center h-[248px] mt-[40px] gap-[8px]">
                     <div className="w-[48px] h-[48px] flex items-center justify-center bg-gray-50 rounded-lg">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 48 48"
-                        className="w-[48px] h-[48px]"
-                      >
-                        <defs>
-                          <linearGradient
-                            id="gradient-note"
-                            x1="0%"
-                            y1="0%"
-                            x2="0%"
-                            y2="100%"
-                          >
-                            <stop offset="0%" stopColor="#fff0bd" />
-                            <stop offset="100%" stopColor="#ffebb5" />
-                          </linearGradient>
-                        </defs>
-                        <rect
-                          width="32"
-                          height="32"
-                          x="8"
-                          y="8"
-                          fill="url(#gradient-note)"
-                          rx="16"
-                        />
-                        <ellipse
-                          cx="20.704"
-                          cy="11.176"
-                          fill="#2E2000"
-                          fillOpacity=".88"
-                          stroke="#2E2000"
-                          strokeLinejoin="round"
-                          strokeOpacity=".88"
-                          strokeWidth=".889"
-                          rx=".792"
-                          ry="1.346"
-                          transform="rotate(-7.767 20.704 11.176) matrix(0.990826, -0.135145, 0.135145, 0.990826, -1.32044, 2.90057)"
-                        />
-                        <path
-                          stroke="#2E2000"
-                          strokeLinejoin="round"
-                          strokeOpacity=".88"
-                          strokeWidth=".889"
-                          d="M21.093 21.345c-1.764 1.494-5.388 1.788-8.465.534M15.223 8.667s3.444 5.887 3.444 7.486c0 .847-.994 1.18-3 1.18"
-                          fill="none"
-                        />
-                        <ellipse
-                          cx="11.63"
-                          cy="11.378"
-                          fill="#2E2000"
-                          fillOpacity=".88"
-                          stroke="#2E2000"
-                          strokeLinejoin="round"
-                          strokeOpacity=".88"
-                          strokeWidth=".889"
-                          rx=".789"
-                          ry="1.341"
-                          transform="rotate(-7.767 11.63 11.378) matrix(0.990826, -0.135145, 0.135145, 0.990826, -1.43098, 1.67612)"
-                        />
-                      </svg>
+                      <StickyNote
+                        className="w-[24px] h-[24px] text-amber-500"
+                        strokeWidth={1.5}
+                      />
                     </div>
                     <h3 className="text-[20px] font-[500] text-[#202020] tracking-[-0.38px] font-['Uxum_Grotesque',sans-serif]">
                       Add a note
@@ -881,14 +772,14 @@ export default function Page() {
                 </div>
 
                 {/* fixed bottom entry form */}
-                <div className="absolute bottom-[24px] left-[24px] right-[24px] max-w-[780px] w-full mx-auto">
+                <div className="absolute bottom-[24px] left-0 right-0 mx-auto w-[calc(100%-48px)] max-w-[780px]">
                   <div className="bg-white border border-[#D9D9D9] rounded shadow-[0_1px_1px_rgba(0,0,0,0.06)] p-[16px] flex flex-col gap-[16px]">
                     <textarea
                       placeholder="Add a note"
                       className="w-full text-[13px] text-[#202020] bg-transparent outline-none resize-none placeholder:text-[#989898]"
                       rows={1}
                     />
-                    <div className="flex items-center justify-between pt-[12px]">
+                    <div className="flex items-center justify-between pt-[12px] flex-wrap gap-[12px]">
                       {/* Editor Tool buttons */}
                       <div className="flex items-center gap-[2px]">
                         <button className="w-[28px] h-[28px] rounded flex items-center justify-center text-[#626262] hover:bg-black/5 transition-colors">
@@ -901,38 +792,13 @@ export default function Page() {
                           <span className="font-[500] text-[14px]">U</span>
                         </button>
                         <button className="w-[28px] h-[28px] rounded flex items-center justify-center text-[#626262] hover:bg-black/5 transition-colors">
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                          >
-                            <line x1="8" y1="6" x2="21" y2="6"></line>
-                            <line x1="8" y1="12" x2="21" y2="12"></line>
-                            <line x1="8" y1="18" x2="21" y2="18"></line>
-                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                          </svg>
+                          <List className="w-[16px] h-[16px]" strokeWidth={2} />
                         </button>
                         <button className="w-[28px] h-[28px] rounded flex items-center justify-center text-[#626262] hover:bg-black/5 transition-colors">
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                          >
-                            <line x1="10" y1="6" x2="21" y2="6"></line>
-                            <line x1="10" y1="12" x2="21" y2="12"></line>
-                            <line x1="10" y1="18" x2="21" y2="18"></line>
-                            <path d="M4 6h1v4"></path>
-                            <path d="M4 14h1v4"></path>
-                            <path d="M4 18h2"></path>
-                          </svg>
+                          <ListOrdered
+                            className="w-[16px] h-[16px]"
+                            strokeWidth={2}
+                          />
                         </button>
                       </div>
                       <div className="flex items-center gap-[12px]">

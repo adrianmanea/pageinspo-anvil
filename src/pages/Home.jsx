@@ -34,8 +34,28 @@ export default function Home() {
           path: "/notifications/empty-state",
         },
         {
-          name: "Notifications Open Light",
-          path: "/notifications/open-light",
+          name: "Notifications Open",
+          path: "/notifications/open",
+        },
+        {
+          name: "Settings Shell",
+          path: "/settings-shell",
+        },
+      ],
+    },
+    {
+      title: "Attio",
+      description: "CRM for the next generation",
+      color: "bg-pink-500",
+      letter: "A",
+      links: [
+        {
+          name: "Notification Empty",
+          path: "/notifications/empty",
+        },
+        {
+          name: "Notification With Items",
+          path: "/notifications/with-items",
         },
       ],
     },
