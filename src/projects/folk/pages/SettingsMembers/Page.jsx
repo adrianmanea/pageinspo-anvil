@@ -5,7 +5,7 @@ import { Search, ChevronDown, Check, X } from "lucide-react";
 
 export default function Page() {
   return (
-    <div className="flex flex-col flex-1 h-full min-h-screen bg-white dark:bg-transparent w-full">
+    <div className="flex flex-col flex-1 h-full min-h-screen bg-white dark:bg-[#191919] w-full">
       <header className="flex items-center gap-[8px] h-[48px] px-[24px] pr-[16px] border-b border-[#d9d9d9] dark:border-[#3D3D3D] flex-shrink-0">
         <div className="flex items-center gap-[12px] flex-1">
           <h1 className="text-[20px] font-[500] leading-[30px] tracking-[-0.38px] text-[#202020] dark:text-[#EEEEEE]">
@@ -17,7 +17,7 @@ export default function Page() {
       <div className="flex flex-col flex-1 h-[calc(100vh-48px)] overflow-y-auto w-full">
         <div className="flex items-center gap-[16px] w-full h-[44px] min-h-[44px] px-[12px] py-[8px] bg-[rgba(0,0,0,0.055)] dark:bg-[#ffffff10] flex-shrink-0">
           <div className="flex-1 text-[13px] font-[500] leading-[18px] tracking-[-0.026px] text-[#202020] dark:text-[#EEEEEE]">
-            Free trial ends in 5 days, upgrade to keep using folk.
+            Free trial ends in 5 days, upgrade to keep using Acme.
           </div>
           <div className="flex gap-[8px] flex-shrink-0">
             <a
@@ -32,10 +32,10 @@ export default function Page() {
         <div className="flex flex-col w-full max-w-[672px] px-[24px] pt-[24px] pb-[40px] flex-shrink-0">
           <div className="flex items-center justify-between gap-[16px] w-full min-h-[36px] mb-[32px]">
             <span className="text-[13px] font-[400] leading-[18px] tracking-[-0.026px] text-[#626262] dark:text-[#B4B4B4]">
-              Invite a member to start collaborating on folk. Manage members and
+              Invite a member to start collaborating on Acme. Manage members and
               set their access level.{" "}
               <a
-                href="https://help.folk.app/en/articles/4970711-invite-your-teammates"
+                href="https://acme.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline decoration-[rgba(0,0,0,0.15)] dark:decoration-[#6E6E6E]"
@@ -76,11 +76,11 @@ export default function Page() {
                 <Dialog.Portal>
                   <Dialog.Overlay className="fixed inset-0 bg-[#00000033] z-[100001] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
                   <Dialog.Content
-                    className="fixed left-[50%] top-[50%] z-[100001] flex flex-col w-[384px] max-w-[384px] max-h-[981px] p-[16px] bg-white dark:bg-[#222222] border border-[#202020] dark:border-[#EEEEEE] shadow-[0_0_1px_0_rgba(24,26,27,0.04),0_3px_6px_0_rgba(24,26,27,0.08),0_9px_24px_0_rgba(24,26,27,0.16)] dark:shadow-[0_0_1px_0_rgba(0,0,0,0.04),0_3px_6px_0_rgba(0,0,0,0.08),0_9px_24px_0_rgba(0,0,0,0.24)] translate-x-[-50%] translate-y-[-50%] overflow-y-auto duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%]"
+                    className="fixed left-[50%] top-[50%] z-[100001] flex flex-col w-[384px] max-w-[384px] max-h-[981px] p-[16px] bg-white dark:bg-[#222222] border border-[#202020] dark:border-[#EEEEEE] shadow-[0_0_1px_0_rgba(24,26,27,0.04),0_3px_6px_0_rgba(24,26,27,0.08),0_9px_24px_0_rgba(24,26,27,0.16),0_0_0_1px_rgba(141,141,141,0.24)] dark:shadow-[0_0_1px_0_rgba(0,0,0,0.04),0_3px_6px_0_rgba(0,0,0,0.08),0_9px_24px_0_rgba(0,0,0,0.24),0_0_0_1px_rgba(200,200,200,0.24)] translate-x-[-50%] translate-y-[-50%] overflow-y-auto duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%]"
                     style={{ borderRadius: "4px" }}
                   >
                     <form className="grid grid-cols-1 gap-[16px] w-[352px]">
-                      <Dialog.Title className="text-[20px] font-[500] leading-[30px] tracking-[-0.38px] text-[#202020] dark:text-[#EEEEEE]">
+                      <Dialog.Title className="text-[20px] font-[500] leading-[30px] tracking-[-0.38px] text-[#202020] dark:text-[#EEEEEE] font-['Uxum_Grotesque',sans-serif]">
                         Invite to your workspace
                       </Dialog.Title>
                       <Dialog.Description className="sr-only">
@@ -149,7 +149,7 @@ export default function Page() {
                         </Select.Root>
                       </div>
 
-                      <div className="flex items-center justify-between gap-[8px] w-[384px] h-[53px] mt-[16px] px-[16px] py-[12px] bg-white dark:bg-[#222222] border-t border-[#d9d9d9] dark:border-[#3D3D3D] -mx-[16px] -mb-[16px] sticky bottom-[-16px]">
+                      <div className="flex items-center justify-between gap-[8px] w-[384px] h-[53px] mt-[24px] px-[16px] py-[12px] bg-white dark:bg-[#222222] border-t border-[#d9d9d9] dark:border-[#3D3D3D] -mx-[16px] -mb-[16px] sticky bottom-[-16px]">
                         <div className="flex items-center gap-[8px]" />
                         <div className="flex items-center gap-[8px]">
                           <Dialog.Close asChild>
@@ -188,13 +188,13 @@ export default function Page() {
                 </div>
                 <div className="flex flex-col gap-[2px] flex-1">
                   <span className="text-[13px] font-[500] leading-[18px] tracking-[-0.026px] text-[#202020] dark:text-[#EEEEEE]">
-                    Adrian Stefan{" "}
+                    John Doe{" "}
                     <span className="font-[400] text-[#626262] dark:text-[#B4B4B4]">
                       (You)
                     </span>
                   </span>
                   <span className="text-[13px] font-[400] leading-[18px] tracking-[-0.026px] text-[#626262] dark:text-[#B4B4B4] truncate">
-                    adrianmanea.s@gmail.com ·{" "}
+                    john@acme.com ·{" "}
                     <span className="text-[#626262] dark:text-[#B4B4B4]">
                       Paid seat
                     </span>
@@ -224,10 +224,10 @@ export default function Page() {
                 </div>
                 <div className="flex flex-col gap-[2px] flex-1">
                   <span className="text-[13px] font-[500] leading-[18px] tracking-[-0.026px] text-[#202020] dark:text-[#EEEEEE]">
-                    John Dodescu
+                    Jane Smith
                   </span>
                   <span className="text-[13px] font-[400] leading-[18px] tracking-[-0.026px] text-[#626262] dark:text-[#B4B4B4] truncate">
-                    holavom694@cslua.com ·{" "}
+                    jane@acme.com ·{" "}
                     <span className="text-[#626262] dark:text-[#B4B4B4]">
                       Paid seat
                     </span>
@@ -257,10 +257,10 @@ export default function Page() {
                 </div>
                 <div className="flex flex-col gap-[2px] flex-1">
                   <span className="text-[13px] font-[500] leading-[18px] tracking-[-0.026px] text-[#202020] dark:text-[#EEEEEE]">
-                    jipatiw699@daerdy.com
+                    mike@acme.com
                   </span>
                   <span className="text-[13px] font-[400] leading-[18px] tracking-[-0.026px] text-[#626262] dark:text-[#B4B4B4] truncate">
-                    jipatiw699@daerdy.com ·{" "}
+                    mike@acme.com ·{" "}
                     <span className="text-[#626262] dark:text-[#B4B4B4]">
                       Paid seat
                     </span>

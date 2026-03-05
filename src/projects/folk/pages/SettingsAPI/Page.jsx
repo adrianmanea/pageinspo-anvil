@@ -19,7 +19,7 @@ export default function Page() {
   }, [theme]);
 
   return (
-    <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#1a1d21] text-[#202020] dark:text-[#EEEEEE] font-sans min-h-screen">
+    <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#191919] text-[#202020] dark:text-[#EEEEEE] font-sans min-h-screen">
       <div className="flex-1 w-full">
         {/* Main Content Area */}
         <div className="w-full max-w-[768px] px-[16px] sm:px-[24px] pt-[24px] pb-[40px] flex flex-col">
@@ -28,7 +28,7 @@ export default function Page() {
             <p className="text-[13px] font-[400] text-[#626262] dark:text-[#B4B4B4]">
               Sync your data with other tools and build custom integrations.{" "}
               <a
-                href="https://help.folk.app/en/articles/11666479-folk-api-beta"
+                href="https://acme.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline decoration-[rgba(0,0,0,0.15)] dark:decoration-[#6E6E6E] hover:decoration-[rgba(0,0,0,0.4)] dark:hover:decoration-[#999999] transition-colors"
@@ -48,7 +48,7 @@ export default function Page() {
                 <p className="text-[13px] font-[400] text-[#626262] dark:text-[#B4B4B4]">
                   Create API keys to build your own integrations.{" "}
                   <a
-                    href="https://developer.folk.app/guides/quick-start"
+                    href="https://acme.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline decoration-[rgba(0,0,0,0.15)] dark:decoration-[#6E6E6E] hover:decoration-[rgba(0,0,0,0.4)] dark:hover:decoration-[#999999] transition-colors"
@@ -112,7 +112,7 @@ export default function Page() {
                     <div className="flex items-center justify-between gap-[8px] mt-[24px] mx-[-16px] mb-[-16px] px-[16px] py-[12px] bg-white dark:bg-[#222222] border-t border-[#D9D9D9] dark:border-[#3D3D3D]">
                       <div className="flex items-center gap-[8px]">
                         <a
-                          href="https://help.folk.app/en/articles/11666479-folk-api-beta"
+                          href="https://acme.com"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-[13px] font-[400] text-[#202020] dark:text-[#EEEEEE] underline decoration-[rgba(0,0,0,0.15)] dark:decoration-[#6E6E6E] hover:decoration-[rgba(0,0,0,0.4)] dark:hover:decoration-[#999999] transition-colors"
@@ -150,28 +150,6 @@ export default function Page() {
                 fill="url(#api-keys-gradient)"
                 strokeWidth="1px"
               />
-              <svg
-                aria-hidden="true"
-                style={{
-                  position: "absolute",
-                  width: "1px",
-                  height: "1px",
-                  overflow: "hidden",
-                }}
-              >
-                <defs>
-                  <linearGradient
-                    id="api-keys-gradient"
-                    x1="0%"
-                    x2="0%"
-                    y1="0%"
-                    y2="100%"
-                  >
-                    <stop offset="0%"></stop>
-                    <stop offset="100%"></stop>
-                  </linearGradient>
-                </defs>
-              </svg>
               <h3 className="text-[20px] font-[500] text-[#202020] dark:text-[#EEEEEE] tracking-[-0.38px]">
                 No API keys
               </h3>
@@ -189,7 +167,7 @@ export default function Page() {
                   Receive notifications whenever data is created, updated or
                   removed.{" "}
                   <a
-                    href="https://developer.folk.app/webhooks/about"
+                    href="https://acme.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline decoration-[rgba(0,0,0,0.15)] dark:decoration-[#6E6E6E] hover:decoration-[rgba(0,0,0,0.4)] dark:hover:decoration-[#999999] transition-colors"
@@ -333,7 +311,7 @@ export default function Page() {
                     <div className="flex items-center justify-between gap-[8px] mt-[24px] mx-[-16px] mb-[-16px] px-[16px] py-[12px] bg-white dark:bg-[#222222] border-t border-[#D9D9D9] dark:border-[#3D3D3D]">
                       <div className="flex items-center gap-[8px]">
                         <a
-                          href="https://help.folk.app/en/articles/11666479-folk-api-beta"
+                          href="https://acme.com"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-[13px] font-[400] text-[#202020] dark:text-[#EEEEEE] underline decoration-[rgba(0,0,0,0.15)] dark:decoration-[#6E6E6E] hover:decoration-[rgba(0,0,0,0.4)] dark:hover:decoration-[#999999] transition-colors"
@@ -371,28 +349,6 @@ export default function Page() {
                 fill="url(#api-webhook-gradient)"
                 strokeWidth="1px"
               />
-              <svg
-                aria-hidden="true"
-                style={{
-                  position: "absolute",
-                  width: "1px",
-                  height: "1px",
-                  overflow: "hidden",
-                }}
-              >
-                <defs>
-                  <linearGradient
-                    id="api-webhook-gradient"
-                    x1="0%"
-                    x2="0%"
-                    y1="0%"
-                    y2="100%"
-                  >
-                    <stop offset="0%"></stop>
-                    <stop offset="100%"></stop>
-                  </linearGradient>
-                </defs>
-              </svg>
               <h3 className="text-[20px] font-[500] text-[#202020] dark:text-[#EEEEEE] tracking-[-0.38px]">
                 No webhooks
               </h3>
@@ -406,7 +362,7 @@ export default function Page() {
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-[12px] mt-[8px]">
               <a
-                href="https://developer.folk.app"
+                href="https://acme.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col gap-[2px] p-[16px] bg-white dark:bg-[#222222] border border-[#D9D9D9] dark:border-[#3D3D3D] shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] hover:bg-gray-50 dark:hover:bg-[#2a2a2a] transition-colors"
@@ -415,11 +371,11 @@ export default function Page() {
                   API documentation
                 </span>
                 <span className="text-[13px] font-[400] text-[#626262] dark:text-[#B4B4B4]">
-                  Get started with the folk API
+                  Get started with the Acme API
                 </span>
               </a>
               <a
-                href="https://help.folk.app/en/collections/10294076-integrations-automations"
+                href="https://acme.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col gap-[2px] p-[16px] bg-white dark:bg-[#222222] border border-[#D9D9D9] dark:border-[#3D3D3D] shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] hover:bg-gray-50 dark:hover:bg-[#2a2a2a] transition-colors"
@@ -428,7 +384,7 @@ export default function Page() {
                   Guides
                 </span>
                 <span className="text-[13px] font-[400] text-[#626262] dark:text-[#B4B4B4]">
-                  Learn how to integrate with the folk API
+                  Learn how to integrate with the Acme API
                 </span>
               </a>
             </div>

@@ -26,13 +26,13 @@ export default function Page() {
     }
   }, [theme]);
   return (
-    <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#1a1d21] text-[#202020] dark:text-[#EEEEEE] font-sans h-full min-h-screen">
+    <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#191919] text-[#202020] dark:text-[#EEEEEE] font-sans h-full min-h-screen">
       <div className="flex-1 w-full">
         {/* Trial Banner */}
         <div className="flex flex-col sm:flex-row sm:items-center w-full px-[12px] py-[8px] gap-[12px] sm:gap-[16px] bg-[rgba(0,0,0,0.055)] dark:bg-[rgba(255,255,255,0.063)]">
           <div className="flex-1 w-full text-left">
             <span className="text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE]">
-              Free trial ends in 6 days, upgrade to keep using folk.
+              Free trial ends in 6 days, upgrade to keep using Acme.
             </span>
           </div>
           <a
@@ -127,7 +127,7 @@ export default function Page() {
                 </span>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-[8px] sm:gap-[12px] min-h-[28px] items-start">
                   <span className="text-[13px] font-[400] text-[#202020] dark:text-[#EEEEEE] break-all">
-                    adrianmanea.s@gmail.com
+                    john@acme.com
                   </span>
                   <button className="inline-flex items-center justify-center flex-shrink-0 h-[28px] px-[10px] text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-gray-50 dark:hover:bg-[#2a2a2a] transition-colors">
                     Change email
@@ -145,7 +145,7 @@ export default function Page() {
                   App settings
                 </h2>
                 <p className="text-[13px] font-[400] text-[#626262] dark:text-[#B4B4B4]">
-                  Manage your preferences for the folk app
+                  Manage your preferences for the Acme app
                 </p>
               </div>
             </header>
@@ -161,7 +161,7 @@ export default function Page() {
                     <p className="text-[13px] font-[400] text-[#626262] dark:text-[#B4B4B4]">
                       You must have the{" "}
                       <a
-                        href="https://folk.app/download"
+                        href="https://acme.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="underline decoration-black/15 dark:decoration-[#6E6E6E] hover:decoration-black/40 dark:hover:decoration-[#999999] transition-colors mx-[4px]"
@@ -192,7 +192,7 @@ export default function Page() {
                       Appearance
                     </span>
                     <p className="text-[13px] font-[400] text-[#626262] dark:text-[#B4B4B4]">
-                      Customize the look of folk on your device.
+                      Customize the look of Acme on your device.
                     </p>
                   </div>
                   <div className="flex items-center justify-end flex-shrink-0">

@@ -52,7 +52,7 @@ const footerLinks = [
   { name: "Migrate from another CRM", href: "#", external: false },
   { name: "Get chrome extension", href: "#", external: true },
   { name: "Download desktop app", href: "#", external: true },
-  { name: "Share folk, earn money", href: "#", external: true },
+  { name: "Share Acme, earn money", href: "#", external: true },
 ];
 
 export default function SettingsShell({
@@ -77,9 +77,9 @@ export default function SettingsShell({
   }, [theme]);
 
   return (
-    <div className="flex min-h-screen w-full bg-[#FFFFFF] dark:bg-[#1a1d21] text-[#202020] dark:text-[#EEEEEE] font-sans">
+    <div className="flex min-h-screen w-full bg-[#FFFFFF] dark:bg-[#191919] text-[#202020] dark:text-[#EEEEEE] font-sans">
       {/* Mobile Sidebar Toggle (visible only on small screens) */}
-      <div className="md:hidden fixed top-0 left-0 z-[40] flex h-[48px] items-center px-[12px] bg-white dark:bg-[#1a1d21] border-b border-[#D9D9D9] dark:border-[#3D3D3D] w-full">
+      <div className="md:hidden fixed top-0 left-0 z-[40] flex h-[48px] items-center px-[12px] bg-white dark:bg-[#191919] border-b border-[#D9D9D9] dark:border-[#3D3D3D] w-full">
         <button
           onClick={() => setIsMobileMenuOpen(true)}
           className="flex items-center justify-center w-[28px] h-[28px] rounded-full hover:bg-[rgba(0,0,0,0.055)] dark:hover:bg-[rgba(255,255,255,0.063)] transition-colors text-[#626262] dark:text-[#B4B4B4]"
@@ -108,7 +108,7 @@ export default function SettingsShell({
 
       {/* Sidebar */}
       <aside
-        className={`fixed md:sticky top-0 left-0 h-screen w-[240px] flex-col border-r border-[#D9D9D9] dark:border-[#3D3D3D] bg-white dark:bg-[#1a1d21] flex-shrink-0 z-[50] transition-transform duration-300 ease-in-out ${
+        className={`fixed md:sticky top-0 left-0 h-screen w-[240px] flex-col border-r border-[#D9D9D9] dark:border-[#3D3D3D] bg-white dark:bg-[#191919] flex-shrink-0 z-[50] transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen
             ? "translate-x-0"
             : "-translate-x-full md:translate-x-0"
@@ -193,7 +193,7 @@ export default function SettingsShell({
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col pt-[48px] md:pt-0 overflow-x-hidden">
         {/* Top Header */}
-        <header className="hidden md:flex items-center h-[48px] px-[24px] border-b border-[#D9D9D9] dark:border-[#3D3D3D] bg-white dark:bg-[#1a1d21] sticky top-0 z-10 w-full">
+        <header className="hidden md:flex items-center h-[48px] px-[24px] border-b border-[#D9D9D9] dark:border-[#3D3D3D] bg-white dark:bg-[#191919] sticky top-0 z-10 w-full">
           <h1 className="text-[20px] font-[500] text-[#202020] dark:text-[#EEEEEE] tracking-[-0.38px]">
             {title}
           </h1>
@@ -202,7 +202,7 @@ export default function SettingsShell({
         {/* Dynamic Page Content Slot */}
         <div className="flex-1 overflow-x-hidden flex flex-col">
           {children || (
-            <div className="flex-1 overflow-y-auto flex flex-col items-center justify-center p-8 bg-white dark:bg-[#1a1d21]">
+            <div className="flex-1 overflow-y-auto flex flex-col items-center justify-center p-8 bg-white dark:bg-[#191919]">
               <div className="flex flex-col items-center gap-[24px] max-w-[400px]">
                 <div className="w-[215px] h-[140px] text-[#EEEFF1] dark:text-[#27282B]">
                   <svg

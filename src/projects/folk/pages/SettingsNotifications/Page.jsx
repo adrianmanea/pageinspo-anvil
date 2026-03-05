@@ -18,7 +18,7 @@ export default function Page() {
   }, [theme]);
 
   return (
-    <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#1a1d21] text-[#202020] dark:text-[#EEEEEE] font-sans min-h-screen">
+    <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#191919] text-[#202020] dark:text-[#EEEEEE] font-sans min-h-screen">
       <div className="flex-1 w-full">
         {/* Main Content Area */}
         <div className="w-full max-w-[672px] px-[16px] sm:px-[24px] pt-[24px] pb-[40px] flex flex-col">
@@ -46,7 +46,7 @@ export default function Page() {
                     Inbox
                   </span>
                   <span className="text-[13px] font-[400] text-[#626262] dark:text-[#B4B4B4]">
-                    You'll always receive your notification in your folk inbox
+                    You'll always receive your notification in your Acme inbox
                   </span>
                 </div>
               </label>

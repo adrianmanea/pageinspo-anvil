@@ -4,7 +4,7 @@ import { Plus } from "lucide-react";
 const usageCards = [
   {
     label: "Messages",
-    href: "https://help.folk.app/en/articles/5779445-send-messages",
+    href: "https://acme.com",
     used: 0,
     max: 1000,
     usedDisplay: "0/1,000",
@@ -12,7 +12,7 @@ const usageCards = [
   },
   {
     label: "Sender domains",
-    href: "https://help.folk.app/en/articles/6380286-how-to-authenticate-a-domain",
+    href: "https://acme.com",
     used: 0,
     max: 1,
     usedDisplay: "0/1",
@@ -20,7 +20,7 @@ const usageCards = [
   },
   {
     label: "Enrichments",
-    href: "https://help.folk.app/en/articles/6804416-data-enrichment",
+    href: "https://acme.com",
     used: 0,
     max: 500,
     usedDisplay: "0/500",
@@ -28,7 +28,7 @@ const usageCards = [
   },
   {
     label: "Research credits",
-    href: "https://help.folk.app/en/articles/12326202-research-assistant",
+    href: "https://acme.com",
     used: 0,
     max: 50,
     usedDisplay: "0/50",
@@ -36,7 +36,7 @@ const usageCards = [
   },
   {
     label: "AI fields",
-    href: "https://help.folk.app/en/articles/7325564-magic-fields",
+    href: "https://acme.com",
     used: 0,
     max: 500,
     usedDisplay: "0/500",
@@ -153,13 +153,13 @@ export default function Page() {
   }, [theme]);
 
   return (
-    <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#1a1d21] text-[#202020] dark:text-[#EEEEEE] font-sans min-h-screen">
+    <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#191919] text-[#202020] dark:text-[#EEEEEE] font-sans min-h-screen">
       <div className="flex-1 w-full">
         {/* Trial Banner */}
         <div className="flex flex-col sm:flex-row sm:items-center w-full px-[12px] py-[8px] gap-[12px] sm:gap-[16px] bg-[rgba(0,0,0,0.055)] dark:bg-[rgba(255,255,255,0.063)]">
           <div className="flex-1">
             <span className="text-[13px] font-[500] leading-[18px] tracking-[-0.026px] text-[#202020] dark:text-[#EEEEEE]">
-              Free trial ends in 5 days, upgrade to keep using folk.
+              Free trial ends in 5 days, upgrade to keep using Acme.
             </span>
           </div>
           <a

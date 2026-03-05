@@ -18,7 +18,7 @@ export default function Page() {
   }, [theme]);
 
   return (
-    <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#1a1d21] text-[#202020] dark:text-[#EEEEEE] font-sans min-h-screen">
+    <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#191919] text-[#202020] dark:text-[#EEEEEE] font-sans min-h-screen">
       <div className="flex-1 w-full">
         {/* Main Content Area */}
         <div className="w-full max-w-[672px] px-[16px] sm:px-[24px] pt-[24px] pb-[40px] flex flex-col">
