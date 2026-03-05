@@ -41,21 +41,29 @@ export default function Home() {
           name: "Settings Shell",
           path: "/settings-shell",
         },
-      ],
-    },
-    {
-      title: "Attio",
-      description: "CRM for the next generation",
-      color: "bg-pink-500",
-      letter: "A",
-      links: [
         {
-          name: "Notification Empty",
-          path: "/notifications/empty",
+          name: "Settings Profile",
+          path: "/settings-profile",
         },
         {
-          name: "Notification With Items",
-          path: "/notifications/with-items",
+          name: "Settings Notifications",
+          path: "/settings-notifications",
+        },
+        {
+          name: "Settings Sessions",
+          path: "/settings-sessions",
+        },
+        {
+          name: "Settings API",
+          path: "/settings-api",
+        },
+        {
+          name: "Settings Workspace",
+          path: "/settings-workspace",
+        },
+        {
+          name: "Settings Members",
+          path: "/settings-members",
         },
       ],
     },

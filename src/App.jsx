@@ -12,8 +12,12 @@ import Step4OnboardingCapture from "@/projects/folk/pages/Step4OnboardingCapture
 import NotificationsEmptyState from "@/projects/folk/pages/NotificationsEmptyState/Page";
 import NotificationsOpen from "@/projects/folk/pages/NotificationsOpen/Page";
 import SettingsShell from "@/projects/folk/pages/SettingsShell/Page";
-import NotificationEmpty from "@/projects/attio/pages/NotificationEmpty/NotificationsEmpty";
-import NotificationWithItems from "@/projects/attio/pages/NotificationWithItems/NotificationsWithItems";
+import SettingsProfile from "@/projects/folk/pages/SettingsProfile/Page";
+import SettingsNotifications from "@/projects/folk/pages/SettingsNotifications/Page";
+import SettingsSessions from "@/projects/folk/pages/SettingsSessions/Page";
+import SettingsAPI from "@/projects/folk/pages/SettingsAPI/Page";
+import SettingsWorkspace from "@/projects/folk/pages/SettingsWorkspace/Page";
+import SettingsMembers from "@/projects/folk/pages/SettingsMembers/Page";
 
 function App() {
   return (
@@ -47,11 +51,15 @@ function App() {
         />
         <Route path="/notifications/open" element={<NotificationsOpen />} />
         <Route path="/settings-shell" element={<SettingsShell />} />
-        <Route path="/notifications/empty" element={<NotificationEmpty />} />
+        <Route path="/settings-profile" element={<SettingsProfile />} />
         <Route
-          path="/notifications/with-items"
-          element={<NotificationWithItems />}
+          path="/settings-notifications"
+          element={<SettingsNotifications />}
         />
+        <Route path="/settings-sessions" element={<SettingsSessions />} />
+        <Route path="/settings-api" element={<SettingsAPI />} />
+        <Route path="/settings-workspace" element={<SettingsWorkspace />} />
+        <Route path="/settings-members" element={<SettingsMembers />} />
       </Routes>
     </BrowserRouter>
   );
