@@ -20,7 +20,14 @@ export default function Page() {
 
   return (
     <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#191919] text-[#202020] dark:text-[#EEEEEE] font-sans min-h-screen">
-      <div className="flex-1 w-full">
+      <header className="flex items-center gap-[8px] h-[48px] px-[24px] pr-[16px] border-b border-[#D9D9D9] dark:border-[#3D3D3D] flex-shrink-0">
+        <div className="flex items-center gap-[12px] flex-1">
+          <h1 className="text-[20px] font-[500] leading-[30px] tracking-[-0.38px] text-[#202020] dark:text-[#EEEEEE]">
+            API
+          </h1>
+        </div>
+      </header>
+      <div className="flex-1 w-full overflow-y-auto">
         {/* Main Content Area */}
         <div className="w-full max-w-[768px] px-[16px] sm:px-[24px] pt-[24px] pb-[40px] flex flex-col">
           {/* Header */}

@@ -154,22 +154,14 @@ export default function Page() {
 
   return (
     <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#191919] text-[#202020] dark:text-[#EEEEEE] font-sans min-h-screen">
-      <div className="flex-1 w-full">
-        {/* Trial Banner */}
-        <div className="flex flex-col sm:flex-row sm:items-center w-full px-[12px] py-[8px] gap-[12px] sm:gap-[16px] bg-[rgba(0,0,0,0.055)] dark:bg-[rgba(255,255,255,0.063)]">
-          <div className="flex-1">
-            <span className="text-[13px] font-[500] leading-[18px] tracking-[-0.026px] text-[#202020] dark:text-[#EEEEEE]">
-              Free trial ends in 5 days, upgrade to keep using Acme.
-            </span>
-          </div>
-          <a
-            href="#"
-            className="flex items-center justify-center h-[28px] px-[10px] bg-[#202020] dark:bg-[#EEEEEE] text-[#FDFDFD] dark:text-[#191919] text-[13px] font-[500] rounded-full hover:bg-[rgba(32,32,32,0.9)] dark:hover:bg-[rgba(238,238,238,0.9)] transition-colors whitespace-nowrap"
-          >
-            Upgrade to Premium
-          </a>
+      <header className="flex items-center gap-[8px] h-[48px] px-[24px] pr-[16px] border-b border-[#D9D9D9] dark:border-[#3D3D3D] flex-shrink-0">
+        <div className="flex items-center gap-[12px] flex-1">
+          <h1 className="text-[20px] font-[500] leading-[30px] tracking-[-0.38px] text-[#202020] dark:text-[#EEEEEE]">
+            Workspace
+          </h1>
         </div>
-
+      </header>
+      <div className="flex-1 w-full overflow-y-auto">
         {/* Main Content Area */}
         <div className="w-full max-w-[1024px] px-[16px] sm:px-[24px] pt-[24px] pb-[40px] flex flex-col">
           {/* Header */}

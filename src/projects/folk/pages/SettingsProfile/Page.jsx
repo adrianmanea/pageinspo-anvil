@@ -27,7 +27,14 @@ export default function Page() {
   }, [theme]);
   return (
     <div className="flex flex-col flex-1 w-full bg-white dark:bg-[#191919] text-[#202020] dark:text-[#EEEEEE] font-sans h-full min-h-screen">
-      <div className="flex-1 w-full">
+      <header className="flex items-center gap-[8px] h-[48px] px-[24px] pr-[16px] border-b border-[#D9D9D9] dark:border-[#3D3D3D] flex-shrink-0">
+        <div className="flex items-center gap-[12px] flex-1">
+          <h1 className="text-[20px] font-[500] leading-[30px] tracking-[-0.38px] text-[#202020] dark:text-[#EEEEEE]">
+            Profile
+          </h1>
+        </div>
+      </header>
+      <div className="flex-1 w-full overflow-y-auto">
         {/* Trial Banner */}
         <div className="flex flex-col sm:flex-row sm:items-center w-full px-[12px] py-[8px] gap-[12px] sm:gap-[16px] bg-[rgba(0,0,0,0.055)] dark:bg-[rgba(255,255,255,0.063)]">
           <div className="flex-1 w-full text-left">

@@ -18,6 +18,9 @@ import SettingsSessions from "@/projects/folk/pages/SettingsSessions/Page";
 import SettingsAPI from "@/projects/folk/pages/SettingsAPI/Page";
 import SettingsWorkspace from "@/projects/folk/pages/SettingsWorkspace/Page";
 import SettingsMembers from "@/projects/folk/pages/SettingsMembers/Page";
+import SettingsSecurity from "@/projects/folk/pages/SettingsSecurity/Page";
+import DashboardLeads from "@/projects/folk/pages/DashboardLeads/Page";
+import SettingsPlans from "@/projects/folk/pages/SettingsPlans/Page";
 
 function App() {
   return (
@@ -29,6 +32,7 @@ function App() {
         <Route path="/auth/email-sent" element={<AuthEmailSent />} />
         <Route path="/contacts-shell" element={<ContactsShell />} />
         <Route path="/search-contacts" element={<SearchContacts />} />
+        <Route path="/dashboard-leads" element={<DashboardLeads />} />
         <Route
           path="/step-1-onboarding-welcome"
           element={<Step1OnboardingWelcome />}
@@ -60,6 +64,8 @@ function App() {
         <Route path="/settings-api" element={<SettingsAPI />} />
         <Route path="/settings-workspace" element={<SettingsWorkspace />} />
         <Route path="/settings-members" element={<SettingsMembers />} />
+        <Route path="/settings-security" element={<SettingsSecurity />} />
+        <Route path="/settings-plans" element={<SettingsPlans />} />
       </Routes>
     </BrowserRouter>
   );

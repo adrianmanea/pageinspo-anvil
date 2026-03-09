@@ -14,6 +14,10 @@ export default function Home() {
         { name: "Contacts Shell", path: "/contacts-shell" },
         { name: "Search Contacts", path: "/search-contacts" },
         {
+          name: "Dashboard Leads",
+          path: "/dashboard-leads",
+        },
+        {
           name: "Step 1 Onboarding Welcome",
           path: "/step-1-onboarding-welcome",
         },
@@ -64,6 +68,14 @@ export default function Home() {
         {
           name: "Settings Members",
           path: "/settings-members",
+        },
+        {
+          name: "Settings Security",
+          path: "/settings-security",
+        },
+        {
+          name: "Settings Plans",
+          path: "/settings-plans",
         },
       ],
     },
