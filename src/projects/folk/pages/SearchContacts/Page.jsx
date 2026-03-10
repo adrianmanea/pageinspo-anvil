@@ -327,7 +327,7 @@ export default function Page() {
         </div>
 
         <div className="flex items-center gap-[8px]">
-          <button className="flex items-center justify-center gap-[4px] px-[10px] py-[6px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] font-[500] text-[13px] hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+          <button className="flex items-center justify-center gap-[4px] px-[10px] py-[6px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] font-[500] text-[13px] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors">
             All contacts
             <ChevronDown className="w-[16px] h-[16px]" />
           </button>
@@ -341,7 +341,7 @@ export default function Page() {
             <li
               key={contact.id}
               onClick={() => setSelectedContact(contact)}
-              className="group flex flex-row items-center relative h-[70px] w-full px-[24px] py-[16px] gap-[12px] border-b border-[#f0f0f0] dark:border-[#333333] hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer"
+              className="group flex flex-row items-center relative h-[70px] w-full px-[24px] py-[16px] gap-[12px] border-b border-[#f0f0f0] dark:border-[#333333] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors cursor-pointer"
             >
               {/* Avatar & Checkbox Stack */}
               <div className="relative flex items-center justify-center w-[32px] h-[32px] shrink-0">
@@ -410,13 +410,13 @@ export default function Page() {
                 <div className="flex items-center gap-[4px]">
                   <button
                     onClick={(e) => e.stopPropagation()}
-                    className="flex items-center justify-center w-[24px] h-[24px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-gray-50 dark:hover:bg-[#2A2A2A] text-[#626262] dark:text-[#B4B4B4]"
+                    className="flex items-center justify-center w-[24px] h-[24px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] text-[#626262] dark:text-[#B4B4B4]"
                   >
                     <Plus className="w-[14px] h-[14px]" />
                   </button>
                   <button
                     onClick={(e) => e.stopPropagation()}
-                    className="flex items-center justify-center w-[24px] h-[24px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 text-[#626262] dark:text-[#B4B4B4]"
+                    className="flex items-center justify-center w-[24px] h-[24px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] text-[#626262] dark:text-[#B4B4B4]"
                   >
                     <MessageSquare className="w-[14px] h-[14px]" />
                   </button>
@@ -441,12 +441,12 @@ export default function Page() {
             <div className="flex items-center px-[24px] h-[48px] border-b border-[#d9d9d9] dark:border-[#2C2C2E] shrink-0 gap-[4px] bg-white dark:bg-[#191919]">
               <button
                 onClick={() => setSelectedContact(null)}
-                className="flex items-center justify-center w-[28px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                className="flex items-center justify-center w-[28px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors"
                 aria-label="Close dialog"
               >
                 <X className="w-[16px] h-[16px]" />
               </button>
-              <button className="flex items-center justify-center w-[28px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+              <button className="flex items-center justify-center w-[28px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                 <Maximize2 className="w-[16px] h-[16px]" />
               </button>
 
@@ -454,7 +454,7 @@ export default function Page() {
                 <span className="text-[13px] font-[500] text-[#626262] dark:text-[#B4B4B4] mr-[8px]">
                   View in
                 </span>
-                <div className="flex items-center h-[28px] px-[8px] border border-[#626262] dark:border-[#B4B4B4] rounded-full cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                <div className="flex items-center h-[28px] px-[8px] border border-[#626262] dark:border-[#B4B4B4] rounded-full cursor-pointer hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                   <span className="text-[16px] leading-[19px] mr-[6px] -ml-[2px]">
                     {selectedContact.group.emoji}
                   </span>
@@ -464,10 +464,10 @@ export default function Page() {
                 </div>
               </div>
 
-              <button className="flex items-center justify-center h-[28px] px-[10px] rounded-full text-[13px] font-[500] text-[#626262] dark:text-[#B4B4B4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors ml-auto">
+              <button className="flex items-center justify-center h-[28px] px-[10px] rounded-full text-[13px] font-[500] text-[#626262] dark:text-[#B4B4B4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors ml-auto">
                 Copy link
               </button>
-              <button className="flex items-center justify-center w-[28px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+              <button className="flex items-center justify-center w-[28px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                 <MoreHorizontal className="w-[16px] h-[16px]" />
               </button>
             </div>
@@ -491,7 +491,7 @@ export default function Page() {
                     <h2 className="text-[20px] font-[500] text-[#202020] dark:text-[#EEEEEE] leading-[30px] tracking-[-0.38px]">
                       {selectedContact.name}
                     </h2>
-                    <button className="flex items-center justify-center w-[28px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="flex items-center justify-center w-[28px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <Copy className="w-[16px] h-[16px]" />
                     </button>
                   </div>
@@ -512,18 +512,18 @@ export default function Page() {
 
               {/* Action Buttons Row */}
               <div className="flex items-center gap-[8px] h-[28px]">
-                <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-gray-50 dark:hover:bg-[#2A2A2A] transition-colors">
+                <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors">
                   <Sparkles className="w-[16px] h-[16px] mr-[6px] -ml-[2px] text-[#626262] dark:text-[#B4B4B4]" />
                   Enrich
                 </button>
-                <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-gray-50 dark:hover:bg-[#2A2A2A] transition-colors">
+                <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors">
                   <Mail className="w-[16px] h-[16px] mr-[6px] -ml-[2px] text-[#626262] dark:text-[#B4B4B4]" />
                   Email
                 </button>
-                <button className="flex items-center justify-center w-[28px] h-[28px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-gray-50 dark:hover:bg-[#2A2A2A] transition-colors">
+                <button className="flex items-center justify-center w-[28px] h-[28px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors">
                   <Linkedin className="w-[14px] h-[14px] text-[#626262] dark:text-[#B4B4B4]" />
                 </button>
-                <button className="flex items-center justify-center w-[28px] h-[28px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-gray-50 dark:hover:bg-[#2A2A2A] transition-colors">
+                <button className="flex items-center justify-center w-[28px] h-[28px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors">
                   <Phone className="w-[14px] h-[14px] text-[#626262] dark:text-[#B4B4B4]" />
                 </button>
               </div>
@@ -554,7 +554,7 @@ export default function Page() {
                 {/* Field: Status */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Status
                       </span>
@@ -574,12 +574,12 @@ export default function Page() {
                 {/* Field: Channel */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Channel
                       </span>
                     </div>
-                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <X className="w-[14px] h-[14px]" />
                     </button>
                   </div>
@@ -595,12 +595,12 @@ export default function Page() {
                 {/* Field: Prospect owner */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Prospect owner
                       </span>
                     </div>
-                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <X className="w-[14px] h-[14px]" />
                     </button>
                   </div>
@@ -621,7 +621,7 @@ export default function Page() {
                 {/* Field: User selection */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         User selection
                       </span>
@@ -637,12 +637,12 @@ export default function Page() {
                 {/* Field: Deal value */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Deal value
                       </span>
                     </div>
-                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <Copy className="w-[14px] h-[14px]" />
                     </button>
                   </div>
@@ -656,12 +656,12 @@ export default function Page() {
                 {/* Field: Company size */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Company size
                       </span>
                     </div>
-                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <X className="w-[14px] h-[14px]" />
                     </button>
                   </div>
@@ -677,16 +677,16 @@ export default function Page() {
                 {/* Field: Emails */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Emails
                       </span>
                     </div>
                     <div className="flex items-center gap-[4px]">
-                      <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                      <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                         <Copy className="w-[14px] h-[14px]" />
                       </button>
-                      <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                      <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                         <MoreHorizontal className="w-[14px] h-[14px]" />
                       </button>
                     </div>
@@ -702,16 +702,16 @@ export default function Page() {
                 {/* Field: Phones */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Phones
                       </span>
                     </div>
                     <div className="flex items-center gap-[4px]">
-                      <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                      <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                         <Copy className="w-[14px] h-[14px]" />
                       </button>
-                      <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                      <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                         <MoreHorizontal className="w-[14px] h-[14px]" />
                       </button>
                     </div>
@@ -727,12 +727,12 @@ export default function Page() {
                 {/* Field: Job title */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Job title
                       </span>
                     </div>
-                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <Copy className="w-[14px] h-[14px]" />
                     </button>
                   </div>
@@ -746,7 +746,7 @@ export default function Page() {
                 {/* Field: Groups */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Groups
                       </span>
@@ -759,7 +759,7 @@ export default function Page() {
                         Search contacts
                       </span>
                     </div>
-                    <button className="flex items-center h-[24px] px-[8px] gap-[6px] border border-dashed border-[#e1e1e1] dark:border-[#3D3D3D] rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-[#626262] dark:text-[#B4B4B4]">
+                    <button className="flex items-center h-[24px] px-[8px] gap-[6px] border border-dashed border-[#e1e1e1] dark:border-[#3D3D3D] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors text-[#626262] dark:text-[#B4B4B4]">
                       <span className="text-[13px] font-[400]">+ Add</span>
                     </button>
                   </div>
@@ -768,12 +768,12 @@ export default function Page() {
                 {/* Field: Addresses */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Addresses
                       </span>
                     </div>
-                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <Copy className="w-[14px] h-[14px]" />
                     </button>
                   </div>
@@ -785,12 +785,12 @@ export default function Page() {
                 {/* Field: Urls */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Urls
                       </span>
                     </div>
-                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <Copy className="w-[14px] h-[14px]" />
                     </button>
                   </div>
@@ -802,12 +802,12 @@ export default function Page() {
                 {/* Field: Gender */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Gender
                       </span>
                     </div>
-                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <Copy className="w-[14px] h-[14px]" />
                     </button>
                   </div>
@@ -819,12 +819,12 @@ export default function Page() {
                 {/* Field: Companies */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Companies
                       </span>
                     </div>
-                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <X className="w-[14px] h-[14px]" />
                     </button>
                   </div>
@@ -845,7 +845,7 @@ export default function Page() {
                 {/* Field: Notes */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Notes
                       </span>
@@ -859,12 +859,12 @@ export default function Page() {
                 {/* Field: Created at */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Created at
                       </span>
                     </div>
-                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <Copy className="w-[14px] h-[14px]" />
                     </button>
                   </div>
@@ -876,7 +876,7 @@ export default function Page() {
                 {/* Field: Created by */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Created by
                       </span>
@@ -899,12 +899,12 @@ export default function Page() {
                 {/* Field: Added to group at */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Added to group at
                       </span>
                     </div>
-                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <button className="hidden group-hover/field:flex items-center justify-center w-[24px] h-[24px] rounded-full text-[#b4b4b4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                       <Copy className="w-[14px] h-[14px]" />
                     </button>
                   </div>
@@ -916,7 +916,7 @@ export default function Page() {
                 {/* Field: Added to group by */}
                 <div className="flex flex-col min-h-[58px] py-[4px] group/field border border-transparent hover:border-[#d9d9d9] dark:hover:border-[#3D3D3D] rounded-[8px] px-[8px] -mx-[8px] transition-colors">
                   <div className="flex items-center justify-between h-[29px]">
-                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer">
+                    <div className="flex items-center gap-[4px] px-[6px] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] cursor-pointer">
                       <span className="text-[12px] font-[500] text-[#626262] dark:text-[#B4B4B4]">
                         Added to group by
                       </span>
@@ -940,10 +940,10 @@ export default function Page() {
 
             {/* Footer Buttons */}
             <div className="absolute bottom-0 left-[24px] right-[24px] grid gap-[4px] grid-cols-2 pt-[12px] pb-[12px] bg-white dark:bg-[#191919]">
-              <button className="flex h-[28px] px-[10px] py-[6px] items-center justify-center text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border-[0.666667px] border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+              <button className="flex h-[28px] px-[10px] py-[6px] items-center justify-center text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border-[0.666667px] border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                 New field
               </button>
-              <button className="flex h-[28px] px-[10px] py-[6px] items-center justify-center text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border-[0.666667px] border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+              <button className="flex h-[28px] px-[10px] py-[6px] items-center justify-center text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border-[0.666667px] border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
                 Visible fields
               </button>
             </div>
@@ -963,26 +963,26 @@ export default function Page() {
             {selectedContactIds.length === 1 ? "person" : "people"}
           </span>
           <div className="flex items-center gap-[6px] ml-[8px]">
-            <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-gray-50 dark:hover:bg-[#2A2A2A] transition-colors">
+            <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors">
               Email
             </button>
-            <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-gray-50 dark:hover:bg-[#2A2A2A] transition-colors">
+            <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors">
               Enrich
             </button>
-            <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-gray-50 dark:hover:bg-[#2A2A2A] transition-colors">
+            <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors">
               Add to group
             </button>
-            <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-gray-50 dark:hover:bg-[#2A2A2A] transition-colors">
+            <button className="flex items-center justify-center h-[28px] px-[10px] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] text-[#202020] dark:text-[#EEEEEE] text-[13px] font-[500] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors">
               Merge
             </button>
-            <button className="flex items-center justify-center w-[28px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+            <button className="flex items-center justify-center w-[28px] h-[28px] rounded-full text-[#626262] dark:text-[#B4B4B4] hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors">
               <Trash2 className="w-[16px] h-[16px]" />
             </button>
           </div>
           <button
             type="button"
             onClick={() => setSelectedContactIds([])}
-            className="flex items-center justify-center h-[28px] px-[10px] text-[#626262] dark:text-[#B4B4B4] text-[13px] font-[500] rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors ml-[4px]"
+            className="flex items-center justify-center h-[28px] px-[10px] text-[#626262] dark:text-[#B4B4B4] text-[13px] font-[500] rounded-full hover:bg-[#F9F9F9] dark:hover:bg-[#1A1A1A] transition-colors ml-[4px]"
           >
             Cancel
           </button>

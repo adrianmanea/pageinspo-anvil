@@ -21,6 +21,7 @@ import SettingsMembers from "@/projects/folk/pages/SettingsMembers/Page";
 import SettingsSecurity from "@/projects/folk/pages/SettingsSecurity/Page";
 import DashboardLeads from "@/projects/folk/pages/DashboardLeads/Page";
 import SettingsPlans from "@/projects/folk/pages/SettingsPlans/Page";
+import UsersEmptyLight from "@/projects/folk/pages/UsersEmptyLight/Page";
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
         <Route path="/settings-members" element={<SettingsMembers />} />
         <Route path="/settings-security" element={<SettingsSecurity />} />
         <Route path="/settings-plans" element={<SettingsPlans />} />
+        <Route path="/users-empty-light" element={<UsersEmptyLight />} />
       </Routes>
     </BrowserRouter>
   );

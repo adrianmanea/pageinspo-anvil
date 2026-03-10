@@ -26,7 +26,7 @@ export default function Page() {
             <header className="flex flex-col gap-[24px] mt-[16px] w-full max-w-[304px] mx-auto">
               <a
                 href="/logout"
-                className="absolute top-[24px] left-[24px] flex w-[65px] h-[28px] items-center justify-center rounded-full border border-[#BBBBBB] bg-[#FFFFFF] px-[10px] py-[6px] text-[13px] font-[500] leading-[19px] text-[#202020] shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] transition-colors hover:bg-[#F9FAFB] md:fixed md:bottom-[24px] md:top-auto"
+                className="absolute top-[24px] left-[24px] flex w-[65px] h-[28px] items-center justify-center rounded-full border border-[#BBBBBB] bg-[#FFFFFF] px-[10px] py-[6px] text-[13px] font-[500] leading-[19px] text-[#202020] shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] transition-colors hover:bg-[#F5F5F5] md:fixed md:bottom-[24px] md:top-auto"
               >
                 Logout
               </a>
@@ -53,7 +53,7 @@ export default function Page() {
 
             <footer className="flex flex-col gap-[24px] w-full max-w-[304px] mx-auto">
               <div className="flex flex-col w-full">
-                <button className="flex w-full h-[40px] items-center justify-center rounded-full border border-transparent bg-[#202020] px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#FDFDFD] transition-colors hover:bg-[#333333]">
+                <button className="flex w-full h-[40px] items-center justify-center rounded-full border border-transparent bg-[#202020] px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#FDFDFD] transition-colors hover:bg-[#3D3D3D]">
                   Get started
                 </button>
               </div>

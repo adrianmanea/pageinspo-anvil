@@ -113,7 +113,7 @@ export default function Page({ children }) {
                 (2 weeks left)
               </span>
             </div>
-            <button className="flex items-center justify-center h-7 px-2.5 bg-[#202020] dark:bg-[#eeeeee] text-[#fdfdfd] dark:text-[#191919] text-[13px] font-medium rounded-full hover:bg-black dark:hover:bg-white w-fit">
+            <button className="flex items-center justify-center h-7 px-2.5 bg-[#202020] dark:bg-[#eeeeee] text-[#fdfdfd] dark:text-[#191919] text-[13px] font-medium rounded-full hover:bg-[#3D3D3D] dark:hover:bg-[#D4D4D4] w-fit">
               Subscribe
             </button>
           </div>
@@ -198,7 +198,7 @@ export default function Page({ children }) {
       <main className="flex-1 flex flex-col relative bg-[#ffffff] dark:bg-[#191919] overflow-hidden">
         {/* Help Button - Fixed at bottom right */}
         <div className="absolute right-3 bottom-3 z-50">
-          <button className="flex items-center justify-center w-8 h-8 bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-gray-50 dark:hover:bg-[#2a2a2a] text-[#202020] dark:text-[#eeeeee]">
+          <button className="flex items-center justify-center w-8 h-8 bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] text-[#202020] dark:text-[#eeeeee]">
             <HelpCircle className="w-4 h-4" />
           </button>
         </div>
@@ -232,7 +232,7 @@ export default function Page({ children }) {
                 J
               </div>
             </div>
-            <button className="h-7 px-3 bg-[#202020] dark:bg-[#eeeeee] text-white dark:text-[#191919] text-[13px] font-medium rounded-full hover:bg-black dark:hover:bg-white transition-colors hidden sm:flex items-center">
+            <button className="h-7 px-3 bg-[#202020] dark:bg-[#eeeeee] text-white dark:text-[#191919] text-[13px] font-medium rounded-full hover:bg-[#3D3D3D] dark:hover:bg-[#D4D4D4] transition-colors hidden sm:flex items-center">
               Share
             </button>
             <button className="flex items-center justify-center w-7 h-7 text-[#626262] dark:text-[#b4b4b4] hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-colors">

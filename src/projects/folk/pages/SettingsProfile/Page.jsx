@@ -44,7 +44,7 @@ export default function Page() {
           </div>
           <a
             href="#"
-            className="inline-flex items-center justify-center w-full sm:w-auto h-[28px] px-[10px] text-[13px] font-[500] text-[#FDFDFD] dark:text-[#191919] bg-[#202020] dark:bg-[#EEEEEE] rounded-full border border-transparent whitespace-nowrap hover:bg-[#303030] dark:hover:bg-[#DDDDDD] transition-colors"
+            className="inline-flex items-center justify-center w-full sm:w-auto h-[28px] px-[10px] text-[13px] font-[500] text-[#FDFDFD] dark:text-[#191919] bg-[#202020] dark:bg-[#EEEEEE] rounded-full border border-transparent whitespace-nowrap hover:bg-[#3D3D3D] dark:hover:bg-[#D4D4D4] transition-colors"
           >
             Upgrade to Premium
           </a>
@@ -81,7 +81,7 @@ export default function Page() {
                 <div className="flex flex-col gap-[8px]">
                   <label
                     htmlFor="avatar-upload"
-                    className="inline-flex items-center justify-center h-[28px] px-[10px] w-fit text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] cursor-pointer hover:bg-gray-50 dark:hover:bg-[#2a2a2a] transition-colors"
+                    className="inline-flex items-center justify-center h-[28px] px-[10px] w-fit text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] cursor-pointer hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors"
                   >
                     Upload picture
                   </label>
@@ -136,7 +136,7 @@ export default function Page() {
                   <span className="text-[13px] font-[400] text-[#202020] dark:text-[#EEEEEE] break-all">
                     john@acme.com
                   </span>
-                  <button className="inline-flex items-center justify-center flex-shrink-0 h-[28px] px-[10px] text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-gray-50 dark:hover:bg-[#2a2a2a] transition-colors">
+                  <button className="inline-flex items-center justify-center flex-shrink-0 h-[28px] px-[10px] text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors">
                     Change email
                   </button>
                 </div>
@@ -207,7 +207,7 @@ export default function Page() {
                       value={selectedTheme}
                       onValueChange={setSelectedTheme}
                     >
-                      <Select.Trigger className="inline-flex items-center justify-between h-[28px] px-[10px] gap-[4px] text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-gray-50 dark:hover:bg-[#2a2a2a] transition-colors outline-none">
+                      <Select.Trigger className="inline-flex items-center justify-between h-[28px] px-[10px] gap-[4px] text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.24)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors outline-none">
                         <Select.Value />
                         <Select.Icon>
                           <ChevronDown className="w-[16px] h-[16px] text-[#202020] dark:text-[#EEEEEE] -mr-[2px]" />

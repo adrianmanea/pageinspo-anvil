@@ -137,7 +137,7 @@ export default function Page() {
                       w-[16px] h-[16px] flex-shrink-0
                       appearance-none cursor-pointer
                       bg-white dark:bg-[#191919]
-                      border border-[#626262] dark:border-[#B4B4B4]
+                      border border-[#CECECE] dark:border-[#4A4A4A]
                       bg-center bg-no-repeat
                       checked:bg-[url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M6.66667%2010.9333L4%208.26667L4.93333%207.33333L6.66667%209.06667L11.0667%204.66667L12%205.6L6.66667%2010.9333Z%22%20fill%3D%22%23202020%22%2F%3E%3C%2Fsvg%3E')]
                       dark:checked:bg-[url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M6.66667%2010.9333L4%208.26667L4.93333%207.33333L6.66667%209.06667L11.0667%204.66667L12%205.6L6.66667%2010.9333Z%22%20fill%3D%22%23eee%22%2F%3E%3C%2Fsvg%3E')]

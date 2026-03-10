@@ -77,7 +77,7 @@ export default function Page() {
                   <div className="flex items-center sm:justify-end flex-1">
                     <button
                       aria-label="Revoke session on Windows"
-                      className="flex items-center justify-center h-[28px] px-[10px] py-[6px] text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] hover:bg-gray-50 dark:hover:bg-[#2a2a2a] transition-colors whitespace-nowrap"
+                      className="flex items-center justify-center h-[28px] px-[10px] py-[6px] text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors whitespace-nowrap"
                     >
                       Revoke
                     </button>

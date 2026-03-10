@@ -47,14 +47,14 @@ export default function Page() {
 
               <button
                 type="button"
-                className="flex h-[40px] w-[304px] items-center justify-center rounded-[9999px] border-[0.666667px] border-[#BBBBBB] dark:border-[#606060] bg-[#FFFFFF] dark:bg-[#222222] px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#202020] dark:text-[#EEEEEE] shadow-[0px_1px_1px_0px_rgba(0,0,0,0.06)] dark:shadow-[0px_1px_2px_0px_rgba(0,0,0,0.24)] transition-colors hover:bg-[#F9FAFB] dark:hover:bg-[#333333]"
+                className="flex h-[40px] w-[304px] items-center justify-center rounded-[9999px] border-[0.666667px] border-[#BBBBBB] dark:border-[#606060] bg-[#FFFFFF] dark:bg-[#222222] px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#202020] dark:text-[#EEEEEE] shadow-[0px_1px_1px_0px_rgba(0,0,0,0.06)] dark:shadow-[0px_1px_2px_0px_rgba(0,0,0,0.24)] transition-colors hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A]"
               >
                 Resend email
               </button>
 
               <button
                 type="button"
-                className="flex h-[40px] w-[304px] items-center justify-center rounded-[9999px] border-[0.666667px] border-transparent bg-transparent px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#626262] dark:text-[#B4B4B4] transition-colors hover:bg-[#F9FAFB] dark:hover:bg-[#333333]"
+                className="flex h-[40px] w-[304px] items-center justify-center rounded-[9999px] border-[0.666667px] border-transparent bg-transparent px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#626262] dark:text-[#B4B4B4] transition-colors hover:bg-[rgba(0,0,0,0.055)] dark:hover:bg-[rgba(255,255,255,0.063)]"
               >
                 Back to login
               </button>

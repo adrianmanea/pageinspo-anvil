@@ -24,7 +24,7 @@ export default function Page() {
         >
           {/* Header */}
           <header className="flex flex-col gap-[24px] mt-[8px] sm:mt-[16px] w-full relative">
-            <button className="absolute -left-[8px] -top-[32px] sm:-left-[16px] sm:-top-[32px] md:-left-[32px] md:-top-[32px] flex h-[28px] items-center justify-center rounded-full px-[10px] py-[6px] text-[13px] font-[500] leading-[19px] text-[#626262] transition-colors hover:bg-[#F9FAFB] z-10">
+            <button className="absolute -left-[8px] -top-[32px] sm:-left-[16px] sm:-top-[32px] md:-left-[32px] md:-top-[32px] flex h-[28px] items-center justify-center rounded-full px-[10px] py-[6px] text-[13px] font-[500] leading-[19px] text-[#626262] transition-colors hover:bg-[rgba(0,0,0,0.055)] z-10">
               <span className="mr-[6px] -ml-[2px] flex h-[16px] w-[16px] items-center justify-center">
                 <ArrowLeft className="h-[16px] w-[16px]" />
               </span>
@@ -32,7 +32,7 @@ export default function Page() {
             </button>
             <a
               href="/logout"
-              className="absolute top-0 right-0 sm:fixed sm:bottom-[24px] sm:right-[24px] sm:top-auto flex h-[28px] items-center justify-center rounded-full border border-[#BBBBBB] bg-[#FFFFFF] px-[10px] py-[6px] text-[13px] font-[500] leading-[19px] text-[#202020] shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] transition-colors hover:bg-[#F9FAFB] z-10"
+              className="absolute top-0 right-0 sm:fixed sm:bottom-[24px] sm:right-[24px] sm:top-auto flex h-[28px] items-center justify-center rounded-full border border-[#BBBBBB] bg-[#FFFFFF] px-[10px] py-[6px] text-[13px] font-[500] leading-[19px] text-[#202020] shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] transition-colors hover:bg-[#F5F5F5] z-10"
             >
               Logout
             </a>
@@ -62,10 +62,10 @@ export default function Page() {
           <footer className="flex flex-col gap-[24px] w-full">
             <div className="flex flex-col w-full max-w-[304px] mx-auto gap-[16px]">
               <div className="flex flex-col gap-[16px] w-full">
-                <button className="flex w-full h-[40px] items-center justify-center rounded-full border border-transparent bg-[#202020] px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#FDFDFD] transition-colors hover:bg-[#333333]">
+                <button className="flex w-full h-[40px] items-center justify-center rounded-full border border-transparent bg-[#202020] px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#FDFDFD] transition-colors hover:bg-[#3D3D3D]">
                   Download AcmeX
                 </button>
-                <button className="flex w-full h-[40px] items-center justify-center rounded-full border border-transparent bg-transparent px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#626262] transition-colors hover:bg-[#F9FAFB]">
+                <button className="flex w-full h-[40px] items-center justify-center rounded-full border border-transparent bg-transparent px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#626262] transition-colors hover:bg-[rgba(0,0,0,0.055)]">
                   I'll do this later
                 </button>
               </div>

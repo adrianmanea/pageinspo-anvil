@@ -74,7 +74,7 @@ export default function Page() {
         <header className="flex h-[48px] items-center justify-between border-b border-[#D9D9D9] px-[24px]">
           {/* Breadcrumb / Group Badge */}
           <div className="flex items-center">
-            <button className="flex items-center gap-[6px] h-[24px] px-[8px] rounded-full border border-[#E1E1E1] bg-[#FFFFFF] hover:bg-[#F9FAFB] transition-colors">
+            <button className="flex items-center gap-[6px] h-[24px] px-[8px] rounded-full border border-[#E1E1E1] bg-[#FFFFFF] hover:bg-[#F5F5F5] transition-colors">
               <span className="text-[16px] leading-none">🤑</span>
               <span className="text-[13px] text-[#202020] max-w-[150px] truncate">
                 Leads
@@ -130,18 +130,18 @@ export default function Page() {
 
                 {/* Action Buttons Row */}
                 <div className="flex items-center gap-[8px] h-[28px]">
-                  <button className="flex items-center justify-center h-[28px] px-[10px] bg-white border border-[#bbbbbb] text-[#202020] text-[13px] font-[500] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-gray-50 transition-colors">
+                  <button className="flex items-center justify-center h-[28px] px-[10px] bg-white border border-[#bbbbbb] text-[#202020] text-[13px] font-[500] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-[#F5F5F5] transition-colors">
                     <Sparkles className="w-[16px] h-[16px] mr-[6px] -ml-[2px] text-[#626262]" />
                     Enrich
                   </button>
-                  <button className="flex items-center justify-center h-[28px] px-[10px] bg-white border border-[#bbbbbb] text-[#202020] text-[13px] font-[500] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-gray-50 transition-colors">
+                  <button className="flex items-center justify-center h-[28px] px-[10px] bg-white border border-[#bbbbbb] text-[#202020] text-[13px] font-[500] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-[#F5F5F5] transition-colors">
                     <Mail className="w-[16px] h-[16px] mr-[6px] -ml-[2px] text-[#626262]" />
                     Email
                   </button>
-                  <button className="flex items-center justify-center w-[28px] h-[28px] bg-white border border-[#bbbbbb] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-gray-50 transition-colors">
+                  <button className="flex items-center justify-center w-[28px] h-[28px] bg-white border border-[#bbbbbb] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-[#F5F5F5] transition-colors">
                     <Linkedin className="w-[14px] h-[14px] text-[#626262]" />
                   </button>
-                  <button className="flex items-center justify-center w-[28px] h-[28px] bg-white border border-[#bbbbbb] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-gray-50 transition-colors">
+                  <button className="flex items-center justify-center w-[28px] h-[28px] bg-white border border-[#bbbbbb] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-[#F5F5F5] transition-colors">
                     <Phone className="w-[14px] h-[14px] text-[#626262]" />
                   </button>
                 </div>

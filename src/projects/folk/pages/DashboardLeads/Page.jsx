@@ -34,10 +34,10 @@ function WidgetCard({ title, children }) {
           <div
             className={`flex gap-[8px] transition-opacity duration-200 ${isHovered ? "opacity-100" : "opacity-0"}`}
           >
-            <button className="flex h-[28px] items-center justify-center px-[10px] bg-white border border-[#bbbbbb] rounded-full shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] text-[13px] font-medium text-[#202020]">
+            <button className="flex h-[28px] items-center justify-center px-[10px] bg-white border border-[#bbbbbb] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] text-[13px] font-medium text-[#202020]">
               Edit
             </button>
-            <button className="flex h-[28px] w-[28px] items-center justify-center bg-white border border-[#bbbbbb] rounded-full shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] text-[#626262]">
+            <button className="flex h-[28px] w-[28px] items-center justify-center bg-white border border-[#bbbbbb] rounded-full shadow-[0_1px_1px_rgba(0,0,0,0.06)] text-[#626262]">
               <MoreHorizontal size={14} />
             </button>
           </div>
@@ -93,7 +93,7 @@ export default function Page() {
           </div>
         </div>
         <div className="flex items-center gap-[8px]">
-          <button className="flex h-[28px] items-center justify-center px-[10px] rounded-full bg-[#202020] text-white text-[13px] font-medium shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] hover:bg-[#323232]">
+          <button className="flex h-[28px] items-center justify-center px-[10px] rounded-full bg-[#202020] text-white text-[13px] font-medium shadow-[0_1px_1px_rgba(0,0,0,0.06)] hover:bg-[#3D3D3D]">
             Add chart
           </button>
           <button className="flex h-[28px] w-[28px] items-center justify-center rounded-full text-[#626262]">
@@ -303,7 +303,7 @@ export default function Page() {
           </WidgetCard>
 
           {/* Add chart block */}
-          <button className="flex items-center justify-center h-[305px] border border-[#d9d9d9] bg-white shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] text-[#626262] hover:bg-gray-50 transition-colors">
+          <button className="flex items-center justify-center h-[305px] border border-[#d9d9d9] bg-white shadow-[0_1px_1px_rgba(0,0,0,0.06)] text-[#626262] hover:bg-[#F5F5F5] transition-colors">
             <Plus size={24} />
           </button>
         </div>

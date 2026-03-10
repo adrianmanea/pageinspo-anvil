@@ -18,6 +18,10 @@ export default function Home() {
           path: "/dashboard-leads",
         },
         {
+          name: "Users Empty Light",
+          path: "/users-empty-light",
+        },
+        {
           name: "Step 1 Onboarding Welcome",
           path: "/step-1-onboarding-welcome",
         },

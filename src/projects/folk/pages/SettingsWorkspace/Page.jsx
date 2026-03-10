@@ -196,7 +196,7 @@ export default function Page() {
                 <div className="flex flex-col gap-[8px]">
                   <label
                     htmlFor="workspace-icon-upload"
-                    className="inline-flex items-center justify-center h-[28px] px-[10px] w-fit text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] cursor-pointer hover:bg-gray-50 dark:hover:bg-[#2C2C2C] transition-colors whitespace-nowrap"
+                    className="inline-flex items-center justify-center h-[28px] px-[10px] w-fit text-[13px] font-[500] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] cursor-pointer hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors whitespace-nowrap"
                   >
                     Upload workspace icon
                   </label>

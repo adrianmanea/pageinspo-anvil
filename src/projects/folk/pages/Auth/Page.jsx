@@ -39,7 +39,7 @@ export default function Page() {
             <div className="flex w-[304px] flex-col gap-[16px]">
               <a
                 href="#"
-                className="flex h-[40px] w-[304px] items-center justify-center rounded-[9999px] border-[0.666667px] border-transparent bg-[#202020] dark:bg-[#EEEEEE] px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] tracking-[-0.026px] text-[#FDFDFD] dark:text-[#191919] transition-colors hover:bg-[#333333] dark:hover:bg-[#D9D9D9]"
+                className="flex h-[40px] w-[304px] items-center justify-center rounded-[9999px] border-[0.666667px] border-transparent bg-[#202020] dark:bg-[#EEEEEE] px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] tracking-[-0.026px] text-[#FDFDFD] dark:text-[#191919] transition-colors hover:bg-[#3D3D3D] dark:hover:bg-[#D4D4D4]"
               >
                 <span className="ml-[-2px] mr-[6px] flex h-[16px] w-[16px] items-center justify-center">
                   <svg
@@ -68,7 +68,7 @@ export default function Page() {
               </a>
               <button
                 type="submit"
-                className="flex h-[40px] w-[304px] items-center justify-center rounded-[9999px] border-[0.666667px] border-[#BBBBBB] dark:border-[#606060] bg-[#FFFFFF] dark:bg-[#222222] px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#202020] dark:text-[#EEEEEE] shadow-[0px_1px_1px_0px_rgba(0,0,0,0.06)] dark:shadow-[0px_1px_2px_0px_rgba(0,0,0,0.24)] transition-colors hover:bg-[#F9FAFB] dark:hover:bg-[#333333]"
+                className="flex h-[40px] w-[304px] items-center justify-center rounded-[9999px] border-[0.666667px] border-[#BBBBBB] dark:border-[#606060] bg-[#FFFFFF] dark:bg-[#222222] px-[10px] py-[6px] text-[15px] font-[500] leading-[19px] text-[#202020] dark:text-[#EEEEEE] shadow-[0px_1px_1px_0px_rgba(0,0,0,0.06)] dark:shadow-[0px_1px_2px_0px_rgba(0,0,0,0.24)] transition-colors hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A]"
               >
                 Continue with email
               </button>

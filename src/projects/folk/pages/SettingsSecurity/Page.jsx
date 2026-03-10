@@ -112,7 +112,7 @@ export default function Page() {
                 </div>
                 <button
                   type="submit"
-                  className="flex items-center justify-center h-[28px] px-[10px] py-[6px] text-[13px] font-[500] leading-[19px] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] hover:bg-[#F9F9F9] dark:hover:bg-[#333333] transition-colors rounded-full whitespace-nowrap flex-shrink-0"
+                  className="flex items-center justify-center h-[28px] px-[10px] py-[6px] text-[13px] font-[500] leading-[19px] text-[#202020] dark:text-[#EEEEEE] bg-white dark:bg-[#222222] border border-[#bbbbbb] dark:border-[#606060] shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors rounded-full whitespace-nowrap flex-shrink-0"
                 >
                   Add to list
                 </button>

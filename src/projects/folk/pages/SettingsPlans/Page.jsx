@@ -203,16 +203,16 @@ function PlanCard({ plan }) {
           {plan.isCustom ? (
             <a
               href="#"
-              className="inline-flex w-full h-[28px] px-[10px] py-[6px] justify-center items-center text-[13px] font-[500] whitespace-nowrap bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] cursor-pointer text-[#202020] dark:text-[#EEEEEE] hover:bg-gray-50 dark:hover:bg-[#2C2C2C] transition-colors"
+              className="inline-flex w-full h-[28px] px-[10px] py-[6px] justify-center items-center text-[13px] font-[500] whitespace-nowrap bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] cursor-pointer text-[#202020] dark:text-[#EEEEEE] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors"
             >
               {plan.buttonLabel}
             </a>
           ) : plan.highlighted ? (
-            <button className="inline-flex w-full h-[28px] px-[10px] py-[6px] justify-center items-center text-[13px] font-[500] whitespace-nowrap text-[#FDFDFD] dark:text-[#191919] bg-[#202020] dark:bg-[#EEEEEE] border border-transparent rounded-full cursor-pointer hover:bg-[#333333] dark:hover:bg-[#DDDDDD] transition-colors">
+            <button className="inline-flex w-full h-[28px] px-[10px] py-[6px] justify-center items-center text-[13px] font-[500] whitespace-nowrap text-[#FDFDFD] dark:text-[#191919] bg-[#202020] dark:bg-[#EEEEEE] border border-transparent rounded-full cursor-pointer hover:bg-[#3D3D3D] dark:hover:bg-[#D4D4D4] transition-colors">
               {plan.buttonLabel}
             </button>
           ) : (
-            <button className="inline-flex w-full h-[28px] px-[10px] py-[6px] justify-center items-center text-[13px] font-[500] whitespace-nowrap bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] cursor-pointer text-[#202020] dark:text-[#EEEEEE] hover:bg-gray-50 dark:hover:bg-[#2C2C2C] transition-colors">
+            <button className="inline-flex w-full h-[28px] px-[10px] py-[6px] justify-center items-center text-[13px] font-[500] whitespace-nowrap bg-white dark:bg-[#222222] border border-[#BBBBBB] dark:border-[#606060] rounded-full shadow-[0_1px_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_2px_0_rgba(0,0,0,0.24)] cursor-pointer text-[#202020] dark:text-[#EEEEEE] hover:bg-[#F5F5F5] dark:hover:bg-[#2A2A2A] transition-colors">
               {plan.buttonLabel}
             </button>
           )}
