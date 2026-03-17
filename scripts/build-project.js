@@ -18,7 +18,7 @@ const rootDir = path.resolve(__dirname, '..');
 const customConfig = path.resolve(rootDir, `vite.config.${projectName}.js`);
 
 // Special handling for attio and folk due to multi-page structure
-if (['attio', 'folk'].includes(projectName)) {
+if (['attio', 'folk', 'sana-ai'].includes(projectName)) {
   console.log(`Building ${projectName} pages (multi-page structure)...`);
 
   const pagesDir = path.resolve(rootDir, `src/projects/${projectName}/pages`);

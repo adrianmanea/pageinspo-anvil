@@ -3,84 +3,17 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const projects = [
     {
-      title: "Folk",
+      title: "Sana AI",
       description: "CRM for the next generation",
       color: "bg-pink-500",
-      letter: "F",
+      letter: "S",
       links: [
-        { name: "Login Page", path: "/auth" },
-        { name: "Email Login Page", path: "/auth/email-login" },
-        { name: "Email Sent Page", path: "/auth/email-sent" },
-        { name: "Contacts Shell", path: "/contacts-shell" },
-        { name: "Search Contacts", path: "/search-contacts" },
-        {
-          name: "Dashboard Leads",
-          path: "/dashboard-leads",
-        },
-        {
-          name: "Users Empty Light",
-          path: "/users-empty-light",
-        },
-        {
-          name: "Step 1 Onboarding Welcome",
-          path: "/step-1-onboarding-welcome",
-        },
-        {
-          name: "Step 2 Onboarding Tell About Yourself",
-          path: "/step-2-onboarding-tell-about-yourself",
-        },
-        {
-          name: "Step 3 Onboarding Connect Accounts",
-          path: "/step-3-onboarding-connect-accounts",
-        },
-        {
-          name: "Step 4 Onboarding Capture",
-          path: "/step-4-onboarding-capture",
-        },
-        {
-          name: "Notifications Empty State",
-          path: "/notifications/empty-state",
-        },
-        {
-          name: "Notifications Open",
-          path: "/notifications/open",
-        },
-        {
-          name: "Settings Shell",
-          path: "/settings-shell",
-        },
-        {
-          name: "Settings Profile",
-          path: "/settings-profile",
-        },
-        {
-          name: "Settings Notifications",
-          path: "/settings-notifications",
-        },
-        {
-          name: "Settings Sessions",
-          path: "/settings-sessions",
-        },
-        {
-          name: "Settings API",
-          path: "/settings-api",
-        },
-        {
-          name: "Settings Workspace",
-          path: "/settings-workspace",
-        },
-        {
-          name: "Settings Members",
-          path: "/settings-members",
-        },
-        {
-          name: "Settings Security",
-          path: "/settings-security",
-        },
-        {
-          name: "Settings Plans",
-          path: "/settings-plans",
-        },
+        { name: "Chat Empty", path: "/chat-empty" },
+        { name: "Chat with Docs", path: "/chat-with-docs" },
+        { name: "App Shell", path: "/app-shell" },
+        { name: "Chat Document Generated", path: "/chat-document-generated" },
+        { name: "Chat Loading", path: "/chat-loading" },
+        { name: "Chat Response Sent", path: "/chat-response-sent" },
       ],
     },
   ];
