@@ -14,6 +14,7 @@ export default function Home() {
         { name: "Chat Document Generated", path: "/chat-document-generated" },
         { name: "Chat Loading", path: "/chat-loading" },
         { name: "Chat Response Sent", path: "/chat-response-sent" },
+        { name: "Auth", path: "/sign-in-to-sana" },
       ],
     },
   ];

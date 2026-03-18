@@ -6,6 +6,7 @@ import ChatDocumentGenerated from "@/projects/sana-ai/pages/ChatDocumentGenerate
 import ChatLoading from "@/projects/sana-ai/pages/ChatLoading/Page";
 import ChatResponseSent from "@/projects/sana-ai/pages/ChatResponseSent/Page";
 import Home from "@/pages/Home";
+import Auth from "@/projects/sana-ai/pages/Auth/Page";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/chat-loading" element={<ChatLoading />} />
         <Route path="/chat-response-sent" element={<ChatResponseSent />} />
         <Route path="/app-shell" element={<AppShell />} />
+        <Route path="/sign-in-to-sana" element={<Auth />} />
       </Routes>
     </BrowserRouter>
   );
